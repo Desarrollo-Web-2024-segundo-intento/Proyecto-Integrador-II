@@ -1,5 +1,6 @@
 <h1>Sistema de Reserva Médica Online<h1>
 
+
 El Sistema de Reserva Médica Online es una plataforma web diseñada para facilitar a los usuarios/pacientes la gestión de sus turnos médicos de manera eficiente y conveniente. Este proyecto se desarrolla en dos etapas, utilizando diferentes tecnologías para mejorar la experiencia del usuario y optimizar la funcionalidad del sistema.
 
 *Objetivo*
@@ -46,4 +47,5 @@ Ejecuta el backend: python
 
 *Contribución*
 ¡Las contribuciones son bienvenidas! Si deseas mejorar este proyecto, por favor abre un issue para discutir los cambios propuestos.
+
 
