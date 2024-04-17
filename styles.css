@@ -1,0 +1,124 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Estilos del encabezado */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 8px; /* Ajustar el padding del encabezado */
+    text-align: center;
+    margin-bottom: 8px; /* Ajustar el margen inferior del encabezado */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 20px; /* Tamaño de fuente del encabezado */
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 8px; /* Ajustar el margen entre elementos del menú */
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px; /* Tamaño de fuente de los enlaces del menú */
+}
+
+
+
+/* Estilos del contenido principal */
+main {
+    padding: 20px;
+}
+
+form {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+form input[type="text"],
+form input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #0056b3;
+}
+
+/* Estilos del pie de página */
+footer {
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+footer .contact-info,
+footer .useful-links {
+    flex: 1;
+}
+
+footer h3 {
+    margin-top: 0;
+}
+
+footer ul {
+    padding: 0;
+}
+
+footer ul li {
+    margin-bottom: 5px;
+}
+
+footer ul li a {
+    color: #333;
+    text-decoration: none;
+}
+
+/* Estilos del mensaje de derechos de autor */
+footer .copyright {
+    text-align: center;
+    margin-top: 20px;
+}
+
+div.banner {
+    margin-bottom: 12px;
+}
