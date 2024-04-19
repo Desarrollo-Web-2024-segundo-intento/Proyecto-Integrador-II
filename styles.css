@@ -78,7 +78,39 @@ form button {
 form button:hover {
     background-color: #0056b3;
 }
+/* Para formulario de paciente nuevo */
+.form-row {
+    display: flex;
+    margin-bottom: 10px;
+}
 
+.form-row label {
+    flex: 1;
+    margin-right: 10px;
+    text-align: right;
+}
+
+.form-row input,
+.form-row select {
+    flex: 2;
+}
+
+@media only screen and (max-width: 600px) {
+    .form-row {
+        flex-direction: column;
+    }
+
+    .form-row label {
+        flex: none;
+        text-align: left;
+    }
+
+    .form-row input,
+    .form-row select {
+        flex: none;
+        width: 100%;
+    }
+}
 /* Estilos del pie de página */
 footer {
     background-color: #f4f4f4;
