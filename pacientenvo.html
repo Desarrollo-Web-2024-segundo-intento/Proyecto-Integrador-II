@@ -1,85 +1,122 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reserva Médica Online</title>
     <link rel="icon" type="image/x-icon" href="./img/calendario1.ico">
-    <link rel="stylesheet" href="styles.css"> <!-- Enlace al archivo CSS -->
+    <link rel="stylesheet" href="css/styles.css"> <!-- Enlace al archivo CSS -->
 </head>
+
 <body>
 
-<header>
-    <h1>Reserva Médica Online</h1>
-    <nav>
-        <ul>
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="turnos.html">Turnos</a></li>
-            <li><a href="contacto.html">Contacto</a></li>
-            <li><a href="acercade.html">Acerca de</a></li>
-          </ul>
-        <div class="banner">
-            <img src="./img/banner.jpg" alt="" width="500" height="300">
-        </div>
-    </nav>
-</header>
+    <header>
+        <h1>Reserva Médica Online</h1>
 
-<main>
-    
-</main>
-<form action="procesar_formulario.php" method="post">
-    <div class="form-row">
-        <label for="nombre">Nombre:</label>
-        <input type="text" id="nombre" name="nombre" placeholder="Ingrese su nombre" required>
-        <label for="apellido">Apellido:</label>
-        <input type="text" id="apellido" name="apellido" placeholder="Ingrese su apellido" required>
-    </div>
-    <div class="form-row">
-        <label for="telefono">Teléfono:</label>
-        <input type="tel" id="telefono" name="telefono" placeholder="Ingrese su teléfono" required>
-        <label for="dni">DNI:</label>
-        <input type="text" id="dni" name="dni" placeholder="Ingrese su DNI" required>
-    </div>
-    <div class="form-row">
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" placeholder="Ingrese su correo electrónico" required>
-        <label for="obra_social">Obra Social:</label>
-        <select id="obra_social" name="obra_social" required>
-            <option value="">Seleccione su obra social</option>
-            <option value="Obra Social 1">Obra Social 1</option>
-            <option value="Obra Social 2">Obra Social 2</option>
-            <option value="Obra Social 3">Obra Social 3</option>
-            <!-- Agregamos mas opciones según sea necesario -->
-        </select>
-    </div>
-    <div class="form-row">
-        <label for="fecha_nacimiento">Fecha de Nacimiento:</label>
-        <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" placeholder="Seleccione su fecha de nacimiento" required>
-    </div>
-    <!-- <input type="submit" value="Enviar"> -->
-    <button type="button" onclick="alert('Bienvenido!')">Registrarme</button>
-</form>
-<footer>
-    <div class="container">
-        <div class="contact-info">
-            <h3>Contacto</h3>
-            <p><strong>Teléfono:</strong> 08002223456</p>
-            <p><strong>Email:</strong> info@reservamedica.com</p>
-            <p><strong>Dirección:</strong> Av. Valparaiso 1200 Cordoba Argentina</p>
-        </div>
-        <div class="useful-links">
-            <h3>Enlaces Útiles</h3>
+        <nav>
             <ul>
-                <li><a href="#">Preguntas Frecuentes</a></li>
-                <li><a href="#">Términos y Condiciones</a></li>
-                <li><a href="#">Política de Privacidad</a></li>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="turnos.php">Turnos</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="acercade.html">Acerca de</a></li>
             </ul>
+            <div class="banner">
+                <img class="portada" src="./img/banner.jpg" alt="">
+            </div>
+        </nav>
+    </header>
+
+    <main>
+
+    </main>
+    <form action="/php/procesar_registro.php" method="post" id="registro" novalidate>
+
+
+        <div>
+            <label for="dni">DNI:</label>
+            <input type="text" id="dni" name="dni" placeholder="Ingrese su DNI" required>
         </div>
-    </div>
-    <div class="copyright">
-        <p>&copy; 2024 Reserva Médica Online. Todos los derechos reservados.</p>
-    </div>
-</footer>
+
+        <div>
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Ingrese su nombre" required>
+
+            <label for="apellido">Apellido:</label>
+            <input type="text" id="apellido" name="apellido" placeholder="Ingrese su apellido" required>
+        </div>
+
+        <div>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Ingrese su correo electrónico" required>
+        </div>
+
+        <div>
+            <label for="telefono">Teléfono:</label>
+            <input type="tel" id="telefono" name="telefono" placeholder="Ingrese su teléfono" required>
+        </div>
+
+        <div>
+            <label for="obra_social">Obra Social:</label>
+            <select id="obra_social" name="obra_social" required>
+                <option value="">Seleccione su obra social</option>
+                <option value="ObSoc_1">Obra Social 1</option>
+                <option value="ObSoc_2">Obra Social 2</option>
+                <option value="ObSoc_3">Obra Social 3</option>
+                <!-- Agregamos mas opciones según sea necesario -->
+            </select>
+        </div>
+
+        <div>
+            <label for="fecha_nacimiento">Fecha de Nacimiento:</label>
+            <input type="date" id="fecha_nacimiento" name="fecha_nacimiento"
+                placeholder="Seleccione su fecha de nacimiento" required>
+        </div>
+
+        <div>
+            <label for="contrasena">Escriba una contraseña:</label>
+            <input type="password" id="contrasena" name="contrasena" placeholder="Escriba una contraseña" required>
+        </div>
+
+        <div>
+            <label for="contrasena_confirmar">Repita su contraseña:</label>
+            <input type="password" id="contrasena_confirmar" name="contrasena_confirmar"
+                placeholder="Repita su contraseña" required>
+        </div>
+
+        <div>
+            <br />
+            <p class="text">
+                Si olvidaste tu contraseña, ingresá <strong><a href="./recuperarContrasenia.html">Aquí</a></strong>.
+            </p>
+        </div>
+
+        <button id="submit">Registrarme</button>
+
+    </form>
+
+    <footer>
+        <div class="container">
+            <div class="contact-info">
+                <h3>Contacto</h3>
+                <p><strong>Teléfono:</strong> 08002223456</p>
+                <p><strong>Email:</strong> info@reservamedica.com</p>
+                <p><strong>Dirección:</strong> Av. Valparaiso 1200 Cordoba Argentina</p>
+            </div>
+            <div class="useful-links">
+                <h3>Enlaces Útiles</h3>
+                <ul>
+                    <li><a href="#">Preguntas Frecuentes</a></li>
+                    <li><a href="#">Términos y Condiciones</a></li>
+                    <li><a href="#">Política de Privacidad</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2024 Reserva Médica Online. Todos los derechos reservados.</p>
+        </div>
+    </footer>
 
 </body>
+
 </html>
