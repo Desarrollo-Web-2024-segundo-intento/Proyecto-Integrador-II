@@ -56,7 +56,9 @@ nav ul li a {
 .body{
     width:1200px;
     height: 100vh;
-    background-color: #f4f4f4;
+    /* background-color: #f4f4f4; */
+    background-color: #333;
+
     margin: 0 auto;
     padding:0;
     box-sizing: border-box;
@@ -69,7 +71,8 @@ nav ul li a {
 
 
 .login_titulo h1 {
- color:#474646;
+ /* color:#474646; */
+ color:#d6c8c8;
  margin:30px;
 }
 
