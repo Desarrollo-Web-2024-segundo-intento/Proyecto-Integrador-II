@@ -41,6 +41,134 @@ nav ul li a {
     font-size: 14px; /* Tamaño de fuente de los enlaces del menú */
 }
 
+/* ----------------iniciar sesion y registrarse------------ */
+.menu{
+    display: flex;
+    justify-content: center;
+}
+.enlaces{
+    width:170px;
+    height: 30px;
+    color: #8f8989c7;
+    margin-left: 60px;  
+}
+
+.body{
+    width:1200px;
+    height: 100vh;
+    background-color: #f4f4f4;
+    margin: 0 auto;
+    padding:0;
+    box-sizing: border-box;
+}
+.login_titulo{
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+}
+
+
+.login_titulo h1 {
+ color:#474646;
+ margin:30px;
+}
+
+.login_titulo img{
+    padding-right: 20px;
+    color:#f5e8e8; 
+}
+.login_titulo-img img{
+    border-radius: 50%;
+    position: absolute;
+    top:10px;
+    left:960px;
+    transition: transform 1s ease-in-out;
+}
+.login_titulo-img img:hover{
+    transform: rotateY(360deg);
+}
+.login_texto{
+ text-align: center;
+}
+
+.login_texto a{
+    text-decoration: none;
+    color:#434040;
+}
+
+.login_container{
+    width:600px;
+    height: 500px;
+    margin: 0 auto;
+}
+.form-container{
+    height: 100%;
+    background-color: #d1c5c5;
+    display: flex; justify-content: space-around; margin: 0 auto;
+    align-items: center;
+    border-radius: 9px;
+}
+.form-container:hover{
+    background-color: rgb(214, 202, 202);
+}
+.form-container label{
+    background-color: #0056b3;
+    margin: 20px 0;
+    padding: 10px;
+    border-radius: 3px;
+    color: #fff;
+    font-weight: bold;
+}
+.formContainer-regPaciente label{
+    margin: 12px 0;
+}
+#correoElectronico, #password,
+#nombre, #apellido{
+    width:100%;
+    padding:10px;
+    box-sizing: border-box;
+}
+#nom, #apell,
+#email, #contraseña{
+    width:100%;
+    padding:5px;
+    box-sizing: border-box;
+}
+
+.card-container1,
+.card-container2 {
+    flex: 1; 
+    margin-right: 20px;
+    margin-left: 20px;
+    padding: 20px; 
+    background-color: #f0f0f0;
+    height: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.224), 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.card-container1 img,
+.card-container2 img {
+    display: block; 
+    margin: 0 auto; 
+    cursor: pointer;
+}
+.card-container1 p,
+.card-container2 p,
+.card-container1 h2,
+.card-container2 h2{
+   text-align:center;
+}
+.card-container1 p,
+.card-container2 p{
+    font-weight: 500;
+}
+#msj{
+    width: 98%;
+}
+/* ---------------- fin: iniciar sesion y registrarse------------ */
+
+
 
 
 /* Estilos del contenido principal */
