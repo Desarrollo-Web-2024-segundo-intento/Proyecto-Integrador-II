@@ -1,81 +1,84 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacto - Reserva Médica Online</title>
     <link rel="icon" type="image/x-icon" href="./img/calendario1.ico">
-    <link rel="stylesheet" href="styles.css"> <!-- Enlace al archivo CSS -->
+    <link rel="stylesheet" href="css/styles.css"> <!-- Enlace al archivo CSS -->
 </head>
+
 <body>
 
-<header>
-    <h1>Contacto</h1>
-    <nav>
-        <ul>
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="turnos.html">Turnos</a></li>
-            <!-- <li><a href="contacto.html">Contacto</a></li> -->
-            <li><a href="acercade.html">Acerca de</a></li>
-          </ul>
-          <div class="banner">
-            <img src="./img/banner.jpg" alt="" width="500" height="300">
-
-
-
-        </div>  
-    </nav>
-</header>
-
-<main>
-    <h2>Contacto</h2>
-    <form id="contactForm" onsubmit="return validarFormulario()">
-        <label for="nombre">Nombre:</label><br>
-        <input type="text" id="nombre" name="nombre" required><br>
-        <label for="email">Correo Electrónico:</label><br>
-        <input type="email" id="email" name="email" required><br>
-        <label for="mensaje">Mensaje:</label><br>
-        <textarea id="mensaje" name="mensaje" rows="4" required></textarea><br>
-        <button type="submit">Enviar Mensaje</button>
-    </form>
-</main>
-
-<footer>
-    <div class="container">
-        <div class="contact-info">
-            <h3>Contacto</h3>
-            <p><strong>Teléfono:</strong> 08002223456</p>
-            <p><strong>Email:</strong> info@reservamedica.com</p>
-            <p><strong>Dirección:</strong> Av. Valparaiso 1200 Cordoba Argentina</p>
-        </div>
-        <div class="useful-links">
-            <h3>Enlaces Útiles</h3>
+    <header>
+        <h1>Contacto</h1>
+        <nav>
             <ul>
-                <li><a href="#">Preguntas Frecuentes</a></li>
-                <li><a href="#">Términos y Condiciones</a></li>
-                <li><a href="#">Política de Privacidad</a></li>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="turnos.php">Turnos</a></li>
+                <!-- <li><a href="contacto.html">Contacto</a></li> -->
+                <li><a href="acercade.html">Acerca de</a></li>
             </ul>
-        </div>
-    </div>
-    <div class="copyright">
-        <p>&copy; 2024 Reserva Médica Online. Todos los derechos reservados.</p>
-    </div>
-</footer>
-<script>
-    function validarFormulario() {
-        var nombre = document.getElementById('nombre').value;
-        var email = document.getElementById('email').value;
-        var mensaje = document.getElementById('mensaje').value;
+            <div class="banner">
+                <img class="portada" src="./img/banner.jpg" alt="">
 
-        if (nombre == '' || email == '' || mensaje == '') {
-            alert('Por favor, complete todos los campos del formulario.');
-            return false;
-        } else {
-            alert('Mensaje Enviado!');
-            return true;
+
+
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Contacto</h2>
+        <form id="contactForm" onsubmit="return validarFormulario()">
+            <label for="nombre">Nombre:</label><br>
+            <input type="text" id="nombre" name="nombre" required><br>
+            <label for="email">Correo Electrónico:</label><br>
+            <input type="email" id="email" name="email" required><br>
+            <label for="mensaje">Mensaje:</label><br>
+            <textarea id="mensaje" name="mensaje" rows="4" required></textarea><br>
+            <button type="submit">Enviar Mensaje</button>
+        </form>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="contact-info">
+                <h3>Contacto</h3>
+                <p><strong>Teléfono:</strong> 08002223456</p>
+                <p><strong>Email:</strong> info@reservamedica.com</p>
+                <p><strong>Dirección:</strong> Av. Valparaiso 1200 Cordoba Argentina</p>
+            </div>
+            <div class="useful-links">
+                <h3>Enlaces Útiles</h3>
+                <ul>
+                    <li><a href="#">Preguntas Frecuentes</a></li>
+                    <li><a href="#">Términos y Condiciones</a></li>
+                    <li><a href="#">Política de Privacidad</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2024 Reserva Médica Online. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+    <script>
+        function validarFormulario() {
+            var nombre = document.getElementById('nombre').value;
+            var email = document.getElementById('email').value;
+            var mensaje = document.getElementById('mensaje').value;
+
+            if (nombre == '' || email == '' || mensaje == '') {
+                alert('Por favor, complete todos los campos del formulario.');
+                return false;
+            } else {
+                alert('Mensaje Enviado!');
+                return true;
+            }
         }
-    }
-</script>
+    </script>
 
 </body>
+
 </html>
