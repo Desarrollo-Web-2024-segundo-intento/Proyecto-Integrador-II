@@ -1,6 +1,7 @@
 /* Estilos generales */
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Fira Sans", sans-serif !important;
   margin: 0;
   padding: 0;
 }
@@ -13,7 +14,8 @@ body {
 
 /* Estilos del encabezado */
 header {
-  background-color: #333;
+  /* background-color: #333; */
+  background-color: #151635;
   color: #fff;
   padding: 8px; /* Ajustar el padding del encabezado */
   text-align: center;
@@ -22,7 +24,7 @@ header {
 
 header h1 {
   margin: 0;
-  font-size: 20px; /* Tamaño de fuente del encabezado */
+  font-size: 36px; /* Tamaño de fuente del encabezado */
 }
 
 nav ul {
@@ -38,12 +40,20 @@ nav ul li {
 nav ul li a {
   color: #fff;
   text-decoration: none;
-  font-size: 14px; /* Tamaño de fuente de los enlaces del menú */
+  font-size: 18px !important; /* Tamaño de fuente de los enlaces del menú */
 }
 
 /* Estilos del contenido principal */
 main {
   padding: 20px;
+}
+
+section {
+  padding: 2em;
+}
+
+.slide img {
+  height: 60vh;
 }
 
 .portada {
@@ -100,6 +110,9 @@ form button:hover {
 }
 
 @media only screen and (max-width: 600px) {
+  section {
+    padding: 0em;
+  }
   .form-row {
     flex-direction: column;
   }
@@ -117,7 +130,9 @@ form button:hover {
 }
 /* Estilos del pie de página */
 footer {
-  background-color: #f4f4f4;
+  /* background-color: #f4f4f4; */
+  background-color: #151635;
+  color: #fff;
   padding: 20px;
 }
 
@@ -127,10 +142,10 @@ footer .container {
   align-items: flex-start;
 }
 
-footer .contact-info,
+/* footer .contact-info,
 footer .useful-links {
   flex: 1;
-}
+} */
 
 footer h3 {
   margin-top: 0;
@@ -145,7 +160,8 @@ footer ul li {
 }
 
 footer ul li a {
-  color: #333;
+  /* color: #333; */
+  color: #fff;
   text-decoration: none;
 }
 
