@@ -2,60 +2,143 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reserva Médica Online</title>
-    <link rel="icon" type="image/x-icon" href="./img/calendario1.ico">
-    <link rel="stylesheet" href="css/styles.css"> <!-- Enlace al archivo CSS -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reserva Médica Online</title>
+  <link rel="icon" type="image/x-icon" href="./img/calendario1.ico">
+  <link rel="stylesheet" href="css/styles.css"> <!-- Enlace al archivo CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
 </head>
 
 <body>
 
-    <header>
-        <h1>Reserva Médica Online</h1>
+  <header>
+    <h1>Reserva Médica Online</h1>
 
-        <nav>
+    <!-- <nav>
             <ul>
-                <!-- <li><a href="index.html">Inicio</a></li> -->
+                <li><a href="index.html">Inicio</a></li> 
                 <li><a href="turnos.php">Turnos</a></li>
                 <li><a href="contacto.html">Contacto</a></li>
                 <li><a href="acercade.html">Acerca de</a></li>
             </ul>
-            <div class="banner">
-                <img class="portada" src="./img/banner.jpg" alt="">
-            </div>
-        </nav>
+        </nav>-->
 
-    </header>
-
-    <main>
-    </main>
-
-    <footer>
-        <div class="container">
-            <div class="contact-info">
-                <h3>Contacto</h3>
-                <p><strong>Teléfono:</strong> 08002223456</p>
-                <p><strong>Email:</strong> info@reservamedica.com</p>
-                <p><strong>Dirección:</strong> Av. Valparaiso 1200 Cordoba Argentina</p>
-            </div>
-            <div class="useful-links">
-                <h3>Enlaces Útiles</h3>
-                <ul>
-                    <li><a href="#">Preguntas Frecuentes</a></li>
-                    <li><a href="#">Términos y Condiciones</a></li>
-                    <li><a href="#">Política de Privacidad</a></li>
-                </ul>
-            </div>
+    <nav class="navbar navbar-expand-lg" data-bs-theme="dark">
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="turnos.php">Turnos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="acercade.html">Acerca de</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contacto.html">Contacto</a>
+            </li>
+          </ul>
         </div>
+      </div>
+    </nav>
+  </header>
 
-        <div class="copyright">
-            <p>&copy; 2024 Reserva Médica Online. Todos los derechos reservados.</p>
+  <main>
+      <section>
+      <div id="carouselExampleInterval" class="carousel carousel-dark slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="8000">
+            <img src="img/carrusel1.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item" data-bs-interval="8000">
+            <img src="img/carrusel2.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item" data-bs-interval="8000">
+            <img src="img/carrusel3.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="img/carrusel4.jpg" class="d-block w-100" alt="...">
+          </div>
         </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </section>
 
-    </footer>
-    <!--     <?php include('./php/footer.php'); ?> -->
+    <section>
+      <div class="container text-center">
+        <h2>Cifras que respaldan nuestros servicios</h2>
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3">
+          <div>
+            <img src="img/trabajo-evualuado.png" alt="">
+            <div class="col">Personas atendidas</div>
+          </div>
+          <div>
+            <img src="img/empresas-clientes.png" alt="">
+            <div class="col">Empresas Clientes</div>
+          </div>
+          <div>
+            <img src="img/experiencia.png" alt="">
+            <div class="col">De experiencia</div>
+          </div>
+          <div>
+            <img src="img/encuestas.png" alt="">
+            <div class="col">En encuestas de satisfacción</div>
+          </div>
+          <div>
+            <img src="img/servicios-prestados.png" alt="">
+            <div class="col">Servicios prestados</div>
+          </div>
+          <div>
+            <img src="img/profesionales.png" alt="">
+            <div class="col">Profesionales</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 
+  <footer>
+    <div class="container row row-cols-1 row-cols-sm-3">
+      <div>
+        <h3>Reservas Médicas Online</h3>
+      </div>
+      <div class="contact-info">
+        <h3>Contacto</h3>
+        <p><strong>Teléfono:</strong> 08002223456</p>
+        <p><strong>Email:</strong> info@reservamedica.com</p>
+        <p><strong>Dirección:</strong> Av. Valparaiso 1200 Cordoba Argentina</p>
+      </div>
+      <div class="useful-links">
+        <h3>Enlaces Útiles</h3>
+        <ul>
+          <li><a href="#">Preguntas Frecuentes</a></li>
+          <li><a href="#">Términos y Condiciones</a></li>
+          <li><a href="#">Política de Privacidad</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="copyright">
+      <p>&copy; 2024 Reserva Médica Online. Todos los derechos reservados.</p>
+    </div>
+
+  </footer>
+  <!--     <?php include('./php/footer.php'); ?> -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 
