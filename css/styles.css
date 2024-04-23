@@ -110,6 +110,9 @@ form button:hover {
 }
 
 @media only screen and (max-width: 600px) {
+  section {
+    padding: 0em;
+  }
   .form-row {
     flex-direction: column;
   }
