@@ -12,48 +12,61 @@
 
 <body>
 
-<header>
+  <header>
     <h1>Reserva Médica Online</h1>
-    <nav>
-        <ul class="menu">
-            <!-- <li><a href="index.html">Inicio</a></li> -->
-            <li><a href="turnos.html">Turnos</a></li>
-            <li><a href="contacto.html">Contacto</a></li>
-            <li><a href="acercade.html">Acerca de</a></li>
 
-            <div class="enlaces">
-                <li><a href="registrarse.html">Registrate</a></li>
-                <li><a href="iniciarSesion.html">Iniciar Sesion</a></li>    
-            </div>
+    <!-- <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li> 
+                <li><a href="turnos.php">Turnos</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="acercade.html">Acerca de</a></li>
+            </ul>
+        </nav>-->
 
+    <nav class="navbar navbar-expand-lg" data-bs-theme="dark">
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="turnos.php">Turnos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="acercade.html">Acerca de</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contacto.html">Contacto</a>
+            </li>
           </ul>
-        <div class="banner">
-            <img src="./img/banner.jpg" alt="" width="500" height="300">
         </div>
+      </div>
     </nav>
-</header>
+  </header>
 
-    <main>
-    </main>
-
-    <footer>
-        <div class="container">
-            <div class="contact-info">
-                <h3>Contacto</h3>
-                <p><strong>Teléfono:</strong> 08002223456</p>
-                <p><strong>Email:</strong> info@reservamedica.com</p>
-                <p><strong>Dirección:</strong> Av. Valparaiso 1200 Cordoba Argentina</p>
-            </div>
-            <div class="useful-links">
-                <h3>Enlaces Útiles</h3>
-                <ul>
-                    <li><a href="#">Preguntas Frecuentes</a></li>
-                    <li><a href="#">Términos y Condiciones</a></li>
-                    <li><a href="#">Política de Privacidad</a></li>
-                </ul>
-            </div>
-
-       </div>
+  <main>
+      <section>
+      <div id="carouselExampleInterval" class="carousel carousel-dark slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="8000">
+            <img src="img/carrusel1.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item" data-bs-interval="8000">
+            <img src="img/carrusel2.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item" data-bs-interval="8000">
+            <img src="img/carrusel3.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="img/carrusel4.jpg" class="d-block w-100" alt="...">
+          </div>
+        </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Previous</span>
