@@ -50,4 +50,10 @@ Ejecuta el backend: python
 
 <h1>[Sistema de Reserva Médica Online](https://desarrollo-web-2024-segundo-intento.github.io/Proyecto-Integrador-II/index.html)<h1>
 
+<h1>Base de Datos<h1>
+URL: ispcserver1.ddns.net
+Usuario: desarrollo_web_2024
+Password: web_2024
+Puerto: 3306
+
 
