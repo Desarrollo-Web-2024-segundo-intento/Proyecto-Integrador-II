@@ -1,0 +1,27 @@
+[
+    {"id": 1, "nombre": "09:00 hs", "franjaHoraria": 1},
+    {"id": 2, "nombre": "09:30 hs", "franjaHoraria": 1},
+    {"id": 3, "nombre": "10:00 hs", "franjaHoraria": 1},
+    {"id": 4, "nombre": "10:30 hs", "franjaHoraria": 1},
+    {"id": 5, "nombre": "11:00 hs", "franjaHoraria": 1},
+    {"id": 6, "nombre": "11:30 hs", "franjaHoraria": 1},
+    {"id": 7, "nombre": "12:00 hs", "franjaHoraria": 1},
+    {"id": 8, "nombre": "12:30 hs", "franjaHoraria": 1},
+    {"id": 9, "nombre": "13:00 hs", "franjaHoraria": 1},
+    {"id": 10, "nombre": "13:30 hs", "franjaHoraria": 1},
+    {"id": 11, "nombre": "14:00 hs", "franjaHoraria": 1},
+    {"id": 12, "nombre": "14:30 hs", "franjaHoraria": 1},
+    {"id": 13, "nombre": "15:00 hs", "franjaHoraria": 2},
+    {"id": 14, "nombre": "15:30 hs", "franjaHoraria": 2},
+    {"id": 15, "nombre": "16:00 hs", "franjaHoraria": 2},
+    {"id": 16, "nombre": "16:30 hs", "franjaHoraria": 2},
+    {"id": 17, "nombre": "17:00 hs", "franjaHoraria": 2},
+    {"id": 18, "nombre": "17:30 hs", "franjaHoraria": 2},
+    {"id": 19, "nombre": "18:00 hs", "franjaHoraria": 2},
+    {"id": 20, "nombre": "18:30 hs", "franjaHoraria": 2},
+    {"id": 21, "nombre": "19:00 hs", "franjaHoraria": 2},
+    {"id": 22, "nombre": "19:30 hs", "franjaHoraria": 2},
+    {"id": 23, "nombre": "20:00 hs", "franjaHoraria": 2},
+    {"id": 24, "nombre": "20:30 hs", "franjaHoraria": 2}
+
+]
