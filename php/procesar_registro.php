@@ -50,7 +50,7 @@ $conn = require __DIR__ . "/datosDB.php";
 
 /* preparar los datos */
 
-$sql = "INSERT INTO usuarios (dni, nombre, apellido, email, telefono, obra_social, fecha_nac, contrasena_hash) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
+$sql = "INSERT INTO pacientes (nombre, apellido, dni, fecha_nacimiento, obra_social_id, correo, telefono) VALUES (?, ?, ?, ?, ?, ?, ?)";
 
 $stmt = $conn->stmt_init();
 
@@ -60,15 +60,17 @@ if ( ! $stmt-> prepare($sql)) {
 
 /* agregar datos a BD */
 
-$stmt->bind_param("isssisss", 
-                    $_POST["dni"],
+$stmt->bind_param("ssisssi", 
+                    
                     $_POST["nombre"],
                     $_POST["apellido"],
-                    $_POST["email"],
-                    $_POST["telefono"],
-                    $_POST["obra_social"],
+                    $_POST["dni"],
                     $_POST["fecha_nacimiento"],
-                    $contrasena_hash);
+                    $_POST["obra_social"],
+                    $_POST["email"],
+                    $_POST["telefono"]);
+
+                    //$contrasena_hash);
 
 if ($stmt->execute()) {
     
@@ -80,10 +82,10 @@ if ($stmt->execute()) {
 } else {
 
     /* algo anduvo mal, revisar si email es unico*/
-    if ($mysqli->errno === 1062) {
+    if ($conn->errno === 1062) {
         die("Ese email ya existe");
     } else {
-        die($mysqli->error . " " . $mysqli->errno);
+        die($conn->error . " " . $conn->errno);
     }
 
 }

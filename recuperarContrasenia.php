@@ -51,29 +51,15 @@
     </header>
 
     <body>
-        <div style="text-align:center">
-            <h1>Recuperar tu contraseña</h1>
+
+        <h1>Revisa tu correo electronico</h1>
+        <div>
+            <p class="text">
+                <strong><a href="./turnos.php">Volver</a></strong>.
+            </p>
         </div>
 
-
-        <form action="recuperarContrasenia.php" method="POST">
-
-            <label for="dni_login">Ingrese su DNI:</label><br>
-            <input type="text" id="dni_login" name="dni_login" value="" placeholder="N° de documento"><br>
-
-            <label for="clave">Ingrese su email:</label><br>
-            <input type="text" id="clave" name="clave" value="" placeholder="correo electronico"><br>
-
-            <button>Ingresar</button>
-
-            <div style="text-align:center">
-                <p class="text">
-                    <strong><a href="./index.html">Ir a Inicio</a></strong>.
-                </p>
-            </div>
-
-        </form>
-
+        
     </body>
 
 </html>
