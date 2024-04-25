@@ -154,3 +154,80 @@ footer .copyright {
 div.banner {
     margin-bottom: 12px;
 }
+/* styles.css */
+
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Estilos para el formulario */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+textarea.form-control {
+    resize: vertical;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+/* Estilos para la barra de navegación (si la tienes) */
+.navbar {
+    background-color: #f8f9fa;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.navbar-brand {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Estilos adicionales según tus necesidades */
+/* Por ejemplo, colores, márgenes, etc. */
+
+/* Media queries para diseño responsive (opcional) */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+}
