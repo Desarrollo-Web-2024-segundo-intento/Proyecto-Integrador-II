@@ -3,68 +3,144 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sistema de Reserva Medica On-Line</title>
-    <link rel="icon" type="image/x-icon" href="./img/calendario1.ico">
-    <link rel="stylesheet" href="styles.css">
+    <title>Turnos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
-    <div id="cabecera">
-        <h1>Reserva Medica ONLINE</h1>
-        </div>
-        
-        <!-- <p>Este es un servicio para pacientes registrados.
-            Si desea solicitar un turno, ingrese con su número de DNI y repita el mismo para contraseña.
-            Puede cambiar su clave de ingreso, accediendo a Cambiar Contraseña</p> -->
-        
-        <header>
-          <h4>Acceso para pacientes</h4>
-          <!-- <ul>
-            <li><a href="#">Inicio</a></li>
-            <li><a href="turnos.html">Turnos</a></li>
-            <li><a href="#">Contacto</a></li>
-        </ul> -->
-        
-        <nav>
-            <ul>
-              <li><a href="index.html">Inicio</a></li>
-              <!-- <li><a href="turnos.html">Turnos</a></li> -->
-              <li><a href="pacientenvo.html">Registrarme </a></li>
-              <li><a href="contacto.html">Contacto</a></li>
-              <li><a href="acercade.html">Acerca de</a></li>
-              
-            </ul>
-            <div class="banner">
-              <img src="./img/banner.jpg" alt="" width="500" height="300">
+    <header>
+        <h1>Reserva Médica Online</h1>
+        <nav class="navbar navbar-expand-lg" data-bs-theme="dark">
+          <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="turnos.html">Turnos</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="acercade.html">Acerca de</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="contacto.html">Contacto</a>
+                </li>
+              </ul>
+            </div>
           </div>
-          </nav>
-        </header>  
-    <form>
-        <label for="fname">Ingrese su DNI:</label><br>
-        <input type="text" id="fname" name="fname" value=""><br>
-        <label for="lname">Ingrese su clave:</label><br>
-        <input type="text" id="lname" name="lname" value="">
-        <button type="button" onclick="alert('Bienvenido!')">Ingresar</button>
-      </form>
-      <footer>
-        <div class="container">
+        </nav>
+    </header>
+
+    <main class="container" id="mainTurnos">
+
+        <div class="row align-items-center">
+            <img id="calendar" src="./img/time-and-calendar.png" alt="">
+        </div>
+
+       
+        <div class="row" id="menuPrincipal">
+          <h2 class="text-center">Portal de turnos</h2>
+            <button type="button" id="nuevoTurno" class="btn btn-lg col-3 m-5">Nuevo turno</button>
+            <button type="button" id="misTurnos" class="btn btn-lg col-3 m-5">Mis turnos</button>
+        </div>
+      
+
+        <div id="vistaNuevoTurno" class="row align-items-center">
+            <h2 class="text-center">Registrar un nuevo turno</h2>
+            <form class="container" id="formTurnos>
+                <hr class="row">
+                <div class="row m-4">
+                    <div class="col-6">
+                        <select id="especialidad" class="form-select" aria-label="Default select example">
+                            <option value="0" selected>Especialidad</option>
+                        </select>
+                    </div>
+                    <div class="col-6">
+                        <select id="profesional" class="form-select" aria-label="Default select example">
+                            <option value="0" selected>Profesional</option>
+                        </select>                    
+                    </div>
+                </div>
+                <div class="row m-4">
+                    <div class="col-6">
+                        <select id="fecha" class="form-select" aria-label="Default select example">
+                            <option value="0" selected>Fecha</option>
+                        </select>
+                    </div>
+                    <div class="col-6">
+                        <select id="hora" class="form-select" aria-label="Default select example">
+                            <option value="0" selected>Hora</option>
+                        </select>                    
+                    </div>
+                </div>
+                <div class="row">
+                    <button type="submit" id="registrarNuevo" class="btn col-3 m-2">Registrar</button>
+                </div>
+            </form>
+        </div>
+
+        <div id="vistaMisTurnos" class="row">
+            <h2 class="text-center">Mis turnos</h2>
+            <div class="table-responsive">
+                <table class="table">
+                    <hr>
+                    <thead>
+                        <tr>
+                            <th scope="col">Id</th>
+                            <th scope="col">Nombre y Apellido</th>
+                            <th scope="col">DNI</th>
+                            <th scope="col">Especialidad</th>
+                            <th scope="col">Profesional</th>
+                            <th scope="col">Fecha</th>
+                            <th scope="col">Hora</th>
+                            <th scope="col">Cancelar</th>
+                        </tr>
+                    </thead>
+                    <tbody id="contenedorEsp">
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+
+        <div class="row" id="botonVolver">
+            <button class="btn btn-sm col-2 m-4 align-self-center" id="volver">Volver</button>
+        </div>
+    </main>
+   
+    <footer id="footerTurnos">
+        <div class="container row row-cols-1 row-cols-sm-3">
+          <div>
+            <h3>Reservas Médicas Online</h3>
+          </div>
           <div class="contact-info">
-              <h3>Contacto</h3>
-              <p><strong>Teléfono:</strong> 08002223456</p>
-              <p><strong>Email:</strong> info@reservamedica.com</p>
-              <p><strong>Dirección:</strong> Av. Valparaiso 1200 Cordoba Argentina</p>
+            <h3>Contacto</h3>
+            <p><strong>Teléfono:</strong> 08002223456</p>
+            <p><strong>Email:</strong> info@reservamedica.com</p>
+            <p><strong>Dirección:</strong> Av. Valparaiso 1200 Cordoba Argentina</p>
           </div>
           <div class="useful-links">
-              <h3>Enlaces Útiles</h3>
-              <ul>
-                  <li><a href="#">Preguntas Frecuentes</a></li>
-                  <li><a href="#">Términos y Condiciones</a></li>
-                  <li><a href="#">Política de Privacidad</a></li>
-              </ul>
+            <h3>Enlaces Útiles</h3>
+            <ul>
+              <li><a href="#">Preguntas Frecuentes</a></li>
+              <li><a href="#">Términos y Condiciones</a></li>
+              <li><a href="#">Política de Privacidad</a></li>
+            </ul>
           </div>
-      </div>
-      <div class="copyright">
+        </div>
+    
+        <div class="copyright">
           <p>&copy; 2024 Reserva Médica Online. Todos los derechos reservados.</p>
-      </div>
-    </footer>  
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="./js/opcionesSelect_turnos.js"></script>
+    <script src="./js/turnos.js"></script>
 </body>
 </html>

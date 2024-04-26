@@ -13,8 +13,6 @@
 <body>
 
     <header>
-        <h1>Reserva Médica Online</h1>
-
         <!-- <nav>
             <ul>
                 <li><a href="index.html">Inicio</a></li> 
@@ -32,7 +30,7 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+                            <a class="nav-link" aria-current="page" href="index.html">Inicio</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="turnos.php">Turnos</a>
@@ -50,79 +48,16 @@
         <div class="banner">
             <img class="portada" src="./img/banner.jpg" alt="">
         </div>
+
+        <h1>REGISTRO EXITOSO</h1>
+        <p>Te damos la bienvenida!
+            Ahora puede <a href="turnos.php">ingresar</a>.</p>
+
+
     </header>
 
     <main>
-
     </main>
-    <form action="/php/procesar_registro.php" method="post" id="registro" novalidate>
-
-        <div>
-            <h3>Registración</h3>
-            <br>
-            <h4>Datos Personales</h4>
-        </div>
-        <div>
-            <label for="dni">DNI:</label>
-            <input type="text" id="dni" name="dni" placeholder="Ingrese su DNI" required>
-        </div>
-
-        <div>
-            <label for="nombre">Nombre:</label>
-            <input type="text" id="nombre" name="nombre" placeholder="Ingrese su nombre" required>
-
-            <label for="apellido">Apellido:</label>
-            <input type="text" id="apellido" name="apellido" placeholder="Ingrese su apellido" required>
-        </div>
-
-        <div>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" placeholder="Ingrese su correo electrónico" required>
-        </div>
-
-        <div>
-            <label for="telefono">Teléfono:</label>
-            <input type="tel" id="telefono" name="telefono" placeholder="Ingrese su teléfono" required>
-        </div>
-
-        <div>
-            <label for="obra_social">Obra Social:</label>
-            <select id="obra_social" name="obra_social" required>
-                <option value="">Seleccione su obra social</option>
-                <option value="1">Obra Social 1</option>
-                <option value="2">Obra Social 2</option>
-                <option value="3">Obra Social 3</option>
-                <!-- Agregamos mas opciones según sea necesario -->
-            </select>
-        </div>
-
-        <div>
-            <label for="fecha_nacimiento">Fecha de Nacimiento:</label>
-            <input type="date" id="fecha_nacimiento" name="fecha_nacimiento"
-                placeholder="Seleccione su fecha de nacimiento" required>
-        </div>
-
-        <div>
-            <label for="contrasena">Escriba una contraseña:</label>
-            <input type="password" id="contrasena" name="contrasena" placeholder="Escriba una contraseña" required>
-        </div>
-
-        <div>
-            <label for="contrasena_confirmar">Repita su contraseña:</label>
-            <input type="password" id="contrasena_confirmar" name="contrasena_confirmar"
-                placeholder="Repita su contraseña" required>
-        </div>
-
-        <div>
-            <br />
-            <p class="text">
-                Si olvidaste tu contraseña, ingresá <strong><a href="./recuperarContrasenia.html">Aquí</a></strong>.
-            </p>
-        </div>
-
-        <button id="submit">Registrarme</button>
-
-    </form>
 
     <footer>
         <div class="container">
@@ -141,10 +76,13 @@
                 </ul>
             </div>
         </div>
+
         <div class="copyright">
             <p>&copy; 2024 Reserva Médica Online. Todos los derechos reservados.</p>
         </div>
+
     </footer>
+    <!--     <?php include('./php/footer.php'); ?> -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
