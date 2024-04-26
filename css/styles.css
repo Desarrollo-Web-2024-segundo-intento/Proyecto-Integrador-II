@@ -57,9 +57,14 @@ section {
 }
 
 .portada {
-  height: 300px;
+  height: 200px;
   object-fit: cover;
-  object-position: center;
+  object-position: center; 
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.475);
+
+
+
 }
 
 form {
@@ -73,7 +78,9 @@ form label {
 }
 
 form input[type="text"],
-form input[type="password"] {
+form input[type="password"],
+form input[type="email"],
+#contactForm textarea {
   width: 100%;
   padding: 10px;
   margin-bottom: 10px;
