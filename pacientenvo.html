@@ -57,7 +57,11 @@
     </main>
     <form action="/php/procesar_registro.php" method="post" id="registro" novalidate>
 
-
+        <div>
+            <h3>Registración</h3>
+            <br>
+            <h4>Datos Personales</h4>
+        </div>
         <div>
             <label for="dni">DNI:</label>
             <input type="text" id="dni" name="dni" placeholder="Ingrese su DNI" required>
@@ -85,9 +89,9 @@
             <label for="obra_social">Obra Social:</label>
             <select id="obra_social" name="obra_social" required>
                 <option value="">Seleccione su obra social</option>
-                <option value="ObSoc_1">Obra Social 1</option>
-                <option value="ObSoc_2">Obra Social 2</option>
-                <option value="ObSoc_3">Obra Social 3</option>
+                <option value="1">Obra Social 1</option>
+                <option value="2">Obra Social 2</option>
+                <option value="3">Obra Social 3</option>
                 <!-- Agregamos mas opciones según sea necesario -->
             </select>
         </div>

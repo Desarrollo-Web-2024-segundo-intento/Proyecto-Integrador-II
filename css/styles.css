@@ -174,3 +174,47 @@ footer .copyright {
 div.banner {
   margin-bottom: 12px;
 }
+
+/* Estilos del formulario de turnos */
+
+
+
+div.row {
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+#mainTurnos {
+  min-height: 55vh;
+}
+
+#calendar {
+  width: 10rem;
+  margin: 2rem;
+}
+
+#mainTurnos .btn {
+  background-color: #151635;
+  border: none;
+  color: #ffffff;
+}
+
+#mainTurnos .btn:hover {
+  background-color: #5558f0;
+}
+
+#menuPrincipal {
+  display: flex;
+}
+
+#vistaNuevoTurno {
+  display: none;
+}
+
+#vistaMisTurnos {
+  display: none;
+}
+
+#botonVolver {
+  display: none;
+}
