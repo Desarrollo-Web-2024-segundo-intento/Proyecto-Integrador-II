@@ -1,41 +1,39 @@
 /* Estilos generales */
-body {
+/* body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     display: grid;
-}
+} */
 
 
-/* Estilos del encabezado */
+/* Estilos del encabezado
 header {
     background-color: #333;
     color: #fff;
-    padding: 8px; /* Ajustar el padding del encabezado */
+    padding: 8px; 
     text-align: center;
-    margin-bottom: 8px; /* Ajustar el margen inferior del encabezado */
-}
+    margin-bottom: 8px; 
 
 header h1 {
     margin: 0;
-    font-size: 50px; /* Tamaño de fuente del encabezado */
-}
+    font-size: 50px; 
+} */
 
-nav ul {
+/* nav ul {
     list-style-type: none;
     padding: 0;
 }
 
 nav ul li {
     display: inline;
-    margin-right: 8px; /* Ajustar el margen entre elementos del menú */
-}
+    margin-right: 8px; 
 
 nav ul li a {
     color: #fff;
     text-decoration: none;
-    font-size: 18px; /* Tamaño de fuente de los enlaces del menú */
-}
+    font-size: 18px; 
+} */
 
 
 
