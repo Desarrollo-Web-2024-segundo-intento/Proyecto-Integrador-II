@@ -14,7 +14,6 @@ body {
 
 /* Estilos del encabezado */
 header {
-  /* background-color: #333; */
   background-color: #151635;
   color: #fff;
   padding: 8px; /* Ajustar el padding del encabezado */
@@ -130,22 +129,16 @@ form button:hover {
 }
 /* Estilos del pie de página */
 footer {
-  /* background-color: #f4f4f4; */
   background-color: #151635;
   color: #fff;
   padding: 20px;
 }
 
-footer .container {
+.containerFooter {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
 }
-
-/* footer .contact-info,
-footer .useful-links {
-  flex: 1;
-} */
 
 footer h3 {
   margin-top: 0;
@@ -160,7 +153,6 @@ footer ul li {
 }
 
 footer ul li a {
-  /* color: #333; */
   color: #fff;
   text-decoration: none;
 }
