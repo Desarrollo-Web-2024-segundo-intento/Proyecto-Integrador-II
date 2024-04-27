@@ -1,8 +1,18 @@
 <?php
 // Datos de conexión a la base de datos
-$host="localhost";
-$usuario="root";
-$clave="";
+
+// datos para test online 
+$host="ispcserver1.ddns.net";
+$usuario="desarrollo_web_2024";
+$clave="web_2024";
+// puerto: 3306
+
+// datos para Xampp (local)
+
+// $host="localhost";
+// $usuario="root";
+// $clave="";
+
 $basededatos="reservasmedicasdb";
 
 // Crear conexión a la base de datos

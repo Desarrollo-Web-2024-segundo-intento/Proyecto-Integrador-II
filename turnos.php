@@ -43,20 +43,30 @@
     </header>
 
     <form action="login.php" method="POST">
+
         <label for="dni_login">Ingrese su DNI:</label><br>
-        <input type="text" id="dni_login" name="dni_login" value=""><br>
+        <input type="text" id="dni_login" name="dni_login" value="" placeholder="N° de documento"><br>
 
         <label for="clave">Ingrese su clave:</label><br>
-        <input type="text" id="clave" name="clave" value=""><br>
+        <input type="text" id="clave" name="clave" value=""  placeholder="Contraseña"><br>
 
         <button>Ingresar</button>
+
+        <div style="text-align:center">
+            <p class="text">
+                <strong><a href="./recuperarContrasenia.html">¿Olvidaste tu contraseña?</a></strong>.
+            </p>
+        </div>
+
+        <div style="text-align:center">
+            <p class="text">
+                <strong>¿No tenés una cuenta? <a href="./pacientenvo.html">Registrate</a></strong>.
+            </p>
+        </div>
+
     </form>
 
-    <div>
-        <p class="text">
-                Si olvidaste tu contraseña, ingresá <strong><a href="./recuperarContrasenia.html">Aquí</a></strong>.
-        </p>
-    </div>
+
 
     <footer>
         <div class="container">

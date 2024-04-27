@@ -1,0 +1,12 @@
+[
+    {"id": 2, "nombre": "Diagnóstico por imágenes"},
+    {"id": 3, "nombre": "Pediatría"},
+    {"id": 4, "nombre": "Obstetricia"},
+    {"id": 5, "nombre": "Cardiología"},
+    {"id": 6, "nombre": "Dermatología"},
+    {"id": 7, "nombre": "Clínica"},
+    {"id": 8, "nombre": "Neurología"},
+    {"id": 9, "nombre": "Oftalmología"},
+    {"id": 10, "nombre": "Endocrinología"}
+    
+]
