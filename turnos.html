@@ -50,12 +50,13 @@
           <h2 class="text-center">Portal de turnos</h2>
             <button type="button" id="nuevoTurno" class="btn btn-lg col-3 m-5">Nuevo turno</button>
             <button type="button" id="misTurnos" class="btn btn-lg col-3 m-5">Mis turnos</button>
+            <button type="button" id="datos_personales_boton" class="btn btn-lg col-3 m-5">Registrarme</button>
         </div>
       
 
         <div id="vistaNuevoTurno" class="row align-items-center">
             <h2 class="text-center">Registrar un nuevo turno</h2>
-            <form class="container" id="formTurnos>
+            <form class="container" id="formTurnos">
                 <hr class="row">
                 <div class="row m-4">
                     <div class="col-6">
@@ -87,6 +88,9 @@
             </form>
         </div>
 
+
+
+
         <div id="vistaMisTurnos" class="row">
             <h2 class="text-center">Mis turnos</h2>
             <div class="table-responsive">
@@ -108,8 +112,45 @@
                     </tbody>
                 </table>
             </div>
-
         </div>
+
+
+
+        <div id="registro_pacientes" class="row align-items-center">
+          <h2 class="text-center">Datos Personales</h2>
+
+          <div class="row m-4">
+
+            <!-- <label for="apellido">Apellido:</label> -->
+            <input class="input_registro" type="text" id="apellido" name="apellido" placeholder="Apellido"  required>
+            <div class="espacio_5px"></div>
+            <!-- <label for="nombre">Nombre:</label> -->
+            <input class="input_registro" type="text" id="nombre" name="nombre" placeholder="Nombre" required>
+            <div class="espacio_5px"></div>          
+            <!-- <label for="telefono">Teléfono:</label> -->
+            <input class="input_registro" type="tel" id="telefono" name="telefono" placeholder="Telefono" required>
+            <div class="espacio_5px"></div>            
+            <!-- <label for="dni">DNI:</label> -->
+            <input class="input_registro" type="text" id="dni" name="dni" placeholder="DNI" required>
+            <div class="espacio_5px"></div>
+            <!-- <label for="mutual">Mutual:</label> -->
+            <input class="input_registro" type="text" id="mutual" name="mutual" placeholder="Mutual" required>
+            <div class="espacio_5px"></div>
+            <!-- <label for="email">E-Mail:</label> -->
+            <input class="input_registro" type="text" id="email" name="email" placeholder="Email" required>
+        </div>
+
+          <div class="row">
+            <button type="submit" id="datos_personales" class="btn col-3 m-2">Grabar</button>
+        </div>
+      </div>
+
+
+
+
+
+
+
 
         <div class="row" id="botonVolver">
             <button class="btn btn-sm col-2 m-4 align-self-center" id="volver">Volver</button>
