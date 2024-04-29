@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="es">
+.
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reserva Médica Online</title>
+  <link rel="icon" type="image/x-icon" href="./img/calendario1.ico">
+  <link rel="stylesheet" href="css/styles.css"> <!-- Enlace al archivo CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+</head>
+
+<body>
+
+  <header>
+    <h1>Reserva Médica Online</h1>
+
+    <!-- <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li> 
+                <li><a href="turnos.php">Turnos</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="acercade.html">Acerca de</a></li>
+            </ul>
+        </nav>-->
+
+    <nav class="navbar navbar-expand-lg" data-bs-theme="dark">
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="turnos.html">Turnos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="acercade.html">Acerca de</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="servicios.html">Servicios</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contacto.html">Contacto</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section id="servicios">
+        <div class="servicios"> 
+           <h2 class="titulo_servicios">Planes</h2>
+        <div class="servicio-container">
+           <div class="servicio-container-superior">
+  
+              <div class="container-info container-info1">   
+                  <img class="image1 imgs" src="./img/plan100.jpg" alt="Imagen servicio">
+                  <p>* Odontología General</p>
+                  <p>* Internaciones Clínicas y/o Quirúrgicas</p>
+                  <p>* Interconsulta a kinesiología / fisiatría / fonoaudiología</p>
+                  <p> Médico Personal por videoconsulta especialista en Medicina Familiar</p>
+                  <p>* Interconsultas con especialidades en instituciones sanatoriales seleccionadas</p>
+                </div>
+                
+                
+                <div  class="container-info container-info1">
+                    <img class="image2 imgs" src="./img/plan200.jpg" alt="imagen servicio">
+                    <p>* Clínica Médica</p>
+                    <p>* Internación</p>
+                    <p>* Alta complejidad</p>
+                    <p>* Controles preventivos anuales</p>
+                    <p>* Servicio de urgencias y emergencias</p> 
+                    <p>* Maternidad y plan Materno Infantil</p>
+                    <p>* La Cobertura Nacional mas amplia del país </p>
+               </div>
+      
+               <div  class="container-info  container-info1">
+                  <img class="image3 imgs" src="./img/plan300.jpg" alt="imagen servicio">
+                  <p>* Amplia cartilla Médica </p>
+                  <p>* Habitación individual</p>
+                  <p>* Odontología general</p>
+                  <p>* Prótesis odontológica</p>
+                  <p>* Óptica (lentes sin cargo)</p>
+                  <p>* Cirugía de Ojos Excimer Láser </p>
+                  <p>* Cobertura internacional (países limítrofes)</p>
+               </div>     
+          </div>
+        </div>
+
+           <div class="container-consulta">
+            <p>CONSULTA POR OTROS PLANES</p>
+            <a href="contacto.html"><span class="button">Consultar</span></a>
+            
+           </div>
+        </div>
+  
+
+        <div class="servicio-container">        
+           <div class=" container-medio">
+            <div class="container-info-">
+                <div class="card">
+                    <h3><label for="toggle-cobertura"><img src="./img/iconMedicina.png" alt="...">Especialidades Médicas<span class="indicador">&#9660;</span></label></h3>
+                    <input type="checkbox" id="toggle-cobertura" class="toggle">
+                    <ul id="cobertura" class="lista-oculta">
+                        <li>Emergencias médicas</li>
+                        <li><span></span>Consultas médicas</li>
+                        <li>Clínica Médica</li>
+                        <li>Pediatría</li>
+                        <li>Oncología</li>
+                        <li>Reumatología</li>
+                        <li>Gastroenterología</li>
+                        <li>Cardiología</li>
+                        <li>Endocrinología</li>
+                        <li>Odontología</li>
+                        <li>Oftalmología</li>
+                        <li>Ginecología</li>
+                        <li>Obstetricia</li>
+                        <li>Dermatología</li>
+                        <li>Kinesiología</li>
+                        <li>Psicología</li>
+                        <li>Fonoaudiología</li>
+                        <li>Cardiología</li>
+                        <li>Internación</li>
+                        <li>Prótesis e implantes*</li>
+                        <li>Ortodoncia*</li>
+                        <li>Placa de descanso*</li>
+                        <li>Anteojos</li>
+                        <li>Lentes de Contacto</li>
+                        <li>Asistencia al viajero</li>
+                        <li>y más!</li>
+                    </ul>
+                </div>
+            </div>
+            </div>           
+        </div>
+      
+       <h2  class="titulo_servicios ">Estudios médicos de baja, mediana y alta complejidad.</h2> 
+       <div class="servicio-container">
+            <div class="servicio-container-superior">
+    
+                <div class="container-info">   
+                    <img class="image1 imgs" src="./img/imga.png" alt="Imagen servicio">
+                    <h3>Baja complejidad:</h3> 
+                    <p><span class="asterisco">*</span> Análisis de sangre para medir los niveles de glucosa en pacientes con diabetes.</p>
+                    <p><span class="asterisco">*</span> Radiografía de tórax para detectar neumonía o fracturas de costillas.</p>
+                    <p><span class="asterisco">*</span> Ecografía abdominal para evaluar el hígado, el riñón y la vesícula biliar.</p>
+                    <p><span class="asterisco">*</span> Electrocardiograma (ECG) para evaluar la actividad eléctrica del corazón.</p>
+                    <p><span class="asterisco">*</span> Prueba de esfuerzo en cinta rodante para evaluar la función cardíaca durante el ejercicio.</p>
+
+                </div>
+                
+                 <div  class="container-info estudios">
+                    <img class="image2 imgs" src="./img/imgb.png" alt="imagen servicio">
+                    <h3>Mediana complejidad:</h3>
+                    <p><span class="asterisco">*</span> Tomografía computarizada (TC) de abdomen para diagnosticar apendicitis aguda.</p>
+                    <p><span class="asterisco">*</span> Colonoscopia para detectar pólipos o cáncer colorrectal.</p>
+                    <p><span class="asterisco">*</span> Resonancia magnética (RM) de la columna vertebral para evaluar hernias discales.</p>
+                    <p><span class="asterisco">*</span> Endoscopia digestiva alta para diagnosticar úlceras estomacales o esofagitis.</p>
+                    <p><span class="asterisco">*</span> Cateterismo cardíaco para evaluar el flujo sanguíneo en las arterias coronarias.</p>
+                  
+                </div>
+               
+                 <div  class="container-info">
+                    <img class="image3 imgs" src="./img/imgc.png" alt="imagen servicio">
+                    <h3 class="titulo-plan">Alta complejidad:</h3>
+                    <p><span class="asterisco">*</span> Trasplante de médula ósea para tratar la leucemia.</p>
+                    <p><span class="asterisco">*</span> Cirugía de bypass coronario para restaurar el flujo sanguíneo al corazón.</p>
+                    <p><span class="asterisco">*</span> Radioterapia externa para tratar el cáncer de próstata.</p>
+                    <p><span class="asterisco">*</span> Quimioterapia intensiva para el tratamiento del linfoma no Hodgkin.</p>
+                    <p><span class="asterisco">*</span> Implante coclear para restaurar la audición en pacientes con sordera profunda.</p> 
+                 </div>     
+              </div>    
+    
+        </div>
+     </div>
+     </section> 
+  </main>
+
+  <footer>
+    <div class="container row row-cols-1 row-cols-sm-3">
+      <div>
+        <h3>Reservas Médicas Online</h3>
+      </div>
+      <div class="contact-info">
+        <h3>Contacto</h3>
+        <p><strong>Teléfono:</strong> 08002223456</p>
+        <p><strong>Email:</strong> info@reservamedica.com</p>
+        <p><strong>Dirección:</strong> Av. Valparaiso 1200 Cordoba Argentina</p>
+      </div>
+      <div class="useful-links">
+        <h3>Enlaces Útiles</h3>
+        <ul>
+          <li><a href="#">Preguntas Frecuentes</a></li>
+          <li><a href="#">Términos y Condiciones</a></li>
+          <li><a href="#">Política de Privacidad</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="copyright">
+      <p>&copy; 2024 Reserva Médica Online. Todos los derechos reservados.</p>
+    </div>
+
+  </footer>
+  <!--     <?php include('./php/footer.php'); ?> -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
