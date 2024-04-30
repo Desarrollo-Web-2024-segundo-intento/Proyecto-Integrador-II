@@ -11,3 +11,21 @@ function login(event) {
         alert("Por favor, complete todos los campos.");
     }
 }
+
+
+
+
+function registro(event) {
+    event.preventDefault(); 
+
+    // const form = document.getElementById("registro_pacientes_form");
+    const apellido = document.getElementById("apellido").value;
+    const nombre = document.getElementById("nombre").value;
+
+    if (apellido && nombre) {
+        // Lógica para procesar el login (por ejemplo, autenticación con el backend)
+        alert("Registro exitoso para " + apellido);
+    } else {
+        alert("Por favor, complete todos los campos.");
+    }
+}
