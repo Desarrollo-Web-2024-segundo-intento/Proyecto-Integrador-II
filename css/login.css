@@ -1,0 +1,47 @@
+/* Estilo general para el cuerpo de la página
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5; 
+    margin: 0;
+    padding: 20px;
+} */
+
+/* Contenedor del formulario de login */
+.login-container {
+    max-width: 400px; 
+    margin: 50px auto; 
+    padding: 20px; /* Espaciado interno */
+    background-color: white; /* Fondo blanco */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    text-align: center; /* Centra el texto */
+}
+
+/* Estilo para los encabezados */
+h2 {
+    color: #333; /* Color de texto */
+    margin-bottom: 20px; /* Espacio debajo del título */
+}
+
+/* Estilo para los campos de entrada */
+input {
+    border: 1px solid #ccc; /* Borde gris claro */
+    border-radius: 5px; /* Bordes redondeados */
+    padding: 10px; /* Espaciado interno */
+    width: 100%; /* Los inputs ocupan el ancho completo */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    margin-bottom: 10px; /* Espacio entre campos */
+}
+
+/*Estilo para el botón de login*/
+.btn-login {
+    background-color: #0056b3; 
+    color: white; /* Texto blanco */
+    padding: 10px 20px; /* Espaciado interno */
+    border: none; /* Sin borde adicional */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cursor cambia a mano */
+    transition: background-color 0.3s; /* Transición suave */
+}
+
+
