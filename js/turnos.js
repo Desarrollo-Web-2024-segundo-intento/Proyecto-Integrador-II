@@ -36,3 +36,14 @@ botonVolver.addEventListener("click", () => {
     vistaDatos_Personales.style.display ="none"
 
 })
+
+const botonGrabar = document.getElementById("datos_personales");
+botonGrabar.addEventListener("click", () => {
+    alert("Funcion que valida y guarda los datos en la BD del sistema");
+    menuPrincipal.style.display = "flex";
+    vistaMisTurnos.style.display = "none";
+    vistaNuevoTurno.style.display = "none";
+    divBotonVolver.style.display = "none";
+    vistaDatos_Personales.style.display ="none"
+
+})
