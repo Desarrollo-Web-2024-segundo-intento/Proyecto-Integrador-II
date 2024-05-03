@@ -23,6 +23,12 @@ body {
   padding: 20px;
 }
 
+.btn {
+  background-color: #151635;
+  border: none;
+  color: #ffffff;
+}
+
 /* Estilos del encabezado */
 header {
   background-color: #151635;
