@@ -185,4 +185,7 @@
   .espacio_5px {
     height: 10px; /* Espacio vertical entre elementos */
   /* } */
-  
+  .obra-social img {
+    width: 60%; 
+    height: 70%;
+  }
