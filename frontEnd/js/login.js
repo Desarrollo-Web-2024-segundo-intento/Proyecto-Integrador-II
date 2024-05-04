@@ -1,3 +1,8 @@
+const seccionLogin = document.getElementById("login-section")
+const vistaDatos_Personales = document.getElementById("registro_pacientes");
+const divBotonVolver = document.getElementById("botonVolver");
+
+
 function login(event) {
     event.preventDefault(); // Prevenir el comportamiento por defecto del formulario
 
@@ -29,3 +34,28 @@ function registro(event) {
         alert("Por favor, complete todos los campos.");
     }
 }
+
+// Formulario para registrarse
+const botonRegistro = document.getElementById("datos_personales_boton");
+botonRegistro.addEventListener("click", () => {
+    seccionLogin.style.display = "none";
+    vistaDatos_Personales.style.display = "block";
+    divBotonVolver.style.display = "flex";
+})
+
+const botonVolver = document.getElementById("volver");
+botonVolver.addEventListener("click", () => {
+    seccionLogin.style.display = "block";
+    divBotonVolver.style.display = "none";
+    vistaDatos_Personales.style.display ="none"
+
+})
+
+const botonGrabar = document.getElementById("datos_personales");
+botonGrabar.addEventListener("click", () => {
+    alert("Funcion que valida y guarda los datos en la BD del sistema");
+    setTimeout(function(){
+        window.location.href = '../index.html' //en barra de navegacion deberia haber algo que indique ya iniciamos sesion como "pepito sanchez"(ejemplo)
+    },1000)
+
+})
