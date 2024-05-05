@@ -2,11 +2,13 @@ const opcionesEspecialidades = document.getElementById("especialidad");
 const opcionesProfesionales = document.getElementById("profesional");
 const opcionesFechas = document.getElementById("fecha");
 const opcionesHoras = document.getElementById("hora");
+const opcionesObraSocial = document.getElementById("obraSocial");
 
 const listadoEspecialidades = "json/especialidades.json";
 const listadoProfesionales = "json/profesionales.json";
 const listadoFechas = "json/fecha.json";
 const listadoHoras = "json/hora.json";
+const listadoObraSocial = "json/obraSocial.json";
 
 //Petición a archivo local "especialidades.json" para cargar opciones del select de especialidades
 
@@ -91,6 +93,19 @@ opcionesProfesionales.addEventListener("input", () => {
 
 })
 
+//Petición a archivo local "obraSocial.json" para cargar opciones del select de Obra Social
+
+fetch(listadoObraSocial)
+    .then(respuesta => respuesta.json())
+    .then(datos => {
+        opcionesObraSocial.innerHTML = `<option value="0" selected>Obra Social</option>`
+        datos.forEach(obraSocial => {
+            opcionesObraSocial.innerHTML += `<option value="${obraSocial.nombre}">${obraSocial.nombre}</option>`;
+        })
+    })
+    .catch(error => console.log(error)) 
+
+    
 /*Se dispara el evento input al seleccionar una fecha, se hacen peticiones tanto al archivo local "profesionales.json" y "horas.json" 
 para obtener los datos necesarios para deshabilitar las opciones de hora de la fecha seleccionada en las que el profesional en 
 cuestión no posea turnos disponibles*/
