@@ -11,8 +11,9 @@
   <link rel="stylesheet" href="css/styles.css" />
   <!-- Enlace al archivo CSS -->
   <link rel="stylesheet" href="css/stylesAcercaDe.css" />
+  <link rel="stylesheet" href="css/crud_general.css">
   <link rel="stylesheet" href="./css/login.css" />
-
+  
 </head>
 
 <body>
@@ -27,7 +28,10 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="../index.html">Inicio</a>
+              <a class="nav-link" aria-current="page" href="../index.html">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="servicios.html">Servicios</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="turnos.html">Turnos</a>
@@ -36,13 +40,10 @@
               <a class="nav-link" href="acercade.html">Acerca de</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="servicios.html">Servicios</a>
-            </li>
-            <li class="nav-item">
               <a class="nav-link" href="contacto.html">Contacto</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="login.html">Login</a>
+              <a class="nav-link active" href="login.html">Iniciar Sesion</a>
             </li>
           </ul>
         </div>
@@ -62,57 +63,89 @@
   <!------------------------------------------- LOGIN -------------------->
 
 
-  <body>
-    <div class="login-container">
-      <h3 class="text-center">Acceso para pacientes</h3>
-      <form id="login-form" onsubmit="login(event)">
-        <div class="form-group">
-          <label for="usuario">Usuario o Correo Electrónico:</label>
-          <input type="text" id="usuario" name="usuario" placeholder="Usuario o Correo">
-        </div>
+  <div class="login-container" id="login-section">
+    <h3 class="text-center">Acceso para pacientes</h3>
+    <form id="login-form" onsubmit="login(event)">
+      <div class="form-group">
+        <label for="usuario">Usuario o Correo Electrónico:</label>
+        <input type="text" id="usuario" name="usuario" placeholder="Usuario o Correo">
+      </div>
 
-        <div class="form-group">
-          <label for="contrasena">Contraseña:</label>
-          <input type="password" id="contrasena" name="contrasena" placeholder="Contraseña">
-        </div>
+      <div class="form-group">
+        <label for="contrasena">Contraseña:</label>
+        <input type="password" id="contrasena" name="contrasena" placeholder="Contraseña">
+      </div>
 
-        <button type="submit" class="btn-login">Iniciar Sesión</button>
-      </form>
-      <div class="espacio_5px">
+      <button type="submit" class="btn-login">Iniciar Sesión</button>
+      <p class="mt-5">¿No tenés cuenta?</p>
+      <button type="submit" id="datos_personales_boton" class="btn btn-ms col-4">Registrate</button>
+    
+    </form>
+    <div class="espacio_5px"></div>
+  </div>
 
+  <div id="registro_pacientes" class="row align-items-center">
+    <h2 class="text-center">Datos Personales</h2>
+
+    <div class="row m-4">
+
+      <!-- <label for="apellido">Apellido:</label> -->
+      <input class="input_registro" type="text" id="apellido" name="apellido" placeholder="Apellido">
+      <div class="espacio_5px"></div>
+      <!-- <label for="nombre">Nombre:</label> -->
+      <input class="input_registro" type="text" id="nombre" name="nombre" placeholder="Nombre">
+      <div class="espacio_5px"></div>          
+      <!-- <label for="telefono">Teléfono:</label> -->
+      <input class="input_registro" type="tel" id="telefono" name="telefono" placeholder="Telefono" required>
+      <div class="espacio_5px"></div>            
+      <!-- <label for="dni">DNI:</label> -->
+      <input class="input_registro" type="text" id="dni" name="dni" placeholder="DNI" required>
+      <div class="espacio_5px"></div>
+      <!-- <label for="mutual">Mutual:</label> -->
+      <input class="input_registro" type="text" id="mutual" name="mutual" placeholder="Mutual" required>
+      <div class="espacio_5px"></div>
+      <!-- <label for="email">E-Mail:</label> -->
+      <input class="input_registro" type="text" id="email" name="email" placeholder="Email" required>
+    </div>
+
+    <div class="mi_clase">
+      <button type="submit" id="datos_personales" class="posicion_boton_grabar_datospersonales">Grabar</button>
+    </div>
+  </div>
+
+  <div class="row" id="botonVolver">
+    <button class="btn btn-sm col-2 m-4 align-self-center" id="volver">Volver</button>
+  </div>
+
+
+
+  <footer id="footerTurnos">
+    <div class="container row row-cols-1 row-cols-sm-3">
+      <div>
+        <h3>Reservas Médicas Online</h3>
+      </div>
+      <div class="contact-info">
+        <h3>Contacto</h3>
+        <p><strong>Teléfono:</strong> 08002223456</p>
+        <p><strong>Email:</strong> info@reservamedica.com</p>
+        <p><strong>Dirección:</strong> Av. Valparaiso 1200 Cordoba Argentina</p>
+      </div>
+      <div class="useful-links">
+        <h3>Enlaces Útiles</h3>
+        <ul>
+          <li><a href="preguntasfrecuentes.html">Preguntas Frecuentes</a></li>
+          <li><a href="terminosycondiciones.html">Términos y Condiciones</a></li>
+          <li><a href="politicas.html">Política de Privacidad</a></li>
+        </ul>
       </div>
     </div>
 
-    <script src="./js/login.js"></script>
-
-
-
-
-    <footer id="footerTurnos">
-      <div class="container row row-cols-1 row-cols-sm-3">
-        <div>
-          <h3>Reservas Médicas Online</h3>
-        </div>
-        <div class="contact-info">
-          <h3>Contacto</h3>
-          <p><strong>Teléfono:</strong> 08002223456</p>
-          <p><strong>Email:</strong> info@reservamedica.com</p>
-          <p><strong>Dirección:</strong> Av. Valparaiso 1200 Cordoba Argentina</p>
-        </div>
-        <div class="useful-links">
-          <h3>Enlaces Útiles</h3>
-          <ul>
-            <li><a href="./frontEnd/preguntasfrecuentes.html">Preguntas Frecuentes</a></li>
-          <li><a href="./frontEnd/terminosycondiciones.html">Términos y Condiciones</a></li>
-          <li><a href="./frontEnd/politicas.html">Política de Privacidad</a></li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="copyright">
-        <p>&copy; 2024 Reserva Médica Online. Todos los derechos reservados.</p>
-      </div>
-    </footer>
-  </body>
+    <div class="copyright">
+      <p>&copy; 2024 Reserva Médica Online. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script src="./js/login.js"></script>
+</body>
 
 </html>
