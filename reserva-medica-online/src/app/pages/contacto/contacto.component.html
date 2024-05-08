@@ -1,0 +1,30 @@
+<main>
+    <div class="form-container">
+        <form id="contactForm" onsubmit="return validarFormulario()">
+            <h2 class="mb-4">¡ENVIÁ TU CONSULTA!</h2>
+            <div class="mb-3">
+                <label for="nombre" class="form-label">Tu Nombre:</label>
+                <div class="input-group">
+                    <div class="input-group-addon"><i class="bi bi-person-fill"></i></div>
+                    <input type="text" class="form-control" id="nombre" name="nombre" required>
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Tu Correo Electrónico:</label>
+                <div class="input-group">
+                    <div class="input-group-addon"><i class="bi bi-envelope-fill"></i></div>
+                    <input type="email" class="form-control" id="email" name="email" required>
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="mensaje" class="form-label">Mensaje:</label>
+                <div class="input-group">
+                    <div class="input-group-addon"><i class="bi bi-chat-dots-fill"></i></div>
+                    <textarea class="form-control" id="mensaje" name="mensaje" rows="8" required></textarea>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Enviar Mensaje</button>
+        </form>
+    </div>
+</main>
+
