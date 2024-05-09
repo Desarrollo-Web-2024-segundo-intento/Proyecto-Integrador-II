@@ -1,0 +1,48 @@
+.footerTurnos {
+    background-color: #151635;
+    color: #fff;
+    padding: 20px;
+  }
+  
+  .containerFooter {
+    display: flex;
+    justify-content: space-between; 
+    align-items: flex-center;
+  }
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+  
+  .footerTurnos  h3 {
+    margin-top: 0;
+  }
+  
+  .footerTurnos  ul {
+    padding: 0;
+  }
+  
+  .footerTurnos  ul li {
+    margin-bottom: 5px;
+  }
+  
+  .footerTurnos  ul li a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  /* Estilos del mensaje de derechos de autor */
+  .footerTurnos  .copyright {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  div.banner {
+    margin-bottom: 12px;
+  }
+  div.row {
+    justify-content: space-around;
+    margin-bottom: 10px;
+    /* background-color: red; */
+}

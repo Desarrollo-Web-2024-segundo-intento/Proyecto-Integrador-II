@@ -1,0 +1,72 @@
+.form-container{
+  margin-bottom: 30px;
+
+}
+form {
+    max-width: 400px;
+    margin: 0 auto; 
+  }
+  
+  form label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  form input[type="text"],
+  form input[type="password"],
+  form input[type="email"],
+  #contactForm textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+  }
+  
+  form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  
+  form button:hover {
+    background-color: #0056b3;
+  }
+  /* Para formulario de paciente nuevo */
+  .form-row {
+    display: flex;
+    margin-bottom: 10px;
+  }
+  
+  .form-row label {
+    flex: 1;
+    margin-right: 10px;
+    text-align: right;
+  }
+  
+  .form-row input,
+  .form-row select {
+    flex: 2;
+  }
+  
+  @media only screen and (max-width: 600px) {
+    section {
+      padding: 0em;
+    }
+    .form-row {
+      flex-direction: column;
+    }
+  
+    .form-row label {
+      flex: none;
+      text-align: left;
+    }
+  
+    .form-row input,
+    .form-row select {
+      flex: none;
+      width: 100%;
+    }
+}
