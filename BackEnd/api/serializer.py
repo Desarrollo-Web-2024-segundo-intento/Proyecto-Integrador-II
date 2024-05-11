@@ -1,0 +1,40 @@
+from rest_framework import serializers
+# from .models import Especialidad
+# from .models import Estadoturno
+# from .models import Obra_Social
+# from .models import Profesional
+from .models import Paciente
+# from .models import Turnos
+
+
+
+# #1
+# class EspecialidadSerializer(serializers.ModelSerializer):
+#     class Meta:
+#         model=Especialidad
+#         fields='__all__'#Para que tome todos los campos
+# #2
+# class EstadoturnoSerializer(serializers.ModelSerializer):
+#     class Meta:
+#         model = Estadoturno
+#         fields='__all__'#Para que tome todos los campos
+# #3
+# class ObraSocialSerializer(serializers.ModelSerializer):
+#     class Meta:
+#         model= Obra_Social
+#         fields='__all__'#Para que tome todos los campos
+# #4    
+# class ProfesionalSerializer(serializers.ModelSerializer):
+#     class Meta:
+#         model= Profesional
+#         fields='__all__'        
+#5
+class PacienteSerializer(serializers.ModelSerializer):
+    class Meta:
+        model=Paciente
+        fields='__all__'#Para que tome todos los campos  
+# #6
+# class TurnosSerializer(serializers.ModelSerializer):
+#     class Meta:
+#         model = Turnos
+#         fields='__all__'#Para que tome todos los campos  
