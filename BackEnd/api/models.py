@@ -6,10 +6,10 @@ import datetime
 # class Especialidad(models.Model):
 #     especialidad = models.CharField(max_length=100)
 # #2
- class Estadoturno(models.Model):
+class Estadoturno(models.Model):
    estado_turno = models.CharField(max_length=100)
 # #3
- class Obra_Social(models.Model):
+class Obra_Social(models.Model):
      nombre_obra = models.CharField(max_length=100)
      descripcion_obra = models.CharField(max_length=100)
      contacto_obra = models.CharField(max_length=100)
