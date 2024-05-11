@@ -13,12 +13,12 @@ import datetime
      nombre_obra = models.CharField(max_length=100)
      descripcion_obra = models.CharField(max_length=100)
      contacto_obra = models.CharField(max_length=100)
-# #4   
-# class Profesional(models.Model):
-#     nombre = models.CharField(max_length=100)
-#     apellido = models.CharField(max_length=100)
-#     # especialidad_id = models.CharField(max_length=100)
-#     especialidad = models.ForeignKey(Especialidad, on_delete=models.CASCADE, related_name='profesionales')  # Clave foránea
+   
+class Profesional(models.Model):
+    nombre = models.CharField(max_length=100)
+    apellido = models.CharField(max_length=100)
+    # especialidad_id = models.CharField(max_length=100)
+    especialidad = models.ForeignKey(Especialidad, on_delete=models.CASCADE, related_name='profesionales')  # Clave foránea
 #5
 class Paciente(models.Model):
     nombre = models.CharField(max_length=100)
