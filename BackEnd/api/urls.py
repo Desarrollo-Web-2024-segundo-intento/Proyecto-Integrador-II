@@ -9,7 +9,7 @@ router=routers.DefaultRouter()
 # #1
 # router.register('especialidad', views.EspecialidadViewSet)
 # #2
-# router.register('estado_turno', views.EstadoturnoViewSet)
+router.register('estado_turno', views.EstadoturnoViewSet)
 # #3
 # router.register('obra_social', views.ObraSocialViewSet)
 # #4
