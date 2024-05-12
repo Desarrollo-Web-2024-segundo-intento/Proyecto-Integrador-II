@@ -178,13 +178,6 @@
     max-height: 700px; 
     transition: max-height 0.3s ease;
   }
-  /* 
-  .toggle:checked + h3 label::after {
-    content: "Cerrar"; 
-  }
-  .espacio_5px {
-    height: 10px; /* Espacio vertical entre elementos */
-  /* } */
   .obra-social img {
     width: 60%; 
     height: 70%;
