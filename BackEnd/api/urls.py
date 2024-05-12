@@ -16,8 +16,8 @@ router.register('estado_turno', views.EstadoturnoViewSet)
 router.register('profesionales', views.ProfesionalViewSet)
 #5
 router.register('paciente', views.PacienteViewSet)
-# #6
-# router.register('turnos_todos', views.TurnosViewSet)
+#6
+router.register('turnos_todos', views.TurnosViewSet)
 
 urlpatterns = [
     path('', include(router.urls))

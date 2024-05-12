@@ -1,6 +1,6 @@
 from rest_framework import serializers
 # from .models import Especialidad
- from .models import Estadoturno
+from .models import Estadoturno
 # from .models import Obra_Social
 from .models import Profesional
 from .models import Paciente
@@ -34,7 +34,7 @@ class PacienteSerializer(serializers.ModelSerializer):
         model=Paciente
         fields='__all__'#Para que tome todos los campos  
 # #6
-# class TurnosSerializer(serializers.ModelSerializer):
-#     class Meta:
-#         model = Turnos
-#         fields='__all__'#Para que tome todos los campos  
+class TurnosSerializer(serializers.ModelSerializer):
+     class Meta:
+         model = Turnos
+         fields='__all__'#Para que tome todos los campos  
