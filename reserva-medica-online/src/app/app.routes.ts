@@ -1,5 +1,4 @@
 import { Routes } from '@angular/router';
-import { IniciarSesionComponent } from './auth/iniciar-sesion/iniciar-sesion.component';
 import { AcercaDeComponent } from './pages/acerca-de/acerca-de.component';
 import { ContactoComponent } from './pages/contacto/contacto.component';
 import { InicioComponent } from './pages/inicio/inicio.component';
