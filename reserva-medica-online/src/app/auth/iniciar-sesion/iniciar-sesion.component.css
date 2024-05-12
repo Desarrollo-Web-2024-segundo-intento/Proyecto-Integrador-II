@@ -1,18 +1,24 @@
-/* Estilo general para el cuerpo de la pÃ¡gina
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f5f5f5; 
-    margin: 0;
-    padding: 20px;
-} */
+.logo_login{
+    /* background-color: cyan; */
+    width: 100%;
+    height: auto;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+  }
 div.row {
     justify-content: space-around;
     margin-bottom: 10px;
 }
 
 #calendar {
+    /* width: 10rem;
+    margin: 2rem; */
     width: 10rem;
     margin: 2rem;
+    margin: auto;
 }
 
 /* Contenedor del formulario de login */
@@ -43,12 +49,15 @@ input {
 }
 
 /*Estilo para el botÃ³n de login*/
-.btn-login {
-    background-color: #0056b3; 
+.btn-login{
+    background-color: #007bff;
     color: white; /* Texto blanco */
     padding: 10px 20px; /* Espaciado interno */
     border: none; /* Sin borde adicional */
     border-radius: 5px; /* Bordes redondeados */
     cursor: pointer; /* Cursor cambia a mano */
-    transition: background-color 0.3s; /* TransiciÃ³n suave */
+    /* transition: background-color 0.3s; TransiciÃ³n suave */
+}
+.btn_login:hover{
+    background-color: #0056b3; 
 }
