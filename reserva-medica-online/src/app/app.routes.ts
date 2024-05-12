@@ -1,11 +1,12 @@
 import { Routes } from '@angular/router';
+import { IniciarSesionComponent } from './auth/iniciar-sesion/iniciar-sesion.component';
 import { AcercaDeComponent } from './pages/acerca-de/acerca-de.component';
 import { ContactoComponent } from './pages/contacto/contacto.component';
-import { ServiciosComponent } from './pages/servicios/servicios.component';
 import { InicioComponent } from './pages/inicio/inicio.component';
-import { IniciarSesionComponent } from './auth/iniciar-sesion/iniciar-sesion.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
+import { PoliticasComponent } from './pages/politicas/politicas.component';
 import { PreguntasComponent } from './pages/preguntas/preguntas.component';
+import { ServiciosComponent } from './pages/servicios/servicios.component';
 
 
 export const routes: Routes = [
@@ -16,6 +17,7 @@ export const routes: Routes = [
    {path:"servicios", component: ServiciosComponent},
    {path:"iniciarSesion", component: IniciarSesionComponent},
    {path:"preguntas", component: PreguntasComponent},
+   {path:"politicas", component: PoliticasComponent},
    {path:"", redirectTo:"/inicio", pathMatch:"full"},
    {path: "**", component:  NotFoundComponent}
 

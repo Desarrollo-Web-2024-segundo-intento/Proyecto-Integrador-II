@@ -1,13 +1,14 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { HeaderComponent } from "./shared/header/header.component";
-import { FooterComponent } from "./shared/footer/footer.component";
-import { InicioComponent } from './pages/inicio/inicio.component';
-import { ServiciosComponent } from './pages/servicios/servicios.component';
-import { ContactoComponent } from './pages/contacto/contacto.component';
-import { AcercaDeComponent } from './pages/acerca-de/acerca-de.component';
 import { IniciarSesionComponent } from './auth/iniciar-sesion/iniciar-sesion.component';
+import { AcercaDeComponent } from './pages/acerca-de/acerca-de.component';
+import { ContactoComponent } from './pages/contacto/contacto.component';
+import { InicioComponent } from './pages/inicio/inicio.component';
+import { PoliticasComponent } from './pages/politicas/politicas.component';
 import { PreguntasComponent } from './pages/preguntas/preguntas.component';
+import { ServiciosComponent } from './pages/servicios/servicios.component';
+import { FooterComponent } from "./shared/footer/footer.component";
+import { HeaderComponent } from "./shared/header/header.component";
 
 @Component({
     selector: 'app-root',
@@ -15,7 +16,7 @@ import { PreguntasComponent } from './pages/preguntas/preguntas.component';
     templateUrl: './app.component.html',
     styleUrl: './app.component.css',
     imports: [RouterOutlet, HeaderComponent, FooterComponent, InicioComponent, ServiciosComponent, ContactoComponent,
-      AcercaDeComponent, IniciarSesionComponent, PreguntasComponent]
+      AcercaDeComponent, IniciarSesionComponent, PreguntasComponent, PoliticasComponent]
 })
 export class AppComponent {
   title = 'reserva-medica-online';
