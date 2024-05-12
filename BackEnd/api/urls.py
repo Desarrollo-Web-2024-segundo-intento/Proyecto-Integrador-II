@@ -12,8 +12,8 @@ router=routers.DefaultRouter()
 router.register('estado_turno', views.EstadoturnoViewSet)
 # #3
 # router.register('obra_social', views.ObraSocialViewSet)
-# #4
-# router.register('profesionales', views.ProfesionalViewSet)
+
+router.register('profesionales', views.ProfesionalViewSet)
 #5
 router.register('paciente', views.PacienteViewSet)
 # #6

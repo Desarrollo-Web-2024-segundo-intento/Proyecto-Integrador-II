@@ -2,7 +2,7 @@ from rest_framework import serializers
 # from .models import Especialidad
  from .models import Estadoturno
 # from .models import Obra_Social
-# from .models import Profesional
+from .models import Profesional
 from .models import Paciente
 # from .models import Turnos
 
@@ -23,11 +23,11 @@ class EstadoturnoSerializer(serializers.ModelSerializer):
 #     class Meta:
 #         model= Obra_Social
 #         fields='__all__'#Para que tome todos los campos
-# #4    
-# class ProfesionalSerializer(serializers.ModelSerializer):
-#     class Meta:
-#         model= Profesional
-#         fields='__all__'        
+    
+class ProfesionalSerializer(serializers.ModelSerializer):
+    class Meta:
+        model= Profesional
+        fields='__all__'        
 #5
 class PacienteSerializer(serializers.ModelSerializer):
     class Meta:
