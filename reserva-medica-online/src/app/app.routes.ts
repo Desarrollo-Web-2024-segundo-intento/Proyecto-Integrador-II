@@ -8,6 +8,7 @@ import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { PoliticasComponent } from './pages/politicas/politicas.component';
 import { PreguntasComponent } from './pages/preguntas/preguntas.component';
 import { ServiciosComponent } from './pages/servicios/servicios.component';
+import { TerminosYCondicionesComponent } from './pages/terminos-y-condiciones/terminos-y-condiciones.component';
 
 
 export const routes: Routes = [
@@ -19,8 +20,10 @@ export const routes: Routes = [
    {path:"iniciarSesion", component: IniciarSesionComponent},
    {path:"turnos", component: TurnosComponent},
    {path:"preguntas", component: PreguntasComponent},
+   {path: "terminos-y-condiciones", component: TerminosYCondicionesComponent},
    {path:"politicas", component: PoliticasComponent},
    {path:"", redirectTo:"/inicio", pathMatch:"full"},
    {path: "**", component:  NotFoundComponent}
+
 
 ];
