@@ -7,11 +7,11 @@ from api import views
 
 router=routers.DefaultRouter()
 # #1
-# router.register('especialidad', views.EspecialidadViewSet)
+router.register('especialidad', views.EspecialidadViewSet)
 # #2
 router.register('estado_turno', views.EstadoturnoViewSet)
 # #3
-# router.register('obra_social', views.ObraSocialViewSet)
+router.register('obra_social', views.ObraSocialViewSet)
 
 router.register('profesionales', views.ProfesionalViewSet)
 #5
