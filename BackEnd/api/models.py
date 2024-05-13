@@ -3,8 +3,8 @@ from django.utils import timezone
 import datetime
 
 # #1
-# class Especialidad(models.Model):
-#     especialidad = models.CharField(max_length=100)
+class Especialidad(models.Model):
+    especialidad = models.CharField(max_length=100)
 # #2
 class Estadoturno(models.Model):
    estado_turno = models.CharField(max_length=100)
