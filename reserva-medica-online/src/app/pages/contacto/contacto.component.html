@@ -1,30 +1,33 @@
 <main>
-    <div class="form-container">
-        <form id="contactForm" onsubmit="return">
-            <h2 class="mb-4">¡ENVIÁ TU CONSULTA!</h2>
-            <div class="mb-3">
-                <label for="nombre" class="form-label">Tu Nombre:</label>
-                <div class="input-group">
-                    <div class="input-group-addon"><i class="bi bi-person-fill"></i></div>
-                    <input type="text" class="form-control" id="nombre" name="nombre" required>
-                </div>
-            </div>
-            <div class="mb-3">
-                <label for="email" class="form-label">Tu Correo Electrónico:</label>
-                <div class="input-group">
-                    <div class="input-group-addon"><i class="bi bi-envelope-fill"></i></div>
-                    <input type="email" class="form-control" id="email" name="email" required>
-                </div>
-            </div>
-            <div class="mb-3">
-                <label for="mensaje" class="form-label">Mensaje:</label>
-                <div class="input-group">
-                    <div class="input-group-addon"><i class="bi bi-chat-dots-fill"></i></div>
-                    <textarea class="form-control" id="mensaje" name="mensaje" rows="8" required></textarea>
-                </div>
-            </div>
-            <button type="submit" class="btn btn-primary">Enviar Mensaje</button>
-        </form>
-    </div>
+  <div class="form-container">
+    <form [formGroup]="form" (ngSubmit)="onEnviar($event)">
+      <h2 class="mb-4">¡ENVIÁ TU CONSULTA!</h2>
+      <div class="mb-3">
+        <label for="nombre" class="form-label">Tu Nombre:</label>
+        <input type="text" class="form-control" id="nombre" formControlName="nombre">
+        <div *ngIf="Nombre?.errors?.['required'] && Nombre?.touched" class="text-danger">
+          El Nombre es obligatorio.
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label for="email" class="form-label">Tu Correo Electrónico:</label>
+        <input type="email" class="form-control" id="email" formControlName="email">
+        <div *ngIf="Email?.touched && Email?.errors?.['invalidEmail']" class="text-danger">
+          Introducir una dirección de correo electrónico válida con el formato aaa&#64;aa.com
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label for="mensaje" class="form-label">Mensaje:</label>
+        <textarea class="form-control" id="mensaje" formControlName="mensaje" rows="8"></textarea>
+        <div *ngIf="Mensaje?.errors?.['required'] && Mensaje?.touched" class="text-danger">
+          El Mensaje es obligatorio.
+        </div>
+      </div>
+
+      <button type="submit" class="btn btn-primary">Enviar Mensaje</button>
+    </form>
+  </div>
 </main>
 
