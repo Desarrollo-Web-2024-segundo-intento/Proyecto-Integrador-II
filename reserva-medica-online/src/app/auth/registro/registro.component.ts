@@ -78,7 +78,8 @@ export class RegistroComponent implements OnInit {
   mutualValidator(): ValidatorFn {
     return (control: AbstractControl): { [key: string]: any } | null => {
       const mutual = control.value;
-      const regex = /^[A-Za-z]{3,}$/;
+      //const regex = /^[A-Za-z]{3,}$/;
+      const regex = /^([a-zA-ZáéíóúüÁÉÍÓÚÜñÑ]{2,60}[\,\-\.]{0,1}[\s]{0,1}){1,3}$/;
       return regex.test(mutual)? null : { 'invalidMutual': { value: control.value } };
     };
   }
