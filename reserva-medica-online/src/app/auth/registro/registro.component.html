@@ -1,3 +1,48 @@
-<p>
-  registro works!
-</p>
+<div class="logo_login">
+  <img id="calendar" src="assets/img/time-and-calendar.png" alt="">
+</div>
+<form [formGroup]="form" (ngSubmit)="onEnviar($event)">
+  <div id="registro_pacientes" class="row align-items-center singin-container">
+    <h2 class="text-center">Datos Personales</h2>
+    <div class="row p-4">
+      <input class="input_registro" type="text" id="apellido" formControlName="apellido" placeholder="Apellido">
+      <div *ngIf="Apellido?.touched && Apellido?.errors?.['invalidName']" class="text-danger">
+        El Apellido debe tener al menos 3 caracteres y no debe contener números.
+      </div>
+
+      <input class="input_registro" type="text" id="nombre" formControlName="nombre" placeholder="Nombre">
+      <div *ngIf="Nombre?.touched && Nombre?.errors?.['invalidName']" class="text-danger">
+        El Nombre debe tener al menos 3 caracteres y no debe contener números.
+      </div>
+
+      <input class="input_registro" type="tel" id="telefono" formControlName="telefono" placeholder="Telefono">
+      <div *ngIf="Telefono?.touched && Telefono?.errors?.['invalidTelefono']" class="text-danger">
+        El Telefono debe tener 10 digitos, sin espacio ni 0 en codigo de provincia. Ej: 3518888888
+      </div>
+
+      <input class="input_registro" type="text" id="dni" formControlName="dni" placeholder="DNI">
+      <div *ngIf="Dni?.touched && Dni?.errors?.['invalidDni']" class="text-danger">
+        El DNI debe tener entre 7 a 8 caracteres numéricos.
+      </div>
+
+      <input class="input_registro" type="text" id="mutual" formControlName="mutual" placeholder="Mutual">
+      <div *ngIf="Mutual?.touched && Mutual?.errors?.['invalidMutual']" class="text-danger">
+        El Nombre debe tener al menos 3 caracteres y no debe contener números.
+      </div>
+
+      <input class="input_registro" type="text" id="email" formControlName="email" placeholder="Email">
+      <div *ngIf="Email?.touched && Email?.errors?.['invalidEmail']" class="text-danger">
+        Introducir una dirección de correo electrónico válida con el formato aaa&#64;aa.com
+      </div>
+
+      <input class="input_registro" type="text" id="password" formControlName="password" placeholder="Contraseña">
+      <div *ngIf="Password?.touched && Password?.errors?.['passwordStrength']" class="text-danger">
+        La contraseña debe tener al menos 8 caracteres y maximo 20, al menos una letra mayúscula, un número y un símbolo.
+      </div>
+    </div>
+
+    <div class="mi_clase">
+      <button type="submit" id="datos_personales" class="posicion_boton_grabar_datospersonales btn-singin">Registrarse</button>
+    </div>
+  </div>
+</form>
