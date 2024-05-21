@@ -9,7 +9,7 @@ import { PoliticasComponent } from './pages/politicas/politicas.component';
 import { PreguntasComponent } from './pages/preguntas/preguntas.component';
 import { ServiciosComponent } from './pages/servicios/servicios.component';
 import { TerminosYCondicionesComponent } from './pages/terminos-y-condiciones/terminos-y-condiciones.component';
-
+import { RegistroComponent } from './auth/registro/registro.component';
 
 export const routes: Routes = [
    {path:"inicio", component: InicioComponent},
@@ -22,6 +22,7 @@ export const routes: Routes = [
    {path:"preguntas", component: PreguntasComponent},
    {path: "terminos-y-condiciones", component: TerminosYCondicionesComponent},
    {path:"politicas", component: PoliticasComponent},
+   {path: "registro", component: RegistroComponent},
    {path:"", redirectTo:"/inicio", pathMatch:"full"},
    {path: "**", component:  NotFoundComponent}
 
