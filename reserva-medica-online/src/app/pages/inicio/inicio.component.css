@@ -1,0 +1,17 @@
+/* Estilos del contenido principal */  
+  section {
+    padding: 2em;
+  }
+  
+  .slide img {
+    height: 60vh;
+  }
+  
+  .portada {
+    height: 200px;
+    object-fit: cover;
+    object-position: center; 
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.475);
+  
+  }  

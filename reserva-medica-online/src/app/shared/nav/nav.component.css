@@ -1,0 +1,21 @@
+  
+  nav ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  nav ul li {
+    display: inline;
+    margin-right: 8px; /* Ajustar el margen entre elementos del menú */
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    font-size: 18px !important; /* Tamaño de fuente de los enlaces del menú */
+  }
+
+a.active{
+  color:#fff;
+  font-weight: 800;
+
+}
