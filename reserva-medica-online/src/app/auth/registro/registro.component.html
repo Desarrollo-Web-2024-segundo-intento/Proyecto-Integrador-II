@@ -1,48 +1,84 @@
 <div class="logo_login">
   <img id="calendar" src="assets/img/time-and-calendar.png" alt="">
 </div>
-<form [formGroup]="form" (ngSubmit)="onEnviar($event)">
+<form [formGroup]="registroForm" >
   <div id="registro_pacientes" class="row align-items-center singin-container">
     <h2 class="text-center">Datos Personales</h2>
     <div class="row p-4">
       <input class="input_registro" type="text" id="apellido" formControlName="apellido" placeholder="Apellido">
-      <div *ngIf="Apellido?.touched && Apellido?.errors?.['invalidName']" class="text-danger">
-        El Apellido debe tener al menos 3 caracteres y no debe contener números.
+      <div *ngIf="apellido.invalid && (apellido.dirty || apellido.touched)" class="text-danger">
+        <div *ngIf="apellido.errors?.['required']">
+          El Apellido es requerido.
+        </div>
+        <div *ngIf="apellido.errors?.['invalidName']">
+          Debe tener al menos 3 caracteres y no debe contener números.
+        </div>
       </div>
 
       <input class="input_registro" type="text" id="nombre" formControlName="nombre" placeholder="Nombre">
-      <div *ngIf="Nombre?.touched && Nombre?.errors?.['invalidName']" class="text-danger">
-        El Nombre debe tener al menos 3 caracteres y no debe contener números.
+      <div *ngIf="nombre.invalid && (nombre.dirty || nombre.touched)" class="text-danger">
+        <div *ngIf="nombre.errors?.['required']">
+          El Nombre es requerido.
+        </div>
+        <div *ngIf="nombre.errors?.['invalidName']">
+          Debe tener al menos 3 caracteres y no debe contener números.
+        </div>
       </div>
 
       <input class="input_registro" type="tel" id="telefono" formControlName="telefono" placeholder="Telefono">
-      <div *ngIf="Telefono?.touched && Telefono?.errors?.['invalidTelefono']" class="text-danger">
-        El Telefono debe tener 10 digitos, sin espacio ni 0 en codigo de provincia. Ej: 3518888888
+      <div *ngIf="telefono.invalid && (telefono.dirty || nombre.touched)" class="text-danger">
+        <div *ngIf="telefono.errors?.['required']">
+          El Telefono es requerido.
+        </div>
+        <div *ngIf="telefono.errors?.['invalidTelefono']">
+          Debe tener 10 digitos, sin espacio ni 0 en codigo de provincia. Ej: 3518888888
+        </div>
       </div>
 
       <input class="input_registro" type="text" id="dni" formControlName="dni" placeholder="DNI">
-      <div *ngIf="Dni?.touched && Dni?.errors?.['invalidDni']" class="text-danger">
-        El DNI debe tener entre 7 a 8 caracteres numéricos.
+      <div *ngIf="dni.invalid && (dni.dirty || dni.touched)" class="text-danger">
+        <div *ngIf="dni.errors?.['required']">
+          El DNI es requerido.
+        </div>
+        <div *ngIf="dni.errors?.['invalidDni']">
+          Debe tener entre 7 a 8 caracteres numéricos.
+        </div>
       </div>
 
       <input class="input_registro" type="text" id="mutual" formControlName="mutual" placeholder="Mutual">
-      <div *ngIf="Mutual?.touched && Mutual?.errors?.['invalidMutual']" class="text-danger">
-        El Nombre debe tener al menos 3 caracteres y no debe contener números.
+      <div *ngIf="mutual.invalid && (mutual.dirty || mutual.touched)" class="text-danger">
+        <div *ngIf="mutual.errors?.['required']">
+          La Mutual es requerida.
+        </div>
+        <div *ngIf="mutual.errors?.['invalidMutual']">
+          Debe tener al menos 3 caracteres y no debe contener números.
+        </div>
+
       </div>
 
       <input class="input_registro" type="text" id="email" formControlName="email" placeholder="Email">
-      <div *ngIf="Email?.touched && Email?.errors?.['invalidEmail']" class="text-danger">
-        Introducir una dirección de correo electrónico válida con el formato aaa&#64;aa.com
+      <div *ngIf="email.invalid && (email.dirty || email.touched)" class="text-danger">
+        <div *ngIf="email.errors?.['required']">
+          El Email es requerido.
+        </div>
+        <div *ngIf="email.errors?.['invalidEmail']">
+          Introducir una dirección de correo electrónico válida con el formato aaa&#64;aa.com
+        </div>
       </div>
 
       <input class="input_registro" type="text" id="password" formControlName="password" placeholder="Contraseña">
-      <div *ngIf="Password?.touched && Password?.errors?.['passwordStrength']" class="text-danger">
-        La contraseña debe tener al menos 8 caracteres y maximo 20, al menos una letra mayúscula, un número y un símbolo.
+      <div *ngIf="password.invalid && (password.dirty || password.touched)" class="text-danger">
+        <div *ngIf="password.errors?.['required']">
+          La constraseña es requerida.
+        </div>
+        <div *ngIf="password.errors?.['invalidPassword']">
+          Debe tener al menos 8 caracteres y maximo 20, al menos una letra mayúscula, un número y un símbolo.
+        </div>
       </div>
     </div>
 
     <div class="mi_clase">
-      <button type="submit" id="datos_personales" class="posicion_boton_grabar_datospersonales btn-singin">Registrarse</button>
+      <button type="submit" (click)="registrar()" id="datos_personales" class="posicion_boton_grabar_datospersonales btn-singin">Registrarse</button>
     </div>
   </div>
 </form>
