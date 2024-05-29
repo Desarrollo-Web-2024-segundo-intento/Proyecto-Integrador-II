@@ -6,5 +6,6 @@
 ./php
 .index.html
 .readme.md
-node_modules/
-
+/node_modules
+mientornovirtual
+__pycache__
