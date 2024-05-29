@@ -77,21 +77,10 @@ WSGI_APPLICATION = 'abm_ispc.wsgi.application'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
 DATABASES = {
-    # 'default': {
-    #     'ENGINE': 'django.db.backends.sqlite3',
-    #     'NAME': BASE_DIR / 'db.sqlite3',
-    # }
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'reservasmedicasdb',
-        'USER': 'desarrollo_web_2024',
-        'PASSWORD': 'web_2024',
-        'HOST': 'ispcserver1.ddns.net',
-        'PORT': '3306',
-        'OPTIONS': {
-            'sql_mode': 'traditional'
-            }
-        }
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
 }
 
 
