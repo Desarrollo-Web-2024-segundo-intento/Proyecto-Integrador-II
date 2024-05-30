@@ -2,6 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, ValidatorFn, ReactiveFormsModule, AbstractControl, Validators } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
+import { RegistroService } from '../../services/registro.service';
+import { User } from '../../models/user';
+
 
 @Component({
   selector: 'app-registro',
@@ -10,54 +13,73 @@ import { Router } from '@angular/router';
   templateUrl: './registro.component.html',
   styleUrls: ['./registro.component.css']
 })
-export class RegistroComponent implements OnInit {
-  registroError:string="";
-  registroForm=this.formBuilder.group({
-    apellido:['',[Validators.required, this.nameValidator()], []],
-    nombre:['',[Validators.required, this.nameValidator()], []],
-    telefono:['',[Validators.required, this.telefonoValidator()], []],
-    dni:['',[Validators.required, this.dniValidator()], []],
-    mutual:['',[Validators.required, this.mutualValidator()], []],
-    email:['',[Validators.required, this.emailValidator()], []],
-    password:['',[Validators.required, this.passwordValidator], []]
-  })
+export class RegistroComponent {
+  form:FormGroup;
+  user: User = new User();
 
-  constructor(private formBuilder:FormBuilder, private router:Router) { }
+
+  constructor(private formBuilder:FormBuilder, private router:Router, private registroService:RegistroService) {
+    this.form=this.formBuilder.group(
+      {
+        apellido:['',[Validators.required, this.nameValidator()], []],
+        nombre:['',[Validators.required, this.nameValidator()], []],
+        telefono:['',[Validators.required, this.telefonoValidator()], []],
+        dni:['',[Validators.required, this.dniValidator()], []],
+        mutual:['',[Validators.required, this.mutualValidator()], []],
+        email:['',[Validators.required, this.emailValidator()], []],
+        password:['',[Validators.required, this.passwordValidator], []]
+      }
+    )
+  }
 
   ngOnInit(): void {
   }
 
-  get apellido(){
-    return this.registroForm.controls.apellido;
+  get Apellido(){
+    //return this.form.controls['apellido'];
+    return this.form.get("apellido")
   }
-  get nombre(){
-    return this.registroForm.controls.nombre;
+  get Nombre(){
+    return this.form.get("nombre");
   }
-  get telefono(){
-    return this.registroForm.controls.telefono;
+  get Telefono(){
+    return this.form.get("telefono");
   }
-  get dni(){
-    return this.registroForm.controls.dni;
+  get Dni(){
+    return this.form.get("dni");
   }
-  get mutual(){
-    return this.registroForm.controls.mutual;
+  get Mutual(){
+    return this.form.get("mutual");
   }
-  get email(){
-    return this.registroForm.controls.email;
+  get Email(){
+    return this.form.get("email");
   }
-  get password(){
-    return this.registroForm.controls.password;
+  get Password(){
+    return this.form.get("password");
   }
 
-  registrar() {
-  if (this.registroForm.valid){
-    alert ("El registro fue exitoso. Por favor, Inicie Sesión")
-    this.router.navigate(['/iniciarSesion'])
-    this.registroForm.reset()
-  }
-  else {
-    this.registroForm.markAllAsTouched();
-  }
+  onRegistrar(event: Event): void {
+    event.preventDefault;
+
+    if (this.form.valid){
+      //alert ("El registro fue exitoso. Por favor, Inicie Sesión")
+      this.registroService.createUser(this.form.value as User).subscribe(
+        data => {
+          console.log(data.id);
+          console.log( this.form.value as User)
+            if (data.id>0)
+            {
+              alert("El registro ha sido creado satisfactoriamente. A continuación, por favor Inicie Sesión.");
+              this.router.navigate(['/iniciarSesion'])
+            }
+        }
+      )
+      //this.router.navigate(['/iniciarSesion'])
+      //this.form.reset()
+    }
+    else {
+      this.form.markAllAsTouched();
+    }
   }
 
   nameValidator(): ValidatorFn {
@@ -100,11 +122,9 @@ export class RegistroComponent implements OnInit {
     };
   }
 
-  passwordValidator(): ValidatorFn {
-    return (control: AbstractControl): { [key: string]: any } | null => {
-      const password = control.value;
-      const regex = /^(?=(?:.*\d))(?=.*[A-Z])(?=.*[a-z])(?=.*[.,*!?¿¡/#$%&])\S{8,20}$/;
-      return regex.test(password)? null : { 'invalidPassword': { value: control.value } };
-    };
+  passwordValidator(control: AbstractControl): { [key: string]: any } | null {
+    const password = control.value;
+    const regex = /^(?=(?:.*\d))(?=.*[A-Z])(?=.*[a-z])(?=.*[.,*!?¿¡/#$%&])\S{8,20}$/;
+    return regex.test(password)? null : { 'invalidPassword': { value: control.value } };
   }
 }
