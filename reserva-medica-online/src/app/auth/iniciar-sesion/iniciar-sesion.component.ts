@@ -5,6 +5,8 @@ import { Router } from '@angular/router';
 import { InicioComponent } from '../../pages/inicio/inicio.component';
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
+import { LoginService } from '../../services/auth/login.service';
+import { LoginRequest } from '../../services/auth/loginRequest';
 
 @Component({
   selector: 'app-iniciar-sesion',
@@ -20,7 +22,7 @@ export class IniciarSesionComponent {
     email:["", [Validators.required, Validators.email]],
     password: ['', Validators.required],
   });
-  constructor(private formBuilder: FormBuilder, private router:Router) {}
+  constructor(private formBuilder: FormBuilder, private router:Router, private loginService: LoginService ) {}
 
   get correo(){
     return this.loginForm.controls.email;
@@ -32,7 +34,7 @@ export class IniciarSesionComponent {
 
   login(){
     if(this.loginForm.valid){
-      console.log("Llamar al servicio de login");
+      this.loginService.login(this.loginForm.value as LoginRequest);
       this.router.navigateByUrl('/inicio');
     }
     else {
