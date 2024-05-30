@@ -7,18 +7,18 @@
 
   <div class="login-container" id="login-section">
     <h3 class="text-center">Acceso para pacientes</h3>
-    <form id="login-form" onsubmit="login(event)">
+    <form  [formGroup]="loginForm">
       <div class="form-group">
         <label for="usuario">Usuario o Correo Electrónico:</label>
-        <input type="text" id="usuario" name="usuario" placeholder="Usuario o Correo">
+        <input formControlName="email" type="email" id="usuario" name="usuario" placeholder="Usuario o Correo">
       </div>
 
       <div class="form-group">
         <label for="contrasena">Contraseña:</label>
-        <input type="password" id="contrasena" name="contrasena" placeholder="Contraseña">
+        <input formControlName="password" type="password" id="contrasena" name="contrasena" placeholder="Contraseña">
       </div>
 
-      <button type="submit" class="btn-login">Iniciar Sesión</button>
+      <button type="submit" (click)="login()" class="btn-login">Iniciar Sesión</button>
       <p class="mt-5">¿No tenés cuenta?</p>
       <button type="submit" id="datos_personales_boton" class="btn-login">Registrate</button>
     

@@ -11,6 +11,7 @@ import { FooterComponent } from "./shared/footer/footer.component";
 import { HeaderComponent } from "./shared/header/header.component";
 import { TerminosYCondicionesComponent } from './pages/terminos-y-condiciones/terminos-y-condiciones.component';
 
+
 @Component({
     selector: 'app-root',
     standalone: true,
