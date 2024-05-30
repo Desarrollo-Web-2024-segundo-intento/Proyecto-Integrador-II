@@ -3,20 +3,32 @@ import { FormBuilder } from '@angular/forms';
 import { ReactiveFormsModule, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { InicioComponent } from '../../pages/inicio/inicio.component';
+import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
 
 @Component({
   selector: 'app-iniciar-sesion',
   standalone: true,
-  imports: [ReactiveFormsModule],
+  imports: [ReactiveFormsModule, CommonModule],
   templateUrl: './iniciar-sesion.component.html',
   styleUrl: './iniciar-sesion.component.css'
 })
+
+
 export class IniciarSesionComponent {
   loginForm = this.formBuilder.group({
-    email:["paciente1@gmail.com", [Validators.required, Validators.email]],
+    email:["", [Validators.required, Validators.email]],
     password: ['', Validators.required],
   });
   constructor(private formBuilder: FormBuilder, private router:Router) {}
+
+  get correo(){
+    return this.loginForm.controls.email;
+  };
+  get password(){
+    return this.loginForm.controls.password;
+  };
+
 
   login(){
     if(this.loginForm.valid){
@@ -25,7 +37,6 @@ export class IniciarSesionComponent {
     }
     else {
       this.loginForm.markAllAsTouched();
-      alert("Error al ingresar los datos");
     };
   }
 };
