@@ -74,9 +74,14 @@
     text-align: center;
   }
   .container-info p {
-    font-size: 16px;
-    font-weight: 500;
+    font-size: 15px;
+    font-weight: 600;
     color:rgb(79, 75, 75);
+    width: calc(100% - 10px);
+    margin: 0 auto; 
+    padding-left: 5px; 
+    padding-right: 5px;
+    padding-bottom: 10px;
   
   }
   .container-info p > .asterisco{
@@ -109,76 +114,8 @@
   .card .btn {
     width: 100%;
   }
-  
-  .carousel-container {
-    width: 100%;
-    height: 150px; 
-    padding-top: 40px;
-  
-    overflow: hidden; 
-  }
-  
-  .carousel {
-    display: flex; 
-    animation: scroll 15s linear infinite; 
-  }
-  
-  .carousel img {
-    width: 20%; 
-    height: 100%;
-    border-radius: 8px;
-    margin-right: 5px;
-  }
-  
-  @keyframes scroll {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-1500px); } 
-  }
-  /* __________________________ */
-  .container-medio {
-    display: flex;
-    justify-content: center;
-    margin: 50px 0;
-  }
-  .card {
-    background-color: #f0f0f0;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px 5px #5959ec38;
-    cursor: pointer;
-  }
-  
-  .card h3 {
-    margin-bottom: 10px;  
-  }
-  .card img{
-    width: 35px;
-    padding-right: 5px;
-    cursor: pointer;
-  }
-  .card h3 .indicador{
-    margin-left: auto; 
-  }
-  
-  .lista-oculta {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease; 
-  }
-  .lista-oculta li {
-   color:#151635;
-   font-weight: 500;
-   margin-left: 80px;
-  }
-  .toggle {
-    display: none; 
-  }
-  
-  .toggle:checked + ul {
-    max-height: 700px; 
-    transition: max-height 0.3s ease;
-  }
+
   .obra-social img {
     width: 60%; 
     height: 70%;
-  }
+  } 
