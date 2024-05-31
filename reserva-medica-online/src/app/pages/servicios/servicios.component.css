@@ -1,10 +1,30 @@
-#servicios{
-    max-width: 1200px;
+/* #servicios{
+    width: 90%;
     height: 100%;
+    background-color: aqua;
     margin: 0 auto;
     box-sizing: border-box;
-  }
-  
+  } */
+
+  /* .servicios_dinamicos{
+    width: 90%;
+    height: 400px;
+    background-color: aqua;
+    margin-left: 55px;
+    border: 1px solid #000;
+} */
+
+.servicios_dinamicos {
+  width: 95%; /* Ajusta el ancho según sea necesario */
+  height: auto; /* O ajusta la altura según sea necesario */
+  background-color: aqua;
+  margin-left: 50px;
+  overflow: auto; /* Puedes usar 'auto', 'hidden' u otras opciones según tus necesidades */
+  /* border: 1px solid black; /* Agrega un borde para visualizar el contenedor */
+  padding: 10px; /* Ajusta el relleno según sea necesario */
+  /* Otros estilos según tus preferencias */
+}
+/*   
   .titulo_servicios{
     text-align: center;
     padding-bottom: 40px;
@@ -134,7 +154,6 @@
     0% { transform: translateX(0); }
     100% { transform: translateX(-1500px); } 
   }
-  /* __________________________ */
   .container-medio {
     display: flex;
     justify-content: center;
@@ -181,4 +200,4 @@
   .obra-social img {
     width: 60%; 
     height: 70%;
-  }
+  } */
