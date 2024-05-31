@@ -24,16 +24,16 @@
   padding: 10px; /* Ajusta el relleno según sea necesario */
   /* Otros estilos según tus preferencias */
 }
-/*   
-  .titulo_servicios{
+
+  /* .titulo_servicios{
     text-align: center;
     padding-bottom: 40px;
     color: #000000c5;
     text-transform: uppercase;
-    margin-top: 20px;
-   
-  }
-  .servicio-container-superior{
+    margin-top: 10px;
+  
+  } */
+  /* .servicio-container-superior{
     width: 100%;
     height: auto;
     display: flex;
@@ -200,4 +200,4 @@
   .obra-social img {
     width: 60%; 
     height: 70%;
-  } */
+  }  */

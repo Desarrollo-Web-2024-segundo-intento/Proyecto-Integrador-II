@@ -31,23 +31,12 @@ export class ServiciosComponent implements OnInit {
       const data = await response.json();
       console.log('Datos recibidos:', data);
 
-      for (const item of data) {
+          for (let i = 0; i < data.length; i++) {
+
         const newDiv = document.createElement('div'); // este constante genera el div contenedor de la especialidad
-
-        // Crear elementos para especialidad y descripción
-        const especialidadText = document.createElement('div');
-        especialidadText.innerText = item.especialidad; // Carga el contenido de especialidad
-
-        const descripcionText = document.createElement('div1');
-        descripcionText.innerText = item.descripcion; // Carga el contenido de la descripción
-
-        // Agregar los elementos al nuevo div
-        newDiv.appendChild(especialidadText);
-        newDiv.appendChild(descripcionText);
-
-        // Aplicar estilos al nuevo div
-        newDiv.style.width = '200px';
-        newDiv.style.height = '300px';
+        newDiv.id = 'div' + i;
+        newDiv.style.width = '22%';
+        newDiv.style.height = '400px';
         newDiv.style.backgroundColor = 'white';
         newDiv.style.display = 'flex';
         newDiv.style.flexDirection = 'column';
@@ -56,13 +45,88 @@ export class ServiciosComponent implements OnInit {
         newDiv.style.border = '2px solid black';
         newDiv.style.float = 'left';
         newDiv.style.margin = '10px'; // Margen para separación entre divs
-
         const appDiv = document.getElementById('servicios'); // Asegúrate de que este sea el ID correcto
         if (appDiv) {
             appDiv.appendChild(newDiv);
         } else {
             console.error('No se encontró el elemento con id "app"');
         }
+
+        const div_titulo = document.createElement('div'); // este constante genera el div contenedor de la especialidad
+        div_titulo.id = 'div_titulo';
+        div_titulo.innerText = data[i].especialidad;
+        div_titulo.style.width = '90%';
+        div_titulo.style.height = '50px';
+        div_titulo.style.backgroundColor = 'green';
+        div_titulo.style.display = 'flex';
+        div_titulo.style.flexDirection = 'column';
+        div_titulo.style.justifyContent = 'center';
+        div_titulo.style.alignItems = 'center';
+        div_titulo.style.border = '2px solid black';
+        div_titulo.style.margin = '10px'; // Margen para separación entre divs
+
+        const div_padre = document.getElementById('div'+i); // Asegúrate de que este sea el ID correcto
+        if (div_padre) {
+            div_padre.appendChild(div_titulo);
+        } else {
+            console.error('No se encontró el elemento con id "app"');
+        }
+        const div_descripcion = document.createElement('div'); // este constante genera el div contenedor de la especialidad
+        div_descripcion.id = 'div_descripcion';
+        div_descripcion.innerText = data[i].descripcion;
+        div_descripcion.style.width = '98%';
+        div_descripcion.style.height = '450px';
+        div_descripcion.style.font='12px';
+        div_descripcion.style.backgroundColor = 'gray';
+        div_descripcion.style.display = 'flex';
+        div_descripcion.style.flexDirection = 'column';
+        div_descripcion.style.justifyContent = 'center';
+        div_descripcion.style.alignItems = 'center';
+        div_descripcion.style.border = '2px solid black';
+        // div_titulo.style.float = 'left';
+        div_descripcion.style.margin = '10px'; // Margen para separación entre divs
+
+        if (div_padre) {
+            div_padre.appendChild(div_descripcion);
+        } else {
+            console.error('No se encontró el elemento con id "app"');
+        }
+
+        const div_boton_turno = document.createElement('div'); // este constante genera el div contenedor de la especialidad
+        div_boton_turno.id = 'div_descripcion';
+        div_boton_turno.innerText = 'Agendar Turno';
+        div_boton_turno.style.width = '90%';
+        div_boton_turno.style.height = '50px';
+        div_boton_turno.style.font='12px';
+        div_boton_turno.style.backgroundColor = 'orange';
+        div_boton_turno.style.display = 'flex';
+        div_boton_turno.style.flexDirection = 'column';
+        div_boton_turno.style.justifyContent = 'center';
+        div_boton_turno.style.alignItems = 'center';
+        div_boton_turno.style.border = '2px solid black';
+        // div_titulo.style.float = 'left';
+        div_boton_turno.style.margin = '10px'; // Margen para separación entre divs
+
+        if (div_padre) {
+            div_padre.appendChild(div_boton_turno);
+        } else {
+            console.error('No se encontró el elemento con id "app"');
+        }
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       }
     } catch (error) {
       console.error('Error al obtener datos:', error);
