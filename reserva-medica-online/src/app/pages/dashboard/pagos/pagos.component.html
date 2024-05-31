@@ -1,0 +1,28 @@
+<main>
+    <!-- <h2>Pagos Realizados</h2> -->
+    <h2>{{title}}</h2>
+
+    <table>
+    <thead>
+        <tr>
+        <th>Especialidad</th>
+        <th>Profesional</th>
+        <th>Obra Social</th>
+        <th>Fecha</th>
+        <th>Monto</th>
+        <th>Estado</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let pago of pagos">
+        <!-- <td>{{ pago.id }}</td> -->
+        <td>{{ pago.especialidad }}</td>
+        <td>{{ pago.profesional }}</td>
+        <td>{{ pago.obra_social }}</td>
+        <td>{{ pago.fecha }}</td>
+        <td>{{ pago.monto }}</td>
+        </tr>
+    </tbody>
+    </table>
+</main>
+

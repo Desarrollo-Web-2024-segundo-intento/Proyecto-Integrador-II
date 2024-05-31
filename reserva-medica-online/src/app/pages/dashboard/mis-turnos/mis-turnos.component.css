@@ -1,0 +1,26 @@
+.contenedor_turnos {
+    margin: 20px;
+  }
+  
+  .card {
+    border: 1px solid #ddd;
+    padding: 16px;
+    margin-top: 16px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card-body {
+    padding: 16px;
+  }
+  
+  .card-title {
+    font-size: 1.25em;
+    margin-bottom: 0.75em;
+  }
+  
+  .card-text {
+    margin-bottom: 0.5em;
+  }
+  
