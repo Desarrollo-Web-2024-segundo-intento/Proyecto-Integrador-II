@@ -1,3 +1,11 @@
+
+
+import { Component } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { RouterLink, Router } from '@angular/router';
+import { UsuarioService } from '../../services/usuario.service';
+import { Usuario } from '../../interfaces/usuario';
+
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, ValidatorFn, ReactiveFormsModule, AbstractControl, Validators } from '@angular/forms';
 import { CommonModule } from '@angular/common';
@@ -6,9 +14,42 @@ import { RegistroService } from '../../services/registro.service';
 import { User } from '../../models/user';
 
 
+
 @Component({
   selector: 'app-registro',
   standalone: true,
+
+  imports: [RouterLink, FormsModule],
+  templateUrl: './registro.component.html',
+  styleUrl: './registro.component.css'
+})
+export class RegistroComponent {
+  usuarioData: Usuario = {
+    apellido: '',
+    nombre: '',
+    telefono: '',
+    dni: '',
+    obraSocial: '',
+    email: '',
+    id: 0
+  };
+
+
+
+  constructor(private router: Router, private usuarioService: UsuarioService) { }
+
+  grabarDatosPersonales(): void {
+    this.usuarioService.setUsuarioData(this.usuarioData);
+    console.log('Datos personales guardados:', this.usuarioData);
+    this.router.navigate(['/dashboard/usuario/perfil']);
+  };
+
+    actualizarDatos(): void {
+    this.usuarioService.updateUsuarioData(this.usuarioData);
+    console.log('Datos personales actualizados:', this.usuarioData);
+  }
+}
+
   imports: [CommonModule, ReactiveFormsModule],
   templateUrl: './registro.component.html',
   styleUrls: ['./registro.component.css']
@@ -126,5 +167,19 @@ export class RegistroComponent {
     const password = control.value;
     const regex = /^(?=(?:.*\d))(?=.*[A-Z])(?=.*[a-z])(?=.*[.,*!?¿¡/#$%&])\S{8,20}$/;
     return regex.test(password)? null : { 'invalidPassword': { value: control.value } };
+  
+  get Dni(){
+    return this.form.get("dni");
   }
+  get Obra Social(){
+    return this.form.get("mutual");
+  }
+  get Password(){
+    return this.form.get("password");
+  }
+  get Email(){
+    return this.form.get("email");
+  }
+
 }
+

@@ -1,19 +1,39 @@
-#servicios{
-    max-width: 1200px;
+/* #servicios{
+    width: 90%;
     height: 100%;
+    background-color: aqua;
     margin: 0 auto;
     box-sizing: border-box;
-  }
-  
-  .titulo_servicios{
+  } */
+
+  /* .servicios_dinamicos{
+    width: 90%;
+    height: 400px;
+    background-color: aqua;
+    margin-left: 55px;
+    border: 1px solid #000;
+} */
+
+.servicios_dinamicos {
+  width: 95%; /* Ajusta el ancho según sea necesario */
+  height: auto; /* O ajusta la altura según sea necesario */
+  background-color: aqua;
+  margin-left: 50px;
+  overflow: auto; /* Puedes usar 'auto', 'hidden' u otras opciones según tus necesidades */
+  /* border: 1px solid black; /* Agrega un borde para visualizar el contenedor */
+  padding: 10px; /* Ajusta el relleno según sea necesario */
+  /* Otros estilos según tus preferencias */
+}
+
+  /* .titulo_servicios{
     text-align: center;
     padding-bottom: 40px;
     color: #000000c5;
     text-transform: uppercase;
-    margin-top: 20px;
-   
-  }
-  .servicio-container-superior{
+    margin-top: 10px;
+  
+  } */
+  /* .servicio-container-superior{
     width: 100%;
     height: auto;
     display: flex;
@@ -74,9 +94,14 @@
     text-align: center;
   }
   .container-info p {
-    font-size: 16px;
-    font-weight: 500;
+    font-size: 15px;
+    font-weight: 600;
     color:rgb(79, 75, 75);
+    width: calc(100% - 10px);
+    margin: 0 auto; 
+    padding-left: 5px; 
+    padding-right: 5px;
+    padding-bottom: 10px;
   
   }
   .container-info p > .asterisco{
@@ -134,7 +159,6 @@
     0% { transform: translateX(0); }
     100% { transform: translateX(-1500px); } 
   }
-  /* __________________________ */
   .container-medio {
     display: flex;
     justify-content: center;
@@ -181,4 +205,8 @@
   .obra-social img {
     width: 60%; 
     height: 70%;
-  }
+  }  
+  .obra-social img {
+    width: 60%; 
+    height: 70%;
+  } 
