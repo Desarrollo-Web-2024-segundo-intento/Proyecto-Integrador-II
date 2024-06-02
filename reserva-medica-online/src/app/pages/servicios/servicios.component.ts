@@ -23,7 +23,8 @@ export class ServiciosComponent implements OnInit {
 
   async fetchData() {
     try {
-      const response = await fetch('http://192.168.0.170:8000/api/v1/especialidad/?format=json');
+      // const response = await fetch('http://192.168.0.170:8000/api/v1/especialidad/?format=json');
+      const response = await fetch('http://casaiot.ddns.net:8000/api/v1/especialidad/?format=json');
       if (!response.ok) {
         console.error('Error en la respuesta de la solicitud.');
         return;
