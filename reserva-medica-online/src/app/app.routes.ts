@@ -13,7 +13,7 @@ import { EstadoPagosComponent } from './pages/dashboard/estado-pagos/estado-pago
 import { HistorialPagosComponent } from './pages/dashboard/historial-pagos/historial-pagos.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { IniciarSesionComponent } from './auth/iniciar-sesion/iniciar-sesion.component';
-// import { RegistroComponent } from './auth/registro/registro.component';
+import { RegistroComponent } from './auth/registro/registro.component';
 import { CarritoComponent } from './pages/carrito/carrito.component';
 import { PerfilComponent } from './pages/dashboard/usuario/perfil/perfil.component';
 import { MisTurnosComponent } from './pages/dashboard/mis-turnos/mis-turnos.component';
@@ -39,8 +39,8 @@ export const routes: Routes = [
          {path:'estado', component:EstadoPagosComponent },
          {path:'historial', component: HistorialPagosComponent},
       ]},
-      {path:"carrito", component: CarritoComponent},
-   // {path: "registro", component: RegistroComponent},
+   {path:"carrito", component: CarritoComponent},
+   {path: "registro", component: RegistroComponent},
    {path:"", redirectTo:"/inicio", pathMatch:"full"},
    {path: "**", component:  NotFoundComponent}
 

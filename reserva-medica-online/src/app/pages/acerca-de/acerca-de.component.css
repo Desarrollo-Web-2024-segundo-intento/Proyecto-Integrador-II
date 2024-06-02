@@ -8,18 +8,18 @@
 
 .equipo {
     width: auto;
-    height: 850px;
+    /*height: 850px;*/
     margin: 2% auto;
 }
 
 .containerCards {
     width: 100%;
     max-width: 1200px;
-    height: 430px; 
+    /*height: 430px;*/
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin: auto;    
+    margin: auto;
 }
 
 .card {
@@ -59,5 +59,5 @@
 .misionVision {
     margin: auto;
     width: 60%;
-    height: 300px;
+    /*height: 300px;*/
 }
