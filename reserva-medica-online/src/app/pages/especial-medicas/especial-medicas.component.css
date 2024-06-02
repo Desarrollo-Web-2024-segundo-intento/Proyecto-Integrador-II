@@ -8,14 +8,13 @@
 
 
 
-/* 
 
 
 .contenedor__servicio {
     width: 100%;
     margin: 0 auto;
     background-color: #eeeff1; 
-    border-radius: 10px;
+    border-radius: 10px;  
 }
   
 .titulo_servicios{
@@ -32,9 +31,10 @@
 }
 
 .fila {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 20px;
+    display: flex; 
+    margin-bottom: 20px;  
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
 
 .tarjeta {
@@ -45,7 +45,6 @@
     box-sizing: border-box;
     box-shadow: 0px 4px 8px #358ac758;
   }
-  
   .tarjeta img {
     width: 100%;
     height: auto;
@@ -98,4 +97,27 @@ background-color:hwb(201 56% 20% / 0.46);
 }
 a{
   text-decoration: none;
-} */
+
+}
+.iconCarrito{
+  cursor: pointer;
+  background-color: #ccc1c8af;
+  border-radius: 20px; 
+}
+.iconCarrito:hover{
+  color: #ccc1c8f1;
+  background-color: #272966;;
+  border-radius: 20px;
+  animation-delay: 2s;
+}
+
+.material-symbols-outlined {
+  height: 24px;
+  padding: 0 8px;
+}
+.precio{
+  font-size: 14px;
+}
+.badge{
+  position: absolute;
+}

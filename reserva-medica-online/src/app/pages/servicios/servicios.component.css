@@ -94,9 +94,14 @@
     text-align: center;
   }
   .container-info p {
-    font-size: 16px;
-    font-weight: 500;
+    font-size: 15px;
+    font-weight: 600;
     color:rgb(79, 75, 75);
+    width: calc(100% - 10px);
+    margin: 0 auto; 
+    padding-left: 5px; 
+    padding-right: 5px;
+    padding-bottom: 10px;
   
   }
   .container-info p > .asterisco{
@@ -200,4 +205,8 @@
   .obra-social img {
     width: 60%; 
     height: 70%;
-  }  */
+  }  
+  .obra-social img {
+    width: 60%; 
+    height: 70%;
+  } 

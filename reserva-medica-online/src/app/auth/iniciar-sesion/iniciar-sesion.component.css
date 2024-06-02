@@ -24,7 +24,7 @@ div.row {
 /* Contenedor del formulario de login */
 .login-container {
     max-width: 400px; 
-    margin: 50px auto; 
+    margin: 30px auto; 
     padding: 20px; /* Espaciado interno */
     background-color: white; /* Fondo blanco */
     border-radius: 10px; /* Bordes redondeados */
