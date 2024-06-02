@@ -17,7 +17,7 @@ import { RegistroComponent } from './auth/registro/registro.component';
 import { CarritoComponent } from './pages/carrito/carrito.component';
 import { PerfilComponent } from './pages/dashboard/usuario/perfil/perfil.component';
 import { MisTurnosComponent } from './pages/dashboard/mis-turnos/mis-turnos.component';
-
+import { RegistroComponent } from './auth/registro/registro.component';
 
 export const routes: Routes = [
    {path:"inicio", component: InicioComponent},
@@ -40,6 +40,7 @@ export const routes: Routes = [
          {path:'historial', component: HistorialPagosComponent},
       ]},
       {path:"carrito", component: CarritoComponent},
+   {path: "registro", component: RegistroComponent},
    {path:"", redirectTo:"/inicio", pathMatch:"full"},
    {path: "**", component:  NotFoundComponent}
 
