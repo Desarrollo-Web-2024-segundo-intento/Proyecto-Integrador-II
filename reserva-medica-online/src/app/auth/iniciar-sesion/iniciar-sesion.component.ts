@@ -19,7 +19,7 @@ import { RouterLink } from '@angular/router';
 
   imports: [ReactiveFormsModule, CommonModule],
 
-  imports: [RouterLink, FormsModule],
+  //imports: [RouterLink, FormsModule],
 
   templateUrl: './iniciar-sesion.component.html',
   styleUrl: './iniciar-sesion.component.css'

@@ -10,7 +10,7 @@ import { ServiciosComponent } from './pages/servicios/servicios.component';
 import { FooterComponent } from "./shared/footer/footer.component";
 import { HeaderComponent } from "./shared/header/header.component";
 import { TerminosYCondicionesComponent } from './pages/terminos-y-condiciones/terminos-y-condiciones.component';
-import { RegistroComponent } from './auth/registro/registro.component';
+// import { RegistroComponent } from './auth/registro/registro.component';
 
 
 @Component({
@@ -19,8 +19,9 @@ import { RegistroComponent } from './auth/registro/registro.component';
     templateUrl: './app.component.html',
     styleUrl: './app.component.css',
     imports: [RouterOutlet, HeaderComponent, FooterComponent, InicioComponent, ServiciosComponent, ContactoComponent,
-      AcercaDeComponent, IniciarSesionComponent, PreguntasComponent, PoliticasComponent, TerminosYCondicionesComponent, RegistroComponent]
-})
+      AcercaDeComponent, IniciarSesionComponent, PreguntasComponent, PoliticasComponent, TerminosYCondicionesComponent, //RegistroComponent
+    ]
+  })
 export class AppComponent {
   title = 'reserva-medica-online';
 }

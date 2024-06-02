@@ -13,11 +13,11 @@ import { EstadoPagosComponent } from './pages/dashboard/estado-pagos/estado-pago
 import { HistorialPagosComponent } from './pages/dashboard/historial-pagos/historial-pagos.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { IniciarSesionComponent } from './auth/iniciar-sesion/iniciar-sesion.component';
-import { RegistroComponent } from './auth/registro/registro.component';
+// import { RegistroComponent } from './auth/registro/registro.component';
 import { CarritoComponent } from './pages/carrito/carrito.component';
 import { PerfilComponent } from './pages/dashboard/usuario/perfil/perfil.component';
 import { MisTurnosComponent } from './pages/dashboard/mis-turnos/mis-turnos.component';
-import { RegistroComponent } from './auth/registro/registro.component';
+// import { RegistroComponent } from './auth/registro/registro.component';
 
 export const routes: Routes = [
    {path:"inicio", component: InicioComponent},
@@ -26,7 +26,7 @@ export const routes: Routes = [
    {path:"contacto", component: ContactoComponent},
    {path:"servicios", component: ServiciosComponent},
    {path:"iniciar-sesion", component: IniciarSesionComponent},
-   {path:"registro", component: RegistroComponent},
+   // {path:"registro", component: RegistroComponent},
    {path:"turnos", component: TurnosComponent},
    {path:"preguntas", component: PreguntasComponent},
    {path: "terminos-y-condiciones", component: TerminosYCondicionesComponent},
@@ -40,7 +40,7 @@ export const routes: Routes = [
          {path:'historial', component: HistorialPagosComponent},
       ]},
       {path:"carrito", component: CarritoComponent},
-   {path: "registro", component: RegistroComponent},
+   // {path: "registro", component: RegistroComponent},
    {path:"", redirectTo:"/inicio", pathMatch:"full"},
    {path: "**", component:  NotFoundComponent}
 

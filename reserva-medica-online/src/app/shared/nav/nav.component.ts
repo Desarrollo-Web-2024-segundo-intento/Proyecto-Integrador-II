@@ -13,18 +13,14 @@ import { NavDashbComponent } from '../../pages/dashboard/nav-dashb/nav-dashb.com
 @Component({
   selector: 'app-nav',
   standalone: true,
-  imports: [NavComponent, RouterLink, RouterLinkActive, CommonModule],
+  imports: [NavComponent, RouterLink, RouterLinkActive, CommonModule, NavDashbComponent],
   templateUrl: './nav.component.html',
   styleUrl: './nav.component.css'
 })
 export class NavComponent{
   userLoginOn: boolean = false;   
   }
-  imports: [NavComponent, RouterLink, RouterLinkActive, NavDashbComponent],
-  templateUrl: './nav.component.html',
-  styleUrl: './nav.component.css'
-})
-export class NavComponent {
- 
-}
-
+  // imports: [NavComponent, RouterLink, RouterLinkActive, NavDashbComponent],
+  // templateUrl: './nav.component.html',
+  // styleUrl: './nav.component.css'
+// }
