@@ -6,7 +6,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-  
+
   }
 div.row {
     justify-content: space-around;
@@ -23,8 +23,8 @@ div.row {
 
 /* Contenedor del formulario de login */
 .login-container {
-    max-width: 400px; 
-    margin: 30px auto; 
+    max-width: 400px;
+    margin: 30px auto;
     padding: 20px; /* Espaciado interno */
     background-color: white; /* Fondo blanco */
     border-radius: 10px; /* Bordes redondeados */
@@ -59,14 +59,14 @@ input {
     /* transition: background-color 0.3s; TransiciÃ³n suave */
 }
 .btn_login:hover{
-    background-color: #0056b3; 
+    background-color: #0056b3;
 }
 
 
-.ng-valid:not(form).ng-touched {
+/* .ng-valid:not(form).ng-touched {
     border: 2px solid#3fd447;
 }
 
 .ng-invalid:not(form).ng-touched {
     border: 2px solid#f70905;
-}
+} */
