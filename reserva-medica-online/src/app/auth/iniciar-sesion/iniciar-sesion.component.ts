@@ -1,3 +1,4 @@
+
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
 import { ReactiveFormsModule, Validators } from '@angular/forms';
@@ -7,17 +8,26 @@ import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { LoginService } from '../../services/auth/login.service';
 import { LoginRequest } from '../../services/auth/loginRequest';
+//import { Component } from '@angular/core';
+import { FormsModule, NgModel } from '@angular/forms';
+import { RouterLink } from '@angular/router';
+
 
 @Component({
   selector: 'app-iniciar-sesion',
   standalone: true,
+
   imports: [ReactiveFormsModule, CommonModule],
+
+  imports: [RouterLink, FormsModule],
+
   templateUrl: './iniciar-sesion.component.html',
   styleUrl: './iniciar-sesion.component.css'
 })
 
 
 export class IniciarSesionComponent {
+
   loginForm = this.formBuilder.group({
     email:["", [Validators.required, Validators.email]],
     password: ['', Validators.required],
@@ -30,6 +40,9 @@ export class IniciarSesionComponent {
   get password(){
     return this.loginForm.controls.password;
   };
+
+
+ //apellido="castillo"
 
 
   login(){

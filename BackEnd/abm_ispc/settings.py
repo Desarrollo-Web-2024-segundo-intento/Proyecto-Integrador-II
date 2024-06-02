@@ -38,6 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
+    'corsheaders',#
+    #'knox',
     'coreapi',
     'api'
 ]
@@ -50,6 +52,12 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',#
+    'django.middleware.common.CommonMiddleware',#
+]
+
+CORS_ALLOWED_ORIGINS = [#
+    'http://localhost',
 ]
 
 ROOT_URLCONF = 'abm_ispc.urls'
@@ -77,10 +85,22 @@ WSGI_APPLICATION = 'abm_ispc.wsgi.application'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
 DATABASES = {
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.sqlite3',
+    #     'NAME': BASE_DIR / 'db.sqlite3',
+    # }
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'reservasmedicasdb',
+        #'NAME': reuser,
+        'USER': 'desarrollo_web_2024',
+        'PASSWORD': 'web_2024',
+        'HOST': 'ispcserver1.ddns.net',
+        'PORT': '3306',
+        'OPTIONS': {
+            'sql_mode': 'traditional'
+            }
+        }
 }
 
 
