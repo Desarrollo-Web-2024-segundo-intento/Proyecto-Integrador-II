@@ -5,35 +5,6 @@
   <div id="registro_pacientes" class="row align-items-center singin-container">
     <h2 class="text-center">Datos Personales</h2>
     <div class="row p-4">
-      <input class="input_registro" type="text" id="apellido" formControlName="apellido" placeholder="Apellido">
-      <div *ngIf="Apellido?.errors && Apellido?.touched" class="text-danger">
-        <div *ngIf="Apellido?.hasError('required')">
-          El Apellido es requerido.
-        </div>
-        <div *ngIf="Apellido?.hasError('invalidName')">
-          Debe tener al menos 3 caracteres y no debe contener números.
-        </div>
-      </div>
-
-      <input class="input_registro" type="text" id="nombre" formControlName="nombre" placeholder="Nombre">
-      <div *ngIf="Nombre?.errors && Nombre?.touched" class="text-danger">
-        <div *ngIf="Nombre?.hasError('required')">
-          El Nombre es requerido.
-        </div>
-        <div *ngIf="Nombre?.hasError('invalidName')">
-          Debe tener al menos 3 caracteres y no debe contener números.
-        </div>
-      </div>
-
-      <input class="input_registro" type="tel" id="telefono" formControlName="telefono" placeholder="Telefono">
-      <div *ngIf="Telefono?.errors && Telefono?.touched" class="text-danger">
-        <div *ngIf="Telefono?.hasError('required')">
-          El Telefono es requerido.
-        </div>
-        <div *ngIf="Telefono?.hasError('invalidTelefono')">
-          Debe tener 10 digitos, sin espacio ni 0 en codigo de provincia. Ej: 3518888888
-        </div>
-      </div>
 
       <input class="input_registro" type="text" id="dni" formControlName="dni" placeholder="DNI">
       <div *ngIf="Dni?.errors && Dni?.touched" class="text-danger">
@@ -45,7 +16,56 @@
         </div>
       </div>
 
-      <input class="input_registro" type="text" id="mutual" formControlName="mutual" placeholder="Mutual">
+      <!-- <input class="input_registro" type="text" id="apellido" formControlName="apellido" placeholder="Apellido">
+      <div *ngIf="Apellido?.errors && Apellido?.touched" class="text-danger">
+        <div *ngIf="Apellido?.hasError('required')">
+          El Apellido es requerido.
+        </div>
+        <div *ngIf="Apellido?.hasError('invalidName')">
+          Debe tener al menos 3 caracteres y no debe contener números.
+        </div>
+      </div> -->
+
+      <input class="input_registro" type="text" id="nombre" formControlName="nombre" placeholder="Nombre">
+      <div *ngIf="Nombre?.errors && Nombre?.touched" class="text-danger">
+        <div *ngIf="Nombre?.hasError('required')">
+          El Nombre es requerido.
+        </div>
+        <div *ngIf="Nombre?.hasError('invalidName')">
+          Debe tener al menos 3 caracteres y no debe contener números.
+        </div>
+      </div>
+      <input class="input_registro" type="text" id="apellido" formControlName="apellido" placeholder="Apellido">
+      <div *ngIf="Apellido?.errors && Apellido?.touched" class="text-danger">
+        <div *ngIf="Apellido?.hasError('required')">
+          El Apellido es requerido.
+        </div>
+        <div *ngIf="Apellido?.hasError('invalidName')">
+          Debe tener al menos 3 caracteres y no debe contener números.
+        </div>
+      </div>
+      
+      <!-- <input class="input_registro" type="tel" id="telefono" formControlName="telefono" placeholder="Telefono">
+      <div *ngIf="Telefono?.errors && Telefono?.touched" class="text-danger">
+        <div *ngIf="Telefono?.hasError('required')">
+          El Telefono es requerido.
+        </div>
+        <div *ngIf="Telefono?.hasError('invalidTelefono')">
+          Debe tener 10 digitos, sin espacio ni 0 en codigo de provincia. Ej: 3518888888
+        </div>
+      </div> -->
+
+      <!-- <input class="input_registro" type="text" id="dni" formControlName="dni" placeholder="DNI">
+      <div *ngIf="Dni?.errors && Dni?.touched" class="text-danger">
+        <div *ngIf="Dni?.hasError('required')">
+          El DNI es requerido.
+        </div>
+        <div *ngIf="Dni?.hasError('invalidDni')">
+          Debe tener entre 7 a 8 caracteres numéricos.
+        </div>
+      </div> -->
+
+      <!-- <input class="input_registro" type="text" id="mutual" formControlName="mutual" placeholder="Mutual">
       <div *ngIf="Mutual?.errors && Mutual?.touched" class="text-danger">
         <div *ngIf="Mutual?.hasError('required')">
           La Mutual es requerida.
@@ -54,7 +74,7 @@
           Debe tener al menos 3 caracteres y no debe contener números.
         </div>
 
-      </div>
+      </div> -->
 
       <input class="input_registro" type="text" id="email" formControlName="email" placeholder="Email">
       <div *ngIf="Email?.errors && Email?.touched" class="text-danger">
@@ -67,6 +87,15 @@
       </div>
 
       <input class="input_registro" type="text" id="password" formControlName="password" placeholder="Contraseña">
+      <div *ngIf="Password?.errors && Password?.touched" class="text-danger">
+        <div *ngIf="Password?.hasError('required')">
+          La constraseña es requerida.
+        </div>
+        <div *ngIf="Password?.hasError('invalidPassword')">
+          Debe tener al menos 8 caracteres y maximo 20, al menos una letra mayúscula, un número y un símbolo.
+        </div>
+      </div>
+      <input class="input_registro" type="text" id="password" formControlName="password" placeholder="Repetir Contraseña">
       <div *ngIf="Password?.errors && Password?.touched" class="text-danger">
         <div *ngIf="Password?.hasError('required')">
           La constraseña es requerida.
