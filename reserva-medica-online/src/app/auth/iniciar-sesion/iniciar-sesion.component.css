@@ -61,12 +61,3 @@ input {
 .btn_login:hover{
     background-color: #0056b3; 
 }
-
-
-.ng-valid:not(form).ng-touched {
-    border: 2px solid#3fd447;
-}
-
-.ng-invalid:not(form).ng-touched {
-    border: 2px solid#f70905;
-}

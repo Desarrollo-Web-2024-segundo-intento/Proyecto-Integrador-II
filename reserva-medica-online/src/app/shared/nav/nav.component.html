@@ -21,11 +21,8 @@
                 <li class="nav-item">
                   <a class="nav-link" routerLink="/turnos" routerLinkActive="active">Turnos</a>
                 </li>
-                <li *ngIf="!userLoginOn" class="nav-item">
+                <li class="nav-item">
                   <a class="nav-link" routerLink="/iniciarSesion" routerLinkActive="active">Iniciar Sesion</a>
-                </li>
-                <li  *ngIf="userLoginOn" class="nav-item">
-                  <a class="nav-link" routerLink="/CerrarSesion" routerLinkActive="active">Cerrar Sesion</a>
                 </li>
               </ul>
             </div>
