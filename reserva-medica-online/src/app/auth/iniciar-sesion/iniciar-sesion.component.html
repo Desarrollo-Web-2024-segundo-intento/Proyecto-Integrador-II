@@ -107,15 +107,18 @@
         <input formControlName="email" type="email" id="usuario" name="usuario" placeholder="Correo Electronico">
       </div>
 
-      <div *ngIf="correo.invalid && (correo.dirty || correo.touched)"
-        class="text-danger">
-        <div *ngIf="correo.errors?.['required']">
-          El Correo es requerido.
-        </div>
-        <div *ngIf="correo.errors?.['email']">
-          Ingresar un formato de Email valido.
-        </div>
-      </div>
+
+  <div *ngIf="correo.invalid && (correo.dirty || correo.touched)"
+    class="text-danger">
+    <div *ngIf="correo.errors?.['required']">
+      El Correo es requerido.
+    </div>
+    <div *ngIf="correo.errors?.['email']">
+      Ingresar un formato de Email valido.
+    </div>
+  </div>
+
+
 
       <div class="form-group">
         <label for="contrasena">Contraseña:</label>
@@ -130,12 +133,13 @@
     </div>
 
 
-    <button type="submit" (click)="login()" class="btn-login">Iniciar Sesión</button>
-    <p class="mt-5">¿No tenés cuenta?</p>
-    <button type="submit" id="datos_personales_boton" class="btn-login">Registrate</button>
+      <button type="submit" (click)="login()" class="btn-login">Iniciar Sesión</button>
+      <p class="mt-5">¿No tenés cuenta?</p>
+      <button type="submit" id="datos_personales_boton" class="btn-login">Registrate</button>
 
-  </form>
-</div>
+    </form>
+    <div class="espacio_5px"></div>
+  </div>
 
 
 
@@ -180,5 +184,5 @@
     <button class="btn btn-sm col-2 m-4 align-self-center" id="volver">Volver</button>
   </div> -->
   <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script> -->
-  <!-- <script src="./js/login.js"></script> -->
-  <!-- <script src="../../../assets/js/login.js"></script>    (mirar!!!!!) -->
+  <!-- <script src="./js/login.js"></script>
+  <script src="../../../assets/js/login.js"></script>    (mirar!!!!!)-->

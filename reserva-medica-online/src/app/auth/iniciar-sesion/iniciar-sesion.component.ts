@@ -9,15 +9,16 @@ import { NgModule } from '@angular/core';
 import { LoginService } from '../../services/auth/login.service';
 import { LoginRequest } from '../../services/auth/loginRequest';
 //import { Component } from '@angular/core';
-import { FormsModule, NgModel } from '@angular/forms';
-import { RouterLink } from '@angular/router';
+//import { FormsModule, NgModel } from '@angular/forms';
+//import { RouterLink } from '@angular/router';
 
 
 @Component({
   selector: 'app-iniciar-sesion',
   standalone: true,
-  imports: [ReactiveFormsModule, CommonModule],
+  //imports: [ReactiveFormsModule, CommonModule, RouterLink, FormsModule],
   //imports: [RouterLink, FormsModule],
+  imports: [ReactiveFormsModule, CommonModule],
   templateUrl: './iniciar-sesion.component.html',
   styleUrl: './iniciar-sesion.component.css'
 })

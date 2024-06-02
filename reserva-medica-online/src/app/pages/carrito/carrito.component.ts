@@ -20,13 +20,13 @@ export class CarritoComponent implements OnInit  {
   carritoVacio:boolean=false;
   usuarioLogueado:boolean=true;
   especialidad: Especialidad | undefined;
-  
+
   carritoItems: any[] = [];
   total: number = 0;
 
-    
+
   constructor(private router: Router, private CarritoService: CarritoService) {}
-    
+
   ngOnInit() {
     this.carritoItems = this.CarritoService.obtenerCarritoItems();
     this.actualizarTotal();
@@ -45,10 +45,10 @@ export class CarritoComponent implements OnInit  {
       calcularTotal() {
         return this.carritoItems.reduce((total, item) => total + (item.precio * item.cantidad), 0);
       }
- 
-    
+
+
     redirectToLogin() {
-      this.router.navigate(['/iniciar-sesion']);
+      this.router.navigate(['/iniciarSesion']);
     }
   }
 
