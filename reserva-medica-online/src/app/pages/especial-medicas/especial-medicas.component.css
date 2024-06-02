@@ -1,3 +1,14 @@
+.servicios_dinamicos{
+   width: 90%;
+   height: 400px;
+   background-color: aqua;
+
+
+}
+
+
+
+
 
 .contenedor__servicio {
     width: 100%;
@@ -86,6 +97,7 @@ background-color:hwb(201 56% 20% / 0.46);
 }
 a{
   text-decoration: none;
+
 }
 .iconCarrito{
   cursor: pointer;

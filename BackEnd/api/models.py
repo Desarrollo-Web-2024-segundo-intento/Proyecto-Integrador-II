@@ -7,13 +7,13 @@ class Especialidad(models.Model):
     especialidad = models.CharField(max_length=100)
 # #2
 class Estadoturno(models.Model):
-   estado_turno = models.CharField(max_length=100)
+    estado_turno = models.CharField(max_length=100)
 # #3
 class Obra_Social(models.Model):
-     nombre_obra = models.CharField(max_length=100)
-     descripcion_obra = models.CharField(max_length=100)
-     contacto_obra = models.CharField(max_length=100)
-   
+    nombre_obra = models.CharField(max_length=100)
+    descripcion_obra = models.CharField(max_length=100)
+    contacto_obra = models.CharField(max_length=100)
+
 class Profesional(models.Model):
     nombre = models.CharField(max_length=100)
     apellido = models.CharField(max_length=100)
@@ -30,10 +30,10 @@ class Paciente(models.Model):
     telefono = models.CharField(max_length=100)
 # #6    
 class Turnos(models.Model):
-     fecha_turno = models.DateField(null=True)
-     hora_turno = models.TimeField(null=True)
-     paciente = models.ForeignKey(Paciente, on_delete=models.CASCADE, related_name='turnos',null=True, default='00:00')  # Clave foránea a Paciente
-     profesional = models.ForeignKey(Profesional, on_delete=models.CASCADE, related_name='turnos',null=True)  # Clave foránea a Profesional
-     estado_turno = models.ForeignKey(Estadoturno, on_delete=models.CASCADE, related_name='turnos',null=True)  # Clave foránea a Estadoturno
+    fecha_turno = models.DateField(null=True)
+    hora_turno = models.TimeField(null=True)
+    paciente = models.ForeignKey(Paciente, on_delete=models.CASCADE, related_name='turnos',null=True, default='00:00')  # Clave foránea a Paciente
+    profesional = models.ForeignKey(Profesional, on_delete=models.CASCADE, related_name='turnos',null=True)  # Clave foránea a Profesional
+    estado_turno = models.ForeignKey(Estadoturno, on_delete=models.CASCADE, related_name='turnos',null=True)  # Clave foránea a Estadoturno
 
 
