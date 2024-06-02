@@ -1,0 +1,71 @@
+main{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+h2{
+    text-align: center;
+}
+.container{
+    display: flex;
+    flex-direction: row;
+}
+.btn{
+    margin: 50px;
+  
+}
+/* Estilos para la tabla */
+table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  table th,
+  table td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+
+  th span {
+    margin: 0 48px; 
+  }
+  tr{
+    font-weight: 500;
+  }
+  /* Estilo para la primera fila (encabezados) */
+  table th {
+    background-color: #5866d0;
+    color: #333; 
+    color: #e2e2e2;
+    font-weight: 600;
+  }
+
+  input{
+    border-radius: 5px;  
+  }
+  .input input{
+    /* width:50%; */
+    margin-top: 10px;
+    padding: 6px 6px;
+  }
+  .input{
+    width:70%;
+  }
+
+  
+  /* Estilo para las filas impares */
+  table tbody tr:nth-child(odd) {
+    background-color: #f9f9f9;
+  }
+  
+  /* Estilo para las filas al pasar el cursor */
+  table tbody tr:hover {
+    background-color: #e2e2e2;
+  }
+  .td-pagar{
+    font-weight: 600;
+    font-size: 22px;
+  }
+  .espaciado{
+    margin: 0 30px;
+  }
