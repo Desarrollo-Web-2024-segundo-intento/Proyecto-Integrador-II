@@ -1,18 +1,13 @@
-import { CommonModule } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
-import { NgModule } from '@angular/core';
-
-
-
 
 @Component({
   selector: 'app-nav',
   standalone: true,
-  imports: [NavComponent, RouterLink, RouterLinkActive, CommonModule],
+  imports: [NavComponent, RouterLink, RouterLinkActive],
   templateUrl: './nav.component.html',
   styleUrl: './nav.component.css'
 })
-export class NavComponent{
-  userLoginOn: boolean = false;   
-  }
+export class NavComponent {
+
+}
