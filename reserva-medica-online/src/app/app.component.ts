@@ -12,6 +12,7 @@ import { HeaderComponent } from "./shared/header/header.component";
 import { TerminosYCondicionesComponent } from './pages/terminos-y-condiciones/terminos-y-condiciones.component';
 import { RegistroComponent } from './auth/registro/registro.component';
 
+
 @Component({
     selector: 'app-root',
     standalone: true,

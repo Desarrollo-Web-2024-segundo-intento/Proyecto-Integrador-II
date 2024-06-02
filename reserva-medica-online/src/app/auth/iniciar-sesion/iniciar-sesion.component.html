@@ -4,18 +4,45 @@
 
   <div class="login-container" id="login-section">
     <h3 class="text-center">Acceso para pacientes</h3>
-    <form id="login-form" onsubmit="login(event)">
+    <form  [formGroup]="loginForm">
       <div class="form-group">
-        <label for="usuario">Usuario o Correo Electrónico:</label>
-        <input type="text" id="usuario" name="usuario" placeholder="Usuario o Correo" autofocus>
+
+        <label for="usuario">Correo Electronico:</label>
+        <input formControlName="email" type="email" id="usuario" name="usuario" placeholder="Correo Electronico">
+        <!--<label for="usuario">Usuario o Correo Electrónico:</label>
+        <input type="text" id="usuario" name="usuario" placeholder="Usuario o Correo" autofocus>-->
+
       </div>
+
+
+  <div *ngIf="correo.invalid && (correo.dirty || correo.touched)"
+    class="text-danger">
+    <div *ngIf="correo.errors?.['required']">
+      El Correo es requerido.
+    </div>
+    <div *ngIf="correo.errors?.['email']">
+      Ingresar un formato de Email valido.
+    </div>
+  </div>
+
+
 
       <div class="form-group">
         <label for="contrasena">Contraseña:</label>
-        <input type="password" id="contrasena" name="contrasena" placeholder="Contraseña">
+        <input formControlName="password" type="password" id="contrasena" name="contrasena" placeholder="Contraseña">
       </div>
 
-      <button type="submit" routerLink="" class="btn-login">Iniciar Sesión</button>
+      <div *ngIf="password.invalid && (password.dirty || password.touched)"
+      class="text-danger">
+      <div *ngIf="password.errors?.['required']">
+        Ingresar Contraseña
+      </div>
+    </div>
+
+
+
+      <button type="submit" (click)="login()" class="btn-login">Iniciar Sesión</button>
+      <!--<button type="submit" routerLink="" class="btn-login">Iniciar Sesión</button>!-->
       <p class="mt-5">¿No tenés cuenta?</p>
       <button type="submit" id="datos_personales_boton" routerLink="/registro" class="btn-login">Registrate</button>
     
