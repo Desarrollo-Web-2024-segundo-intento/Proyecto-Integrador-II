@@ -39,10 +39,6 @@ export class IniciarSesionComponent {
     return this.loginForm.controls.password;
   };
 
-
- //apellido="castillo"
-
-
   login(){
     if(this.loginForm.valid){
       this.loginService.login(this.loginForm.value as LoginRequest);
