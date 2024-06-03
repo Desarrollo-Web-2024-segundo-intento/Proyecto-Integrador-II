@@ -6,16 +6,18 @@
 - mail: moniantich@gmail.com
 - clave: 123456
 
+## Base de datos  
+
+La información para la conexión a la base de datos se encuentra en la siguiente ubicacion:  
+BackEnd --> abm_ispc --> settings.py  
 
 ## Integrantes del Grupo
-
 
 - Patricia Castillo
 - Monica Antich
 - Jesica Aramayo
 - Alejo Lucero
 - Matias Sorrentino
-- Brenda Storello
 
 
 
