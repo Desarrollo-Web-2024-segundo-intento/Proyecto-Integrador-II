@@ -78,11 +78,12 @@ export class RegistroComponent {
       {
         apellido:['',[Validators.required, this.nameValidator()], []],
         nombre:['',[Validators.required, this.nameValidator()], []],
-        telefono:['',[Validators.required, this.telefonoValidator()], []],
+        //telefono:['',[Validators.required, this.telefonoValidator()], []],
         dni:['',[Validators.required, this.dniValidator()], []],
-        mutual:['',[Validators.required, this.mutualValidator()], []],
+        //mutual:['',[Validators.required, this.mutualValidator()], []],
         email:['',[Validators.required, this.emailValidator()], []],
-        password:['',[Validators.required, this.passwordValidator], []]
+        password:['',[Validators.required, this.passwordValidator], []],
+        password2:['',[Validators.required, this.passwordValidator], []]
       }
     )
   }
@@ -97,20 +98,23 @@ export class RegistroComponent {
   get Nombre(){
     return this.form.get("nombre");
   }
-  get Telefono(){
-    return this.form.get("telefono");
-  }
+  // get Telefono(){
+  //   return this.form.get("telefono");
+  // }
   get Dni(){
     return this.form.get("dni");
   }
-  get Mutual(){
-    return this.form.get("mutual");
-  }
+  // get Mutual(){
+  //   return this.form.get("mutual");
+  // }
   get Email(){
     return this.form.get("email");
   }
   get Password(){
     return this.form.get("password");
+  }
+  get Password2(){
+    return this.form.get("password2");
   }
 
   onRegistrar(event: Event): void {
