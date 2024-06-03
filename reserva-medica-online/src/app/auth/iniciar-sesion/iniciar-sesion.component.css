@@ -5,7 +5,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-  
+
   }
 div.row {
     justify-content: space-around;
@@ -21,11 +21,11 @@ div.row {
 .login-container {
     max-width: 400px; 
     margin: 30px auto; 
-    padding: 20px; 
-    background-color: white; 
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
-    text-align: center; 
+    padding: 20px; /* Espaciado interno */
+    background-color: white; /* Fondo blanco */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    text-align: center; /* Centra el texto */
 }
 
 /* Estilo para los encabezados */
@@ -47,13 +47,22 @@ input {
 /*Estilo para el botÃ³n de login*/
 .btn-login{
     background-color: #007bff;
-    color: white;
-    padding: 10px 20px; 
-    border: none;
-    border-radius: 5px; 
-    cursor: pointer; 
-
+    color: white; /* Texto blanco */
+    padding: 10px 20px; /* Espaciado interno */
+    border: none; /* Sin borde adicional */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cursor cambia a mano */
+    /* transition: background-color 0.3s; TransiciÃ³n suave */
 }
 .btn_login:hover{
-    background-color: #0056b3; 
+    background-color: #0056b3;
 }
+
+
+/* .ng-valid:not(form).ng-touched {
+    border: 2px solid#3fd447;
+}
+
+.ng-invalid:not(form).ng-touched {
+    border: 2px solid#f70905;
+} */

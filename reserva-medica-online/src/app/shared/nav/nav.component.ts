@@ -1,15 +1,27 @@
-import { NgIf } from '@angular/common';
-import { Component } from '@angular/core';
+
+import { CommonModule } from '@angular/common';
+import { Component, OnInit } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
-import { NavDashbComponent } from '../../pages/dashboard/nav-dashb/nav-dashb.component';
+import { NgModule } from '@angular/core';
+
+import { NgIf } from '@angular/common'; //PATRI
+//import { Component } from '@angular/core';
+//import { RouterLink, RouterLinkActive } from '@angular/router';
+import { NavDashbComponent } from '../../pages/dashboard/nav-dashb/nav-dashb.component'; //PATRI
+
 
 @Component({
   selector: 'app-nav',
   standalone: true,
-  imports: [NavComponent, RouterLink, RouterLinkActive, NavDashbComponent],
+  imports: [NavComponent, RouterLink, RouterLinkActive, CommonModule, NavDashbComponent],
   templateUrl: './nav.component.html',
   styleUrl: './nav.component.css'
 })
-export class NavComponent {
- 
+export class NavComponent{
+  userLoginOn: boolean = false;
 }
+
+  // imports: [NavComponent, RouterLink, RouterLinkActive, NavDashbComponent],
+  // templateUrl: './nav.component.html',
+  // styleUrl: './nav.component.css'
+// }

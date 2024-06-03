@@ -1,37 +1,113 @@
-<div class="espacio_5px"></div>
-
-
-  <div id="registro_pacientes" class="row align-items-center">
+<div class="logo_login">
+  <img id="calendar" src="assets/img/time-and-calendar.png" alt="">
+</div>
+<form [formGroup]="form" (ngSubmit)="onRegistrar($event)">
+  <div id="registro_pacientes" class="row align-items-center singin-container">
     <h2 class="text-center">Datos Personales</h2>
+    <div class="row p-4">
 
-    <div class="row m-4">
+      <input class="input_registro" type="text" id="dni" formControlName="dni" placeholder="DNI">
+      <div *ngIf="Dni?.errors && Dni?.touched" class="text-danger">
+        <div *ngIf="Dni?.hasError('required')" style="font-size: 12px;">
+          El DNI es requerido.
+        </div>
+        <div *ngIf="Dni?.hasError('invalidDni')" style="font-size: 12px;">
+          Debe tener entre 7 a 8 caracteres numéricos.
+        </div>
+      </div>
 
-      <!-- <label for="apellido">Apellido:</label> --> 
-      <input class="input_registro" type="text" id="apellido" name="apellido" placeholder="Apellido" autofocus [(ngModel)]="usuarioData.apellido">
-      <div class="espacio_5px"></div>
-      <!-- <label for="nombre">Nombre:</label> -->
-      <input class="input_registro" type="text" id="nombre" name="nombre" placeholder="Nombre" [(ngModel)]="usuarioData.nombre">
-      <div class="espacio_5px"></div>          
-      <!-- <label for="telefono">Teléfono:</label> -->
-      <input class="input_registro" type="tel" id="telefono" name="telefono" placeholder="Telefono" required  [(ngModel)]="usuarioData.telefono">
-      <div class="espacio_5px"></div>            
-      <!-- <label for="dni">DNI:</label> -->
-      <input class="input_registro" type="text" id="dni" name="dni" placeholder="DNI" required [(ngModel)]="usuarioData.dni">
-      <div class="espacio_5px"></div>
-      <!-- <label for="mutual">Mutual:</label> -->
-      <input class="input_registro" type="text" id="obraSocial" name="obraSocial" placeholder="obraSocial" required [(ngModel)]="usuarioData.obraSocial">
-      <div class="espacio_5px"></div>
-      <!-- <label for="email">E-Mail:</label> -->
-      <input class="input_registro" type="text" id="email" name="email" placeholder="Email" required [(ngModel)]="usuarioData.email">
+      <!-- <input class="input_registro" type="text" id="apellido" formControlName="apellido" placeholder="Apellido">
+      <div *ngIf="Apellido?.errors && Apellido?.touched" class="text-danger">
+        <div *ngIf="Apellido?.hasError('required')">
+          El Apellido es requerido.
+        </div>
+        <div *ngIf="Apellido?.hasError('invalidName')">
+          Debe tener al menos 3 caracteres y no debe contener números.
+        </div>
+      </div> -->
+
+      <input class="input_registro" type="text" id="nombre" formControlName="nombre" placeholder="Nombre">
+      <div *ngIf="Nombre?.errors && Nombre?.touched" class="text-danger">
+        <div *ngIf="Nombre?.hasError('required')" style="font-size: 12px;">
+          El Nombre es requerido.
+        </div>
+        <div *ngIf="Nombre?.hasError('invalidName')" style="font-size: 12px;">
+          Debe tener al menos 3 caracteres y no debe contener números.
+        </div>
+      </div>
+      <input class="input_registro" type="text" id="apellido" formControlName="apellido" placeholder="Apellido">
+      <div *ngIf="Apellido?.errors && Apellido?.touched" class="text-danger">
+        <div *ngIf="Apellido?.hasError('required')" style="font-size: 12px;">
+          El Apellido es requerido.
+        </div>
+        <div *ngIf="Apellido?.hasError('invalidName')" style="font-size: 12px;">
+          Debe tener al menos 3 caracteres y no debe contener números.
+        </div>
+      </div>
+
+      <!-- <input class="input_registro" type="tel" id="telefono" formControlName="telefono" placeholder="Telefono">
+      <div *ngIf="Telefono?.errors && Telefono?.touched" class="text-danger">
+        <div *ngIf="Telefono?.hasError('required')">
+          El Telefono es requerido.
+        </div>
+        <div *ngIf="Telefono?.hasError('invalidTelefono')">
+          Debe tener 10 digitos, sin espacio ni 0 en codigo de provincia. Ej: 3518888888
+        </div>
+      </div> -->
+
+      <!-- <input class="input_registro" type="text" id="dni" formControlName="dni" placeholder="DNI">
+      <div *ngIf="Dni?.errors && Dni?.touched" class="text-danger">
+        <div *ngIf="Dni?.hasError('required')">
+          El DNI es requerido.
+        </div>
+        <div *ngIf="Dni?.hasError('invalidDni')">
+          Debe tener entre 7 a 8 caracteres numéricos.
+        </div>
+      </div> -->
+
+      <!-- <input class="input_registro" type="text" id="mutual" formControlName="mutual" placeholder="Mutual">
+      <div *ngIf="Mutual?.errors && Mutual?.touched" class="text-danger">
+        <div *ngIf="Mutual?.hasError('required')">
+          La Mutual es requerida.
+        </div>
+        <div *ngIf="Mutual?.hasError('invalidMutual')">
+          Debe tener al menos 3 caracteres y no debe contener números.
+        </div>
+
+      </div> -->
+
+      <input class="input_registro" type="text" id="email" formControlName="email" placeholder="Email">
+      <div *ngIf="Email?.errors && Email?.touched" class="text-danger">
+        <div *ngIf="Email?.hasError('required')" style="font-size: 12px;">
+          El Email es requerido.
+        </div>
+        <div *ngIf="Email?.hasError('invalidEmail')" style="font-size: 12px;">
+          Introducir una dirección de correo electrónico válida con el formato example&#64;example.com
+        </div>
+      </div>
+
+      <input class="input_registro" type="password" id="password" formControlName="password" placeholder="Contraseña">
+      <div *ngIf="Password?.errors && Password?.touched" class="text-danger">
+        <div *ngIf="Password?.hasError('required')" style="font-size: 12px;">
+          La constraseña es requerida.
+        </div>
+        <div *ngIf="Password?.hasError('invalidPassword')" style="font-size: 12px;">
+          Debe tener al menos 6 caracteres y maximo 20, al menos una letra mayúscula, un número y un símbolo.
+        </div>
+      </div>
+      <input class="input_registro" type="password" id="password" formControlName="password" placeholder="Repetir Contraseña">
+      <div *ngIf="Password?.errors && Password?.touched" class="text-danger">
+        <div *ngIf="Password?.hasError('required')" style="font-size: 12px;">
+          La constraseña es requerida.
+        </div>
+        <div *ngIf="Password?.hasError('invalidPassword')" style="font-size: 12px;">
+          Debe tener al menos 6 caracteres y maximo 20, al menos una letra mayúscula, un número y un símbolo.
+        </div>
+      </div>
     </div>
 
     <div class="mi_clase">
-      <button type="submit" id="datos_personales" class="posicion_boton_grabar_datospersonales" (click)="grabarDatosPersonales()">Grabar</button>
+      <button type="submit" id="datos_personales" class="posicion_boton_grabar_datospersonales btn-singin">Registrarse</button>
     </div>
   </div>
-
-  <div class="row" id="botonVolver">
-    <button routerLink="/inicio" class="btn btn-sm col-2 m-4 align-self-center" id="volver">Volver</button>
-  </div>
-
-  <script src="./js/login.js"></script>
+</form>

@@ -1,18 +1,38 @@
-#servicios{
-    max-width: 1200px;
+/* #servicios{
+    width: 90%;
     height: 100%;
+    background-color: aqua;
     margin: 0 auto;
     box-sizing: border-box;
-  }
-  
-  .titulo_servicios{
+  } */
+
+  /* .servicios_dinamicos{
+    width: 90%;
+    height: 400px;
+    background-color: aqua;
+    margin-left: 55px;
+    border: 1px solid #000;
+} */
+
+.servicios_dinamicos {
+  width: 95%; /* Ajusta el ancho según sea necesario */
+  height: auto; /* O ajusta la altura según sea necesario */
+  background-color: aqua;
+  margin-left: 50px;
+  overflow: auto; /* Puedes usar 'auto', 'hidden' u otras opciones según tus necesidades */
+  /* border: 1px solid black; /* Agrega un borde para visualizar el contenedor */
+  padding: 10px; /* Ajusta el relleno según sea necesario */
+  /* Otros estilos según tus preferencias */
+}
+
+  /* .titulo_servicios{
     text-align: center;
     padding-bottom: 40px;
     color: #000000c5;
     text-transform: uppercase;
-    margin-top: 20px;
-   
-  }
+    margin-top: 10px;
+  
+  } 
   .servicio-container-superior{
     width: 100%;
     height: auto;
@@ -114,10 +134,78 @@
   .card .btn {
     width: 100%;
   }
-
+  
+  .carousel-container {
+    width: 100%;
+    height: 150px; 
+    padding-top: 40px;
+  
+    overflow: hidden; 
+  }
+  
+  .carousel {
+    display: flex; 
+    animation: scroll 15s linear infinite; 
+  }
+  
+  .carousel img {
+    width: 20%; 
+    height: 100%;
+    border-radius: 8px;
+    margin-right: 5px;
+  }
+  
+  @keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-1500px); } 
+  }
+  .container-medio {
+    display: flex;
+    justify-content: center;
+    margin: 50px 0;
+  }
+  .card {
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px 5px #5959ec38;
+    cursor: pointer;
+  }
+  
+  .card h3 {
+    margin-bottom: 10px;  
+  }
+  .card img{
+    width: 35px;
+    padding-right: 5px;
+    cursor: pointer;
+  }
+  .card h3 .indicador{
+    margin-left: auto; 
+  }
+  
+  .lista-oculta {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease; 
+  }
+  .lista-oculta li {
+   color:#151635;
+   font-weight: 500;
+   margin-left: 80px;
+  }
+  .toggle {
+    display: none; 
+  }
+  
+  .toggle:checked + ul {
+    max-height: 700px; 
+    transition: max-height 0.3s ease;
+  }
   .obra-social img {
     width: 60%; 
     height: 70%;
+<<<<<<< HEAD
   } 
 
   .defer{
@@ -130,3 +218,10 @@
       3px 3px 15px rgba(192,192,192,0.5);
       margin:40px;
   }
+=======
+  }  
+  .obra-social img {
+    width: 60%; 
+    height: 70%;
+  }  */
+>>>>>>> 3e7bbc31fd1125c360cea2fee5315883a2cc20f1
