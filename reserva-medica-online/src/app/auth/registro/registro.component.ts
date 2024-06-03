@@ -1,8 +1,8 @@
 // import { Component } from '@angular/core';
 // import { FormsModule } from '@angular/forms';
 // import { RouterLink, Router } from '@angular/router';
-// import { UsuarioService } from '../../services/usuario.service';
-// import { Usuario } from '../../interfaces/usuario';
+import { UsuarioService } from '../../services/usuario.service'; //patri
+import { Usuario } from '../../interfaces/usuario'; //patri
 
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, ValidatorFn, ReactiveFormsModule, FormsModule, AbstractControl, Validators } from '@angular/forms';
@@ -16,7 +16,6 @@ import { User } from '../../models/user';
 // @Component({
 //   selector: 'app-registro',
 //   standalone: true,
-
 //   imports: [RouterLink, FormsModule],
 //   templateUrl: './registro.component.html',
 //   styleUrl: './registro.component.css'
@@ -57,11 +56,24 @@ import { User } from '../../models/user';
   styleUrls: ['./registro.component.css']
 })
 export class RegistroComponent {
+
+//PATRI
+  usuarioData: Usuario = {
+    apellido: '',
+    nombre: '',
+    telefono: '',
+    dni: '',
+    obraSocial: '',
+    email: '',
+    id: 0
+  };
+// FIN PATRI
+
   form:FormGroup;
   user: User = new User();
 
-
-  constructor(private formBuilder:FormBuilder, private router:Router, private registroService:RegistroService) {
+  //PATRI = private usuarioService:UsuarioService
+  constructor(private formBuilder:FormBuilder, private router:Router, private registroService:RegistroService, private usuarioService:UsuarioService) {
     this.form=this.formBuilder.group(
       {
         apellido:['',[Validators.required, this.nameValidator()], []],
@@ -170,4 +182,17 @@ export class RegistroComponent {
     const regex = /^(?=(?:.*\d))(?=.*[A-Z])(?=.*[a-z])(?=.*[.,*!?¿¡/#$%&])\S{8,20}$/;
     return regex.test(password)? null : { 'invalidPassword': { value: control.value } };
   }
+
+  //PATRI
+  grabarDatosPersonales(): void {
+    this.usuarioService.setUsuarioData(this.usuarioData);
+    console.log('Datos personales guardados:', this.usuarioData);
+    this.router.navigate(['/dashboard/usuario/perfil']);
+  };
+
+    actualizarDatos(): void {
+    this.usuarioService.updateUsuarioData(this.usuarioData);
+    console.log('Datos personales actualizados:', this.usuarioData);
+  }
+  //FIN PATRI
 }
