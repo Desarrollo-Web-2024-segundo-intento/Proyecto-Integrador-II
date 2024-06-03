@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { TurnosService } from '../../services/turnos.service';
+import { PasarelaPagoService } from '../pasarela-pago/pasarela-pago.service';
 
 @Component({
   selector: 'app-turnos',
@@ -8,7 +9,7 @@ import { TurnosService } from '../../services/turnos.service';
   styleUrls: ['./turnos.component.css']
 })
 export class TurnosComponent implements OnInit {
-  constructor(private router: Router, private turnosService: TurnosService) {}
+  constructor(private router: Router, private turnosService: TurnosService, private pasarelaDePago: PasarelaPagoService) {}
 
   ngOnInit() {
     this.setupButtonEventListeners();
@@ -42,7 +43,6 @@ export class TurnosComponent implements OnInit {
 
     this.setupButtonEventListener('boton_grabar_turno', () => {
       console.log('Aca va la funcion de la Api Rest para grabar el turno');
-      alert('Aca va la funcion de la Api Rest para grabar el turno');
       this.ocultarSecciones();
       this.verMenuPrincipal();
       this.ocultarVolver();
@@ -136,5 +136,12 @@ export class TurnosComponent implements OnInit {
     if (botonVolver) {
       botonVolver.style.display = 'none';
     }
+  }
+  pagos: {id: number,title:string, profesional: string, obra_social:string, fecha: string, price:number}[] = [
+    { id: 1, title:"medico Clinico",profesional:"",obra_social:"",  fecha: '15-05-2024', price: 7600 },
+    { id: 2, title:"Dermatologo",profesional:"Sebastian verne" ,obra_social:"Saraza",fecha: '16-05-2023', price: 7600,  },
+  ]
+  onProceedToPay(){
+    this.pasarelaDePago.onProceedToPay(this.pagos)
   }
 }

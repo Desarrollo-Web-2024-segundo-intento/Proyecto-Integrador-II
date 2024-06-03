@@ -13,8 +13,6 @@ export class PagosComponent {
   pagos: {id: number,especialidad:string, profesional: string, obra_social:string, fecha: string, monto:number}[] = [
     { id: 1, especialidad:"medico Clinico",profesional:"",obra_social:"",  fecha: '15-05-2024', monto: 100 },
     { id: 2, especialidad:"Dermatologo",profesional:"Sebastian verne" ,obra_social:"Saraza",fecha: '16-05-2023', monto: 200,  },
-
-   
   ]
 }
 
