@@ -1,5 +1,7 @@
 <h1>Proyecto Sistema de Reserva Médica Online<h1>
   
+ ![home](https://github.com/Desarrollo-Web-2024-segundo-intento/Proyecto-Integrador-II/assets/69865928/87f7634d-7d2e-42cb-adfd-6c3384a65668) 
+ 
 <h2>Descripción del proyecto</h2>
 El Sistema de Reserva Médica Online es una plataforma web diseñada para facilitar a los usuarios/pacientes la gestión de sus turnos médicos de manera eficiente y conveniente. Este proyecto se desarrolla en dos etapas, utilizando diferentes tecnologías para mejorar la experiencia del usuario y optimizar la funcionalidad del sistema.
 
