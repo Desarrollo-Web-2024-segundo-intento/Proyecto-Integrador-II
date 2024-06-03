@@ -51,6 +51,7 @@ input {
 /*Estilo para el botÃ³n de login*/
 .btn-login{
     background-color: #007bff;
+    width: 70%;
     color: white; /* Texto blanco */
     padding: 10px 20px; /* Espaciado interno */
     border: none; /* Sin borde adicional */

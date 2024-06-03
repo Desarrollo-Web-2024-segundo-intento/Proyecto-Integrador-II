@@ -23,8 +23,8 @@ export class ServiciosComponent implements OnInit {
 
   async fetchData() {
     try {
-      // const response = await fetch('http://192.168.0.170:8000/api/v1/especialidad/?format=json');
-      const response = await fetch('http://casaiot.ddns.net:8000/api/v1/especialidad/?format=json');
+      const response = await fetch('http://192.168.0.170:8000/api/v1/especialidad/?format=json');
+      // const response = await fetch('http://casaiot.ddns.net:8000/api/v1/especialidad/?format=json');
       if (!response.ok) {
         console.error('Error en la respuesta de la solicitud.');
         return;
@@ -44,6 +44,7 @@ export class ServiciosComponent implements OnInit {
         newDiv.style.justifyContent = 'center';
         newDiv.style.alignItems = 'center';
         newDiv.style.border = '2px solid black';
+        newDiv.style.borderRadius = '10px';
         newDiv.style.float = 'left';
         newDiv.style.margin = '10px'; // Margen para separación entre divs
         const appDiv = document.getElementById('servicios'); // Asegúrate de que este sea el ID correcto
@@ -52,11 +53,19 @@ export class ServiciosComponent implements OnInit {
         } else {
             console.error('No se encontró el elemento con id "app"');
         }
+        const div_contenedor = document.createElement('div'); // Crea el div contenedor de div_titulo y div_carrito
+        div_contenedor.style.width = '100%';
+        div_contenedor.style.backgroundColor = 'yellow';
+        div_contenedor.style.display = 'flex';
+        div_contenedor.style.flexDirection = 'row';
+        div_contenedor.style.justifyContent = 'center';
+        div_contenedor.style.alignItems = 'center';
+        newDiv.appendChild(div_contenedor);
 
         const div_titulo = document.createElement('div'); // este constante genera el div contenedor de la especialidad
         div_titulo.id = 'div_titulo';
         div_titulo.innerText = data[i].especialidad;
-        div_titulo.style.width = '90%';
+        div_titulo.style.width = '55%';
         div_titulo.style.height = '50px';
         div_titulo.style.backgroundColor = 'green';
         div_titulo.style.display = 'flex';
@@ -65,13 +74,61 @@ export class ServiciosComponent implements OnInit {
         div_titulo.style.alignItems = 'center';
         div_titulo.style.border = '2px solid black';
         div_titulo.style.margin = '10px'; // Margen para separación entre divs
-
+        div_contenedor.appendChild(div_titulo);
+        
         const div_padre = document.getElementById('div'+i); // Asegúrate de que este sea el ID correcto
         if (div_padre) {
             div_padre.appendChild(div_titulo);
         } else {
             console.error('No se encontró el elemento con id "app"');
         }
+
+        const div_carrito = document.createElement('div'); // este constante genera el div contenedor de la especialidad
+        div_carrito.id = 'div_carrito';
+        // div_carrito.innerText = 'Carrito';
+        div_carrito.style.width = '30%';
+        div_carrito.style.height = '50px';
+        div_carrito.style.backgroundColor = 'transparent';
+        div_carrito.style.display = 'flex';
+        div_carrito.style.flexDirection = 'column';
+        div_carrito.style.justifyContent = 'center';
+        div_carrito.style.alignItems = 'center';
+        div_carrito.style.border = '1px solid black';
+        div_carrito.style.margin = '10px'; // Margen para separación entre divs
+
+        // const div_padre = document.getElementById('div'+i); // Asegúrate de que este sea el ID correcto
+        // if (div_padre) {
+        //     div_padre.appendChild(div_carrito);
+        // } else {
+        //     console.error('No se encontró el elemento con id "app"');
+        // }
+            // Añadir div_titulo y div_carrito a div_contenedor
+            div_contenedor.appendChild(div_titulo);
+            div_contenedor.appendChild(div_carrito);
+
+
+            // Crear y configurar la imagen
+            const img = document.createElement('img');
+            img.src = 'assets/img/carrito.png'; // Cambia esta ruta a la de tu imagen
+            img.alt = 'Carrito';
+            img.style.width = '50px'; // Ajusta el tamaño según sea necesario
+            img.style.height = '50px'; // Ajusta el tamaño según sea necesario
+
+            // Añadir la imagen al div_carrito
+            div_carrito.appendChild(img);
+
+
+
+
+
+
+
+
+
+
+        // Añadir div_contenedor a newDiv
+          // newDiv.appendChild(div_contenedor);
+        
         const div_descripcion = document.createElement('div'); // este constante genera el div contenedor de la especialidad
         div_descripcion.id = 'div_descripcion';
         div_descripcion.innerText = data[i].descripcion;

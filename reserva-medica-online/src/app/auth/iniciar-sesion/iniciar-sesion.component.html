@@ -1,54 +1,33 @@
-  <div class="logo_login">
-    <img id="calendar" src="assets/img/time-and-calendar.png" alt="">
-  </div>
-
 <div class="logo_login">
   <img id="calendar" src="assets/img/time-and-calendar.png" alt="">
 </div>
 
+  <div class="login-container" id="login-section">
+    <h3 class="text-center">Acceso para pacientes</h3>
+    <form  [formGroup]="loginForm">
+      <div class="form-group">
+        <label for="usuario">DNI:</label>
+        <input formControlName="dni" type="text" id="usuario" name="usuario" placeholder="ingrese documento de identidad">
+      </div>
 
+      <div class="form-group">
+        <label for="contrasena">Contraseña:</label>
+        <input formControlName="password" type="password" id="contrasena" name="contrasena" placeholder="Contraseña">
+      </div>
 
-<div class="login-container" id="login-section">
-  <h3 class="text-center">Acceso para pacientes</h3>
-  <form  [formGroup]="loginForm">
-    <div class="form-group">
-      <label for="usuario">Correo Electronico:</label>
-      <input formControlName="email" type="email" id="usuario" name="usuario" placeholder="Correo Electronico">
-    </div>
-
-    <div *ngIf="correo.errors?.['email']">
-      Ingresar un formato Email valido.
-    </div>
-
-
-    <div *ngIf="correo.invalid && (correo.dirty || correo.touched)"
+      <div *ngIf="password.invalid && (password.dirty || password.touched)"
       class="text-danger">
-      <div *ngIf="correo.errors?.['required']">
-        El Correo es requerido.
-      </div>
-      <div *ngIf="correo.errors?.['email']">
-        Ingresar un formato de Email valido.
-      </div>
-    </div>
-
-    <div class="form-group">
-      <label for="contrasena">Contraseña:</label>
-      <input formControlName="password" type="password" id="contrasena" name="contrasena" placeholder="Contraseña">
-    </div>
-
-    <div *ngIf="password.invalid && (password.dirty || password.touched)"
-    class="text-danger">
       <div *ngIf="password.errors?.['required']">
         Ingresar Contraseña
       </div>
     </div>
 
+      <button type="submit" (click)="login()" class="btn-login">Iniciar Sesión</button>
+      <!-- <p class="mt-5">¿No tenés cuenta?</p> -->
+      <div class="espacio_5px"></div>
+      <p>¿No tenés cuenta?</p>
+      <button type="button" id="datos_personales_boton" class="btn-login" onclick="window.location.href='/registro'">Regístrate</button>
 
-    <button type="submit" (click)="login()" class="btn-login">Iniciar Sesión</button>
-    <p class="mt-5">¿No tenés cuenta?</p>
-    <button type="submit" id="datos_personales_boton" class="btn-login" routerLink="/registro">Registrate</button>
-
-  </form>
-  <div class="espacio_5px"></div>
-</div>
-
+    </form>
+    <div class="espacio_5px"></div>
+  </div>
