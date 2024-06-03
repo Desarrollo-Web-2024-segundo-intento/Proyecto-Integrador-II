@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 * {
     padding: 0px 0px 0px 0px;
     margin: 0;
@@ -6,7 +6,7 @@
     box-sizing: border-box;
   }
 
-/* You can add global styles to this file, and also import other style files */
+
 body {
     font-family: "Fira Sans", sans-serif !important;
     margin: 0;
@@ -20,16 +20,16 @@ body {
     padding: 20px;
   }
   
-  /* Estilos del encabezado */
+
   header {
     background-color: #151635;
     color: #fff;
-    padding: 8px; /* Ajustar el padding del encabezado */
+    padding: 8px; 
     text-align: center;
-    margin-bottom: 8px; /* Ajustar el margen inferior del encabezado */
+    margin-bottom: 8px; 
   }
   
   header h1 {
     margin: 0;
-    font-size: 36px; /* Tamaño de fuente del encabezado */
+    font-size: 36px; 
   }

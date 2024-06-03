@@ -17,9 +17,11 @@ import { RegistroComponent } from './auth/registro/registro.component';
 import { CarritoComponent } from './pages/carrito/carrito.component';
 import { PerfilComponent } from './pages/dashboard/usuario/perfil/perfil.component';
 import { MisTurnosComponent } from './pages/dashboard/mis-turnos/mis-turnos.component';
+import { authGuard } from './guards/auth.guard';
 
 
 export const routes: Routes = [
+   {path:" ", component: InicioComponent},
    {path:"inicio", component: InicioComponent},
    {path:"acercaDe", component: AcercaDeComponent},
    {path:"servicios", component: ServiciosComponent},
@@ -31,7 +33,7 @@ export const routes: Routes = [
    {path:"preguntas", component: PreguntasComponent},
    {path: "terminos-y-condiciones", component: TerminosYCondicionesComponent},
    {path:"politicas", component: PoliticasComponent},
-   {path:"dashboard", component: DashboardComponent,
+   {path:"dashboard", component: DashboardComponent, canActivate: [authGuard],
       children:[
          {path:'usuario/perfil', component: PerfilComponent},
          {path:'mis-turnos', component: MisTurnosComponent},

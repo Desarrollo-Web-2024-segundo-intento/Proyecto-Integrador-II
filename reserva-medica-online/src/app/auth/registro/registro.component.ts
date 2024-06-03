@@ -14,13 +14,13 @@ import { Usuario } from '../../interfaces/usuario';
 })
 export class RegistroComponent {
   usuarioData: Usuario = {
+    id: 0,
     apellido: '',
     nombre: '',
     telefono: '',
     dni: '',
     obraSocial: '',
     email: '',
-    id: 0
   };
 
 

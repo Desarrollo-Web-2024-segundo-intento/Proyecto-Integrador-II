@@ -1,8 +1,8 @@
 .contenidoPrincipal h2 {
     color: #000000;
-    padding: 8px; /* Ajustar el padding del encabezado */
+    padding: 8px; 
     text-align: center;
-    margin-bottom: 8px; /* Ajustar el margen inferior del encabezado */
+    margin-bottom: 8px;
     font-size: 1.7rem;
 }
 

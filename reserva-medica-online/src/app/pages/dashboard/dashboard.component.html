@@ -1,28 +1,32 @@
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
 
-<p *ngIf="!estaAutenticado">usuario no autenticado</p>
-<p *ngIf="estaAutenticado">usuario autenticado</p>
+@if(!estaAutenticado){
+  <p>usuario no autenticado!</p>
+  <a routerLink="/iniciar-sesion">inicia sesion</a>
+}
+@else{
+    <div class="dashboard">
+      <nav class="sidebar">
+        <ul>
+          <li><a routerLink="/dashboard/usuario/perfil" routerLinkActive="active"><span class="material-symbols-outlined perfil">account_circle</span> Perfil</a></li>
+          <li><a routerLink="/dashboard/mis-turnos" routerLinkActive="active"><span class="material-symbols-outlined">assignment_turned_in</span> Mis Turnos</a></li>
+          <li><a routerLink="/dashboard/pagos" routerLinkActive="active"><span class="material-symbols-outlined">monetization_on
+              </span>Pagos Realizados</a></li>
+          <li><a routerLink="/dashboard/historial" routerLinkActive="active"><span class="material-symbols-outlined">
+              description</span>Historial de Pagos</a></li>
+              <li><a routerLink="/inicio" routerLinkActive="active">Salir</a></li>
+        </ul>
+      </nav>
+
+      <div class="main-content">
+        <router-outlet/>  
+      </div>
+    </div> 
+
+
+}
 
 
 
 
-<div class="dashboard">
-    <nav class="sidebar">
-      <ul>
-        <li><a routerLink="/dashboard/usuario/perfil" routerLinkActive="active"><span class="material-symbols-outlined perfil">account_circle</span> Perfil</a></li>
-        <li><a routerLink="/dashboard/mis-turnos" routerLinkActive="active"><span class="material-symbols-outlined">assignment_turned_in</span> Mis Turnos</a></li>
-        <li><a routerLink="/dashboard/pagos" routerLinkActive="active"><span class="material-symbols-outlined">monetization_on
-            </span>Pagos Realizados</a></li>
-        <li><a routerLink="/dashboard/historial" routerLinkActive="active"><span class="material-symbols-outlined">
-            description</span>Historial de Pagos</a></li>
-            <li><a routerLink="/inicio" routerLinkActive="active" >Salir</a></li>
-      </ul>
-    </nav>
 
-    <div class="main-content">
-      <router-outlet></router-outlet>
-    </div>
-  </div> 
+

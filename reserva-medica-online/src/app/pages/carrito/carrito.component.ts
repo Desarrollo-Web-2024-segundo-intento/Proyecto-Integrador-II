@@ -6,23 +6,23 @@ import { FormsModule } from '@angular/forms';
 import { Especialidad } from '../../interfaces/especialidad';
 
 
-
 @Component({
   selector: 'app-carrito',
   standalone: true,
-  imports: [NgIf, NgFor, FormsModule],
+  imports: [NgIf, NgFor, FormsModule, RouterLink],
   templateUrl: './carrito.component.html',
   styleUrl: './carrito.component.css'
 })
 
 
 export class CarritoComponent implements OnInit  {
-  carritoVacio:boolean=false;
+  carritoVacio=false;
   usuarioLogueado:boolean=true;
   especialidad: Especialidad | undefined;
   
   carritoItems: any[] = [];
   total: number = 0;
+
 
     
   constructor(private router: Router, private CarritoService: CarritoService) {}
@@ -39,7 +39,6 @@ export class CarritoComponent implements OnInit  {
       this.actualizarTotal();
     }
       actualizarTotal() {
-        // this.total = this.CarritoService.obtenerTotal();
         this.total = this.calcularTotal();
       }
       calcularTotal() {

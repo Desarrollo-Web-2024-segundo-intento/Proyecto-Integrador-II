@@ -1,5 +1,5 @@
 main{
-    max-width: 1200px;
+    /* max-width: 1200px; */
 }
 h2{
     text-align: center;
@@ -7,7 +7,7 @@ h2{
     text-transform: uppercase;
 }
 table {
-  width: 100%;
+  width: 1000px;
   border-collapse: collapse;
   margin: 20px 0;
   font-size: 18px;
@@ -16,7 +16,7 @@ table {
 }
 
 thead {
-  background-color: #007bff;
+  background-color: #457bb6;
   color: white;
   position: sticky;
   top: 0;
@@ -28,7 +28,15 @@ thead th {
 }
 
 tbody tr {
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid #ddd; 
+}
+td{
+  border:1px solid rgba(255, 0, 0, 0.051);
+  height: 60px;
+  text-align: center;
+}
+th{
+  width: 100px;
 }
 
 tbody tr:nth-of-type(even) {

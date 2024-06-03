@@ -22,11 +22,9 @@
 }
 
 
-
  /* Constructor y declaracion de la grlla y sus areas */
   .menuPrincipal{
     display: grid;
-    /* background-color: aqua; */
     width: 100%;
     height: 200px;
     justify-content: center;
@@ -38,28 +36,24 @@
   }
   .div_titulo{
     grid-area: div_titulo;
-    /* background-color:crimson; */
   }
   .div_boton_1{
     grid-area: div_boton_1;
-    /* background-color: chartreuse; */
     display: flex;
-    justify-content: center; /* Centra horizontalmente */
-    align-items: center; /* Centra verticalmente */
+    justify-content: center;
+    align-items: center; 
    }
   .div_boton_2{
     grid-area: div_boton_2;
-    /* background-color:coral; */
     display: flex;
-    justify-content: center; /* Centra horizontalmente */
-    align-items: center; /* Centra verticalmente */
+    justify-content: center; 
+    align-items: center; 
   }
   .div_boton_3{
     grid-area: div_boton_3;
-    /* background-color:darkorange; */
     display: flex;
-    justify-content: center; /* Centra horizontalmente */
-    align-items: center; /* Centra verticalmente */
+    justify-content: center; 
+    align-items: center; 
   }
 
   .menuPrincipal{
@@ -70,8 +64,6 @@
   "div_boton_1  div_boton_2 div_boton_3"50px /
   20%           20%         20%;
 }
-
-
 
 
   .botones_turnos{
@@ -89,21 +81,8 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
   .menu_boton{
     display: grid;
-    /* background-color:chocolate; */
     width: 100%;
     height: 100px;
     justify-content: center;
@@ -115,24 +94,21 @@
 
   .div_boton_4{
     grid-area: div_boton_4;
-    /* background-color: chartreuse; */
     display: flex;
-    justify-content: center; /* Centra horizontalmente */
-    align-items: center; /* Centra verticalmente */
+    justify-content: center;
+    align-items: center; 
   }
   .div_boton_5{
     grid-area: div_boton_5;
-    /* background-color:coral; */
     display: flex;
-    justify-content: center; /* Centra horizontalmente */
-    align-items: center; /* Centra verticalmente */
+    justify-content: center; 
+    align-items: center;
   }
   .div_boton_6{
     grid-area: div_boton_6;
-    /* background-color:darkorange; */
     display: flex;
-    justify-content: center; /* Centra horizontalmente */
-    align-items: center; /* Centra verticalmente */
+    justify-content: center;
+    align-items: center; 
   }
 
   .menu_boton{
