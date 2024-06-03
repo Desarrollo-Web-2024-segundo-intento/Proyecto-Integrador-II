@@ -8,10 +8,10 @@
 
       <input class="input_registro" type="text" id="dni" formControlName="dni" placeholder="DNI">
       <div *ngIf="Dni?.errors && Dni?.touched" class="text-danger">
-        <div *ngIf="Dni?.hasError('required')">
+        <div *ngIf="Dni?.hasError('required')" style="font-size: 12px;">
           El DNI es requerido.
         </div>
-        <div *ngIf="Dni?.hasError('invalidDni')">
+        <div *ngIf="Dni?.hasError('invalidDni')" style="font-size: 12px;">
           Debe tener entre 7 a 8 caracteres numéricos.
         </div>
       </div>
@@ -28,19 +28,19 @@
 
       <input class="input_registro" type="text" id="nombre" formControlName="nombre" placeholder="Nombre">
       <div *ngIf="Nombre?.errors && Nombre?.touched" class="text-danger">
-        <div *ngIf="Nombre?.hasError('required')">
+        <div *ngIf="Nombre?.hasError('required')" style="font-size: 12px;">
           El Nombre es requerido.
         </div>
-        <div *ngIf="Nombre?.hasError('invalidName')">
+        <div *ngIf="Nombre?.hasError('invalidName')" style="font-size: 12px;">
           Debe tener al menos 3 caracteres y no debe contener números.
         </div>
       </div>
       <input class="input_registro" type="text" id="apellido" formControlName="apellido" placeholder="Apellido">
       <div *ngIf="Apellido?.errors && Apellido?.touched" class="text-danger">
-        <div *ngIf="Apellido?.hasError('required')">
+        <div *ngIf="Apellido?.hasError('required')" style="font-size: 12px;">
           El Apellido es requerido.
         </div>
-        <div *ngIf="Apellido?.hasError('invalidName')">
+        <div *ngIf="Apellido?.hasError('invalidName')" style="font-size: 12px;">
           Debe tener al menos 3 caracteres y no debe contener números.
         </div>
       </div>
@@ -78,30 +78,30 @@
 
       <input class="input_registro" type="text" id="email" formControlName="email" placeholder="Email">
       <div *ngIf="Email?.errors && Email?.touched" class="text-danger">
-        <div *ngIf="Email?.hasError('required')">
+        <div *ngIf="Email?.hasError('required')" style="font-size: 12px;">
           El Email es requerido.
         </div>
-        <div *ngIf="Email?.hasError('invalidEmail')">
-          Introducir una dirección de correo electrónico válida con el formato aaa&#64;aa.com
+        <div *ngIf="Email?.hasError('invalidEmail')" style="font-size: 12px;">
+          Introducir una dirección de correo electrónico válida con el formato example&#64;example.com
         </div>
       </div>
 
       <input class="input_registro" type="text" id="password" formControlName="password" placeholder="Contraseña">
       <div *ngIf="Password?.errors && Password?.touched" class="text-danger">
-        <div *ngIf="Password?.hasError('required')">
+        <div *ngIf="Password?.hasError('required')" style="font-size: 12px;">
           La constraseña es requerida.
         </div>
-        <div *ngIf="Password?.hasError('invalidPassword')">
-          Debe tener al menos 8 caracteres y maximo 20, al menos una letra mayúscula, un número y un símbolo.
+        <div *ngIf="Password?.hasError('invalidPassword')" style="font-size: 12px;">
+          Debe tener al menos 6 caracteres y maximo 20, al menos una letra mayúscula, un número y un símbolo.
         </div>
       </div>
       <input class="input_registro" type="text" id="password" formControlName="password" placeholder="Repetir Contraseña">
       <div *ngIf="Password?.errors && Password?.touched" class="text-danger">
-        <div *ngIf="Password?.hasError('required')">
+        <div *ngIf="Password?.hasError('required')" style="font-size: 12px;">
           La constraseña es requerida.
         </div>
-        <div *ngIf="Password?.hasError('invalidPassword')">
-          Debe tener al menos 8 caracteres y maximo 20, al menos una letra mayúscula, un número y un símbolo.
+        <div *ngIf="Password?.hasError('invalidPassword')" style="font-size: 12px;">
+          Debe tener al menos 6 caracteres y maximo 20, al menos una letra mayúscula, un número y un símbolo.
         </div>
       </div>
     </div>
