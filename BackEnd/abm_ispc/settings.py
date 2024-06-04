@@ -25,7 +25,8 @@ SECRET_KEY = 'django-insecure-oo0idm%r))&%51rf_fj%yo6fa28=p%(su4#@%j6k5_l&c#vc5u
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+# ALLOWED_HOSTS = ['192.168.0.170']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1','192.168.0.170', 'casaiot.ddns.net', '192.168.0.20']
 
 
 # Application definition
@@ -37,11 +38,12 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'corsheaders',
     'rest_framework',
-    'corsheaders',#
-    #'knox',
+    'rest_framework.authtoken',
+    'rest_framework_simplejwt',
     'coreapi',
-    'api'
+    'api',    
 ]
 
 MIDDLEWARE = [
@@ -52,12 +54,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'corsheaders.middleware.CorsMiddleware',#
-    'django.middleware.common.CommonMiddleware',#
-]
-
-CORS_ALLOWED_ORIGINS = [#
-    'http://localhost',
+    'corsheaders.middleware.CorsMiddleware',
 ]
 
 ROOT_URLCONF = 'abm_ispc.urls'
@@ -80,31 +77,27 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'abm_ispc.wsgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
-
 DATABASES = {
-    # 'default': {
-    #     'ENGINE': 'django.db.backends.sqlite3',
-    #     'NAME': BASE_DIR / 'db.sqlite3',
-    # }
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'reservasmedicasdb',
-        #'NAME': reuser,
         'USER': 'desarrollo_web_2024',
         'PASSWORD': 'web_2024',
         'HOST': 'ispcserver1.ddns.net',
         'PORT': '3306',
         'OPTIONS': {
-            'sql_mode': 'traditional'
-            }
+            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
+            'sql_mode': 'traditional',
+            'charset': 'utf8mb4',
+            'use_unicode': True,
         }
+    }
 }
 
-
 # Password validation
+
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
 
 AUTH_PASSWORD_VALIDATORS = [
@@ -122,7 +115,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
 
@@ -133,7 +125,6 @@ TIME_ZONE = 'UTC'
 USE_I18N = True
 
 USE_TZ = True
-
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
@@ -146,5 +137,28 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 REST_FRAMEWORK = {
-    "DEFAULT_SCHEMA_CLASS": "rest_framework.schemas.coreapi.AutoSchema",
+    'DEFAULT_SCHEMA_CLASS': 'rest_framework.schemas.coreapi.AutoSchema',
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.TokenAuthentication',
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
+    ],
 }
+
+# Configuración para JWT
+from datetime import timedelta
+
+SIMPLE_JWT = {
+    'ACCESS_TOKEN_LIFETIME': timedelta(minutes=15),
+    'REFRESH_TOKEN_LIFETIME': timedelta(days=1),
+    'ROTATE_REFRESH_TOKENS': False,
+    'BLACKLIST_AFTER_ROTATION': True,
+}
+
+
+
+CORS_ALLOWED_ORIGINS = ["http://192.168.0.20:4200","http://localhost:4200"]
+CORS_ORIGIN_WHITE_LIST= ["http://localhost:4200"]
+
+CORS_ORIGIN_ALLOW_ALL = True
+
+# AUTH_USER_MODEL = 'api.CustomUser'
