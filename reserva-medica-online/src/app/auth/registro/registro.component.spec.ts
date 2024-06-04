@@ -17,7 +17,7 @@
 //       imports: [RegistroComponent]
 //     })
 //     .compileComponents();
-    
+
 //   beforeEach(async(() => {
 //     TestBed.configureTestingModule({
 //       declarations: [ RegistroComponent ]

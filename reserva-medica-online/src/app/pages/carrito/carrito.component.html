@@ -1,4 +1,4 @@
-  <main>
+  <!-- <main>
     <section id="carrito">
       <h2>Carrito de Compras</h2>
       @if(carritoItems.length >0){
@@ -22,11 +22,11 @@
                 </div>
                 <td>${{ item.precio }}</td>
                 <td>{{ item.cantidad }}</td>
-                <td>${{ item.precio * item.cantidad }}</td> 
+                <td>${{ item.precio * item.cantidad }}</td>
               </tr>
               <td class="td-pagar">Total a pagar: ${{ total }}</td>
             </tbody>
-          </table> 
+          </table>
           <div>
             <p class="p-carrito">Para conservar el turno deberas <a class="btn-iniciar_sesion" routerLink="/iniciar-sesion">Iniciar Sesion</a></p>
           </div>
@@ -36,7 +36,47 @@
           <p class="p-carrito">El carrito está vacío.</p>
         </div>
       }
-      
+
 
     </section>
-  </main>
+  </main> -->
+<main>
+  <section id="carrito">
+    <h2>Carrito de Compras</h2>
+    <div *ngIf="carritoItems.length > 0; else emptyCart">
+      <table>
+        <thead>
+          <tr>
+            <th>Especialidad</th>
+            <th>Fecha y Horario</th>
+            <th>Precio</th>
+            <th>Cantidad</th>
+            <th>Total</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of carritoItems; let i = index">
+            <td>{{ item.titulo }}</td>
+            <td>
+              <div class="input">
+                <input type="date" [(ngModel)]="item.fecha" (change)="actualizarFechaHorario(i, $event, 'fecha')" placeholder="Fecha">
+                <span class="espaciado"></span>
+                <input type="time" [(ngModel)]="item.horario" (change)="actualizarFechaHorario(i, $event, 'horario')" placeholder="Horario">
+              </div>
+            </td>
+            <td>${{ item.precio }}</td>
+            <td>{{ item.cantidad }}</td>
+            <td>${{ item.precio * item.cantidad }}</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="total-pagar">
+        <p>Total a pagar: ${{ total }}</p>
+      </div>
+      <button (click)="irAPasarelaPagos()">Ir a la Pasarela de Pagos</button>
+    </div>
+    <ng-template #emptyCart>
+      <p>El carrito está vacío.</p>
+    </ng-template>
+  </section>
+</main>

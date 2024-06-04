@@ -5,6 +5,12 @@ import { FormBuilder, FormGroup, FormsModule, Validators } from '@angular/forms'
 import { CommonModule } from '@angular/common';
 import { routes } from '../../app.routes';
 
+// import { Component } from '@angular/core';
+// import { FormsModule } from '@angular/forms';
+// import { RouterLink, Router } from '@angular/router';
+import { UsuarioService } from '../../services/usuario.service';
+import { Usuario } from '../../interfaces/usuario';
+
 @Component({
   selector: 'app-registro',
   standalone: true,

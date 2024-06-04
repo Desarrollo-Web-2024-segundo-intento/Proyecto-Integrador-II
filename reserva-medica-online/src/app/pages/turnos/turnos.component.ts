@@ -1,39 +1,27 @@
+<<<<<<< HEAD
 
 
 import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
+=======
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+>>>>>>> 7862e755141a07412b1f7024e76a9a6e4bd38e6b
 import { TurnosService } from '../../services/turnos.service';
-import { Router, RouterLink } from '@angular/router';
-import { Turno } from '../../interfaces/turno';  
+import { PasarelaPagoService } from '../pasarela-pago/pasarela-pago.service';
 
 
 @Component({
   selector: 'app-turnos',
-  standalone: true,
-  imports: [FormsModule, RouterLink],
   templateUrl: './turnos.component.html',
   styleUrls: ['./turnos.component.css']
 })
 export class TurnosComponent implements OnInit {
-  turnoData: Turno = {
-    id: 0,
-    especialidad: "",
-    profesional: "",
-    fecha: "",
-    hora: "",
-    obraSocial: ""
-  };
-
-  constructor(private router: Router, private turnosService: TurnosService) {}
-
-  guardarTurnos(): void {
-    console.log("Turnos guardados", this.turnoData);
-    this.router.navigate(['/dashboard/mis-turnos']);  
-  }
+  constructor(private router: Router, private turnosService: TurnosService, private pasarelaDePago: PasarelaPagoService) {}
 
   ngOnInit() {
-    this.setupButtonEventListeners();  
+    this.setupButtonEventListeners();
   }
 
   setupButtonEventListeners() {
@@ -64,7 +52,6 @@ export class TurnosComponent implements OnInit {
 
     this.setupButtonEventListener('boton_grabar_turno', () => {
       console.log('Aca va la funcion de la Api Rest para grabar el turno');
-      alert('Aca va la funcion de la Api Rest para grabar el turno');
       this.ocultarSecciones();
       this.verMenuPrincipal();
       this.ocultarVolver();
@@ -77,77 +64,93 @@ export class TurnosComponent implements OnInit {
       this.verMenuPrincipal();
       this.ocultarVolver();
     });
+
+    // Listener para confirmar la compra
+    this.setupButtonEventListener('confirmarCompra', () => {
+      console.log('Redirigiendo a la página del carrito de compras');
+      this.router.navigate(['/dashboard/carrito-compras']);
+    });
+
+    // Listener para el botón de carrito de compras
+    this.setupButtonEventListener('carritoCompras', () => {
+      console.log('Redirigiendo a la pasarela de pagos');
+      this.router.navigate(['/dashboard/pasarela-pagos']);
+    });
   }
 
-  setupButtonEventListener(id: string, callback: () => void) {
-    const button = document.getElementById(id);
+  setupButtonEventListener(buttonId: string, callback: () => void) {
+    const button = document.getElementById(buttonId);
     if (button) {
       button.addEventListener('click', callback);
     }
   }
 
-  ocultarElemento(id: string) {
-    const elemento = document.getElementById(id);
-    if (elemento) {
-      elemento.style.display = "none";
+  verFormTurno() {
+    const vistaNuevoTurno = document.getElementById("vistaNuevoTurno");
+    if (vistaNuevoTurno) {
+      vistaNuevoTurno.style.display = 'block';
+    }
+    const boton_grabar_turno = document.getElementById("boton_grabar_turno");
+    if (boton_grabar_turno) {
+      boton_grabar_turno.style.display = 'block';
     }
   }
 
-  verElemento(id: string) {
-    const elemento = document.getElementById(id);
-    if (elemento) {
-      elemento.style.display = "block";
+  verMenuPrincipal() {
+    const menuPrincipal = document.getElementById("menuPrincipal");
+    if (menuPrincipal) {
+      menuPrincipal.style.display = 'block';
     }
   }
 
-  verElemento_grid(id: string) {
-    const elemento = document.getElementById(id);
-    if (elemento) {
-      elemento.style.display = "grid";
+  verMisTurnos() {
+    const vistaMisTurnos = document.getElementById("vistaMisTurnos");
+    if (vistaMisTurnos) {
+      vistaMisTurnos.style.display = 'block';
+    }
+  }
+
+  verRegistrarme() {
+    const registro_pacientes = document.getElementById("registro_pacientes");
+    if (registro_pacientes) {
+      registro_pacientes.style.display = 'block';
+    }
+    const boton_Grabar_registro = document.getElementById("boton_Grabar_registro");
+    if (boton_Grabar_registro) {
+      boton_Grabar_registro.style.display = 'block';
+    }
+  }
+
+  verMenuBoton() {
+    const menu_boton = document.getElementById("menu_boton");
+    if (menu_boton) {
+      menu_boton.style.display = 'block';
+    }
+    const botonVolver = document.getElementById("botonVolver");
+    if (botonVolver) {
+      botonVolver.style.display = 'block';
     }
   }
 
   ocultarSecciones() {
-    this.ocultarElemento('menuPrincipal');
-    this.ocultarElemento('vistaNuevoTurno');
-    this.ocultarElemento('vistaMisTurnos');
-    this.ocultarElemento('registro_pacientes');
-    this.ocultarElemento('boton_grabar_turno');
-    this.ocultarElemento('boton_Grabar_registro');
-    this.ocultarElemento('menu_boton');
-    this.ocultarElemento('datos_personales');
-    this.ocultarElemento('registrarNuevo');
-  }
-
-  verFormTurno() {
-    this.verElemento('vistaNuevoTurno');
-    this.verElemento('boton_grabar_turno');
-    this.verElemento('registrarNuevo');   
-    this.verElemento('botonVolver');
-  }
-
-  verMisTurnos() {
-    this.verElemento('vistaMisTurnos');
-    this.verElemento('botonVolver');
-  }
-
-  verRegistrarme() {
-    this.verElemento('registro_pacientes');
-    this.verElemento('boton_grabar_turno');   
-    this.verElemento('boton_Grabar_registro');
-    this.verElemento('datos_personales');    
-    this.verElemento('botonVolver');
-  }
-
-  verMenuPrincipal() {
-    this.verElemento_grid('menuPrincipal');
-  }
-
-  verMenuBoton() {
-    this.verElemento_grid('menu_boton');
+    const secciones = document.getElementsByClassName("contenedor_turnos");
+    for (let i = 0; i < secciones.length; i++) {
+      const element = secciones[i] as HTMLElement;
+      element.style.display = 'none';
+    }
   }
 
   ocultarVolver() {
-    this.ocultarElemento('botonVolver');
+    const botonVolver = document.getElementById("botonVolver");
+    if (botonVolver) {
+      botonVolver.style.display = 'none';
+    }
+  }
+  pagos: {id: number,title:string, profesional: string, obra_social:string, fecha: string, price:number}[] = [
+    { id: 1, title:"medico Clinico",profesional:"",obra_social:"",  fecha: '15-05-2024', price: 7600 },
+    { id: 2, title:"Dermatologo",profesional:"Sebastian verne" ,obra_social:"Saraza",fecha: '16-05-2023', price: 7600,  },
+  ]
+  onProceedToPay(){
+    this.pasarelaDePago.onProceedToPay(this.pagos)
   }
 }
