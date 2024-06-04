@@ -3,21 +3,17 @@
       <div id="carouselExampleInterval" class="carousel carousel-dark slide" data-bs-ride="carousel">
         <div class="carousel-inner">
           <div class="carousel-item active" data-bs-interval="2000"> 
-            <!-- <img src="assets/img/carrusel1.jpg" class="d-block w-100" alt="..." /> -->
             <img id="img1" [src]=image1 >
           </div>
           <div class="carousel-item" data-bs-interval="2000">
-            <!-- <img src="assets/img/carrusel2.jpg" class="d-block w-100" alt="..." /> -->
             <img id="img2" [src]=image2 >
 
           </div>
           <div class="carousel-item" data-bs-interval="2000">
-            <!-- <img src="assets/img/carrusel3.jpg" class="d-block w-100" alt="..." /> -->
             <img id="img3" [src]=image3 >
 
           </div>
           <div class="carousel-item" data-bs-interval="2000">
-            <!-- <img src="assets/img/carrusel4.jpg" class="d-block w-100" alt="..." /> -->
             <img id="img4" [src]=image4 >
 
           </div>
@@ -38,32 +34,36 @@
     <section>
       <div class="container text-center">
         <h2>Cifras que respaldan nuestros servicios</h2>
+        @defer{
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3">
           <div>
-            <img src="assets/img/trabajo-evualuado.png" alt="" />
+            <img [src]=imagen5 alt="" />
             <div class="col">Personas atendidas</div>
           </div>
           <div>
-            <img src="assets/img/empresas-clientes.png" alt="" />
+            <img [src]=imagen6 alt="" />
             <div class="col">Empresas Clientes</div>
           </div>
           <div>
-            <img src="assets/img/experiencia.png" alt="" />
+            <img [src]=imagen7 alt="" />
             <div class="col">De experiencia</div>
           </div>
           <div>
-            <img src="assets/img/encuestas.png" alt="" />
+            <img [src]=imagen8 alt="" />
             <div class="col">En encuestas de satisfacción</div>
           </div>
           <div>
-            <img src="assets/img/servicios-prestados.png" alt="" />
+            <img [src]=imagen9 alt="" />
             <div class="col">Servicios prestados</div>
           </div>
           <div>
-            <img src="assets/img/profesionales.png" alt="" />
+            <img [src]=imagen10 alt="" />
             <div class="col">Profesionales</div>
           </div>
         </div>
+      }@placeholder {
+        <p class="d-flex justify-content-center align-items-center">Cargando...</p>
+      }
       </div>
     </section>
   </main>

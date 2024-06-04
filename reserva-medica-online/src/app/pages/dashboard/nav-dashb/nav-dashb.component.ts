@@ -13,7 +13,7 @@ import { CarritoService } from '../../../services/carrito.service';
 export class NavDashbComponent implements OnInit {
   estaAutenticado: boolean=false;
 
-  carritoItemCount: number = 0;
+  carritoItemCount = 0;
 
   constructor(private carritoService: CarritoService) {}
 

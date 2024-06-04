@@ -22,7 +22,6 @@
 
 
 
-
 <div id="vistaNuevoTurno" class="contenedor_turnos" style="display: none;">
   <h2 class="text-center">Registrar un nuevo turno</h2>
   <form class="container" id="formTurnos">
@@ -33,33 +32,34 @@
           <option value="0" selected>Especialidad</option>
         </select>
       </div>
-      <div class="col-6"> <!---->
+      <div class="col-6"> 
         <select id="profesional" class="form-select" aria-label="Default select example"  [(ngModel)]="turnoData.profesional">
           <option value="0" selected>Profesional</option>
         </select>
       </div>
     </div>
     <div class="row m-4">
-      <div class="col-6"><!-- [(ngModel)]="Fecha"-->
+      <div class="col-6">
         <select id="fecha" class="form-select" aria-label="Default select example" [(ngModel)]="turnoData.fecha">
           <option value="0" selected>Fecha</option>
         </select>
       </div>
-      <div class="col-6"> <!-- [(ngModel)]="hora"-->
+      <div class="col-6"> 
         <select id="hora" class="form-select" aria-label="Default select example" [(ngModel)]="turnoData.hora" >
           <option value="0" selected>Hora</option>
         </select>
       </div>
     </div>
     <div class="row m-4">
-      <div class="col-6"> <!-- -->
+      <div class="col-6"> 
         <select id="obraSocial" class="form-select" aria-label="Default select example"  [(ngModel)]="turnoData.obraSocial">
           <option value="0" selected>Obra Social</option>
         </select>
       </div>
     </div>
     <div class="row">
-        <button type="submit" id="registrarNuevo" class="btn col-3 m-2" (click)="guardarTurnos()">Registrar</button>
+      <!-- ver boton de guardarturnos <button>registrar</button> -->
+        <!-- <button type="submit" id="registrarNuevo" class="btn col-3 m-2">Registrar</button> -->
       </div>
   </form>
 </div>
@@ -69,7 +69,6 @@
 <div id="vistaMisTurnos" class="contenedor_turnos" style="display: none;">
   <h2 class="text-center">Mis turnos</h2>
     <table class="table">
-      <!-- <hr> -->
       <thead>
         <tr>
           <th>DNI</th>
@@ -85,16 +84,53 @@
 </div>
 
 
+
+
+
+
+
+
+
+
+<div id="registro_pacientes" class="contenedor_turnos" style="display: none;">
+  <h2 class="text-center">Datos Personales</h2>
+
+  <div class="row m-4">
+
+    <!-- <label for="apellido">Apellido:</label> -->
+    <input class="input_registro" type="text" id="apellido" name="apellido" placeholder="Apellido">
+    <div class="espacio_5px"></div>
+    <!-- <label for="nombre">Nombre:</label> -->
+    <input class="input_registro" type="text" id="nombre" name="nombre" placeholder="Nombre">
+    <div class="espacio_5px"></div>
+    <!-- <label for="telefono">Teléfono:</label> -->
+    <input class="input_registro" type="tel" id="telefono" name="telefono" placeholder="Telefono" required>
+    <div class="espacio_5px"></div>
+    <!-- <label for="dni">DNI:</label> -->
+    <input class="input_registro" type="text" id="dni" name="dni" placeholder="DNI" required>
+    <div class="espacio_5px"></div>
+    <!-- <label for="mutual">Mutual:</label> -->
+    <input class="input_registro" type="text" id="mutual" name="mutual" placeholder="Mutual" required>
+    <div class="espacio_5px"></div>
+    <!-- <label for="email">E-Mail:</label> -->
+    <input class="input_registro" type="text" id="email" name="email" placeholder="Email" required>
+  </div>
+</div>
+
+
+
+
+
 <div class="menu_boton" id="menu_boton" style="display:none;">
 
   <div class="div_boton_4" id="boton_grabar_turno" style="display: none;">
     <button type="submit" id="registrarNuevo" class="botones_turnos">Grabar Turno</button>
-    <button type="submit" id="datos_personales" class="botones_turnos" style="display: none;">Grabar Registro</button>
+    <button type="submit" id="datos_personales" class="botones_turnos" style="display: none;"  (click)="guardarTurnos()">Grabar Registro</button>
   </div>
 
-  <div class="div_boton_5" id="boton_Grabar_registro" style="display: none;">
+  <!-- <div class="div_boton_5" id="boton_Grabar_registro" style="display: none;"> -->
     <!-- <button type="submit" id="datos_personales" class="botones_turnos">Grabar Registro</button> -->
-  </div>
+  <!-- </div> -->
 
   <div class="div_boton_6" id="botonVolver" style="display: none;">
     <button class="botones_turnos" id="volver">Volver</button>

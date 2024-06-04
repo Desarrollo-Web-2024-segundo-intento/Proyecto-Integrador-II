@@ -3,14 +3,14 @@ import { RouterLink } from '@angular/router';
 import { NgIf } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { UsuarioService } from '../../../../services/usuario.service';
-import { Usuario } from '../../../../interfaces/usuario';
 
 @Component({
   selector: 'app-perfil',
   standalone: true,
   imports: [RouterLink, NgIf, FormsModule],
   templateUrl: './perfil.component.html',
-  styleUrl: './perfil.component.css'
+  styleUrl: './perfil.component.css',
+
 })
 export class PerfilComponent implements OnInit {
   title: string="Perfil";

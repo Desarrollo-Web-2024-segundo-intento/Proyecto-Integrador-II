@@ -13,6 +13,16 @@ import { routes } from '../../app.routes';
   styleUrl: './registro.component.css'
 })
 
+//PATRI
+ <!-- usuarioData: Usuario = {
+   // id: 0,
+ //   apellido: '',
+//    nombre: '',
+//    telefono: '',
+  //  dni: '',
+  //  obraSocial: '',
+  //  email: '',
+-->
 
 export class RegistroComponent {
   user = {
@@ -21,6 +31,7 @@ export class RegistroComponent {
     last_name: '',
     email: '',
     password: ''
+
   };
 
   constructor(private apiService: ApiService, private router: Router) { }

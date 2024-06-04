@@ -1,27 +1,7 @@
-
-<!-- src/app/components/mis-turnos/mis-turnos.component.html -->
-<!-- <div class="container">
-    <h2 class="text-center">Mis Turnos</h2>
-    <div class="row" *ngIf="turnos.length > 0; else noTurnos">
-      <div class="col-md-6" *ngFor="let turno of turnos">
-        <div class="card mt-4">
-          <div class="card-body">
-            <h5 class="card-title">Turno Registrado</h5>
-            <p class="card-text"><strong>Especialidad:</strong> {{ turno.especialidad }}</p>
-            <p class="card-text"><strong>Profesional:</strong> {{ turno.profesional }}</p>
-            <p class="card-text"><strong>Fecha:</strong> {{ turno.fecha }}</p>
-            <p class="card-text"><strong>Hora:</strong> {{ turno.hora }}</p>
-            <p class="card-text"><strong>Obra Social:</strong> {{ turno.obraSocial }}</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <ng-template #noTurnos>
-      <p class="text-center">No hay turnos registrados.</p>
-    </ng-template>
-  </div> -->
+ 
+<main>
+  <h2 class="text-center pt-3 pb-2">Mis turnos</h2>
   <div id="vistaMisTurnos" class="contenedor_turnos">
-    <h2 class="text-center">Mis turnos</h2>
     <table class="table">
       <thead>
         <tr>
@@ -32,14 +12,19 @@
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let turno of turnoData">
-          <td>{{ turnoData.especialidad }}</td>
-          <td>{{ turnoData.profesional }}</td>
-          <td>{{ turnoData.fecha }}</td>
-          <td>{{ turnoData.hora }}</td>
+        <tr>
+          <td>Clinico</td>
+          <td>Montoto Erica</td>
+          <td>24/06/24</td>
+          <td>16:30</td>
+        </tr>
+        <tr>
+          <td>Clinico</td>
+          <td>Montoto Erica</td>
+          <td>24/06/24</td>
+          <td>16:30</td>
         </tr>
       </tbody>
     </table>
   </div>
-  
-  
+</main>

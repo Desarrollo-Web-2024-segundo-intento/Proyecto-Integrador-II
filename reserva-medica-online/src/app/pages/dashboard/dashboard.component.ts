@@ -12,7 +12,6 @@ import { NgIf } from '@angular/common';
     imports: [RouterOutlet, RouterLink, RouterLinkActive, NavDashbComponent, NgIf]
 })
 export class DashboardComponent {
-    estaAutenticado:boolean=false;
- 
-  
+estaAutenticado=true;
+
 }

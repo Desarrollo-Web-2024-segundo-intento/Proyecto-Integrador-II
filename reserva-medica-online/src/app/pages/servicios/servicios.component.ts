@@ -8,6 +8,24 @@ import { EspecialMedicasComponent } from '../especial-medicas/especial-medicas.c
   imports: [ServiciosComponent, EspecialMedicasComponent],
   templateUrl: './servicios.component.html',
   styleUrl: './servicios.component.css'
+<<<<<<< HEAD
+})
+export class ServiciosComponent {
+imgBajaComplejidad="assets/img/imga.png";
+imgMedianaComplejidad="assets/img/imgb.png";
+imgAltaComplejidad="assets/img/imgc.png";
+imgObraSocial1="assets/img/medife.png";
+imgObraSocial2="assets/img/osde.png";
+imgObraSocial3="assets/img/sancor.png";
+imgObraSocial4="assets/img/galeno.jpg";
+imgObraSocial5="assets/img/Prevencion_Salud.png";
+imgObraSocial6="assets/img/avalian.png";
+imgObraSocial7="assets/img/pami.jpg";
+imgObraSocial8="assets/img/apross.jpg";
+imgObraSocial9="assets/img/swissmedical.png"
+imgObraSocial10="assets/img/federadasalud.jpg";
+imgObraSocial11="assets/img/sipssa.jpg";
+=======
  })
 
 
@@ -195,6 +213,7 @@ export class ServiciosComponent implements OnInit {
     event.preventDefault();
     this.fetchData();
   }
+>>>>>>> 3e7bbc31fd1125c360cea2fee5315883a2cc20f1
 }
       
 //       for (const item of data) {

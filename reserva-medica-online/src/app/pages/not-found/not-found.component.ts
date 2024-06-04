@@ -8,5 +8,5 @@ import { Component } from '@angular/core';
   styleUrl: './not-found.component.css'
 })
 export class NotFoundComponent {
-
+imgNotFound="assets/img/page404.png";
 }

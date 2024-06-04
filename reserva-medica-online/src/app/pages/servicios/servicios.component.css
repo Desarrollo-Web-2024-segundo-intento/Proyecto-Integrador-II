@@ -205,8 +205,23 @@
   .obra-social img {
     width: 60%; 
     height: 70%;
+<<<<<<< HEAD
+  } 
+
+  .defer{
+    text-align:center ;
+    font-size: 40px;
+    color: #808080; 
+    text-shadow: 
+      1px 1px 5px rgba(192,192,192,0.5), 
+      2px 2px 10px rgba(192,192,192,0.5),
+      3px 3px 15px rgba(192,192,192,0.5);
+      margin:40px;
+  }
+=======
   }  
   .obra-social img {
     width: 60%; 
     height: 70%;
   }  */
+>>>>>>> 3e7bbc31fd1125c360cea2fee5315883a2cc20f1
