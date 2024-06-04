@@ -14,7 +14,7 @@ import { routes } from '../../app.routes';
 })
 
 //PATRI
- <!-- usuarioData: Usuario = {
+ // usuarioData: Usuario = {
    // id: 0,
  //   apellido: '',
 //    nombre: '',
@@ -22,7 +22,7 @@ import { routes } from '../../app.routes';
   //  dni: '',
   //  obraSocial: '',
   //  email: '',
--->
+//
 
 export class RegistroComponent {
   user = {
