@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 .servicios_dinamicos{
    width: 90%;
    height: 400px;
@@ -12,21 +10,20 @@
 
 
 
->>>>>>> 3e7bbc31fd1125c360cea2fee5315883a2cc20f1
 .contenedor__servicio {
     width: 100%;
     margin: 0 auto;
-    background-color: #eeeff1; 
-    border-radius: 10px;  
+    background-color: #eeeff1;
+    border-radius: 10px;
 }
-  
+
 .titulo_servicios{
     text-align: center;
     padding-bottom: 40px;
     color: #000000c5;
     text-transform: uppercase;
     margin-top: 20px;
-   
+
   }
 
 .contenedor__servicio h2 {
@@ -34,8 +31,8 @@
 }
 
 .fila {
-    display: flex; 
-    margin-bottom: 20px;  
+    display: flex;
+    margin-bottom: 20px;
     flex-wrap: wrap;
     justify-content: space-around;
 }
@@ -54,10 +51,10 @@
     border-radius: 5px 5px 0 0;
   }
   .tarjeta:hover img {
-    filter: brightness(70%); 
-    
+    filter: brightness(70%);
+
 }
-  
+
 .tarjeta h3 {
     font-size: 18px;
     margin-top: 10px;
@@ -105,7 +102,7 @@ a{
 .iconCarrito{
   cursor: pointer;
   background-color: #ccc1c8af;
-  border-radius: 20px; 
+  border-radius: 20px;
 }
 .iconCarrito:hover{
   color: #ccc1c8f1;

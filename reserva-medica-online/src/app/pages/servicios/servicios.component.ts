@@ -8,25 +8,25 @@ import { EspecialMedicasComponent } from '../especial-medicas/especial-medicas.c
   imports: [ServiciosComponent, EspecialMedicasComponent],
   templateUrl: './servicios.component.html',
   styleUrl: './servicios.component.css'
-<<<<<<< HEAD
+
 })
-export class ServiciosComponent {
-imgBajaComplejidad="assets/img/imga.png";
-imgMedianaComplejidad="assets/img/imgb.png";
-imgAltaComplejidad="assets/img/imgc.png";
-imgObraSocial1="assets/img/medife.png";
-imgObraSocial2="assets/img/osde.png";
-imgObraSocial3="assets/img/sancor.png";
-imgObraSocial4="assets/img/galeno.jpg";
-imgObraSocial5="assets/img/Prevencion_Salud.png";
-imgObraSocial6="assets/img/avalian.png";
-imgObraSocial7="assets/img/pami.jpg";
-imgObraSocial8="assets/img/apross.jpg";
-imgObraSocial9="assets/img/swissmedical.png"
-imgObraSocial10="assets/img/federadasalud.jpg";
-imgObraSocial11="assets/img/sipssa.jpg";
-=======
- })
+// export class ServiciosComponent {
+// imgBajaComplejidad="assets/img/imga.png";
+// imgMedianaComplejidad="assets/img/imgb.png";
+// imgAltaComplejidad="assets/img/imgc.png";
+// imgObraSocial1="assets/img/medife.png";
+// imgObraSocial2="assets/img/osde.png";
+// imgObraSocial3="assets/img/sancor.png";
+// imgObraSocial4="assets/img/galeno.jpg";
+// imgObraSocial5="assets/img/Prevencion_Salud.png";
+// imgObraSocial6="assets/img/avalian.png";
+// imgObraSocial7="assets/img/pami.jpg";
+// imgObraSocial8="assets/img/apross.jpg";
+// imgObraSocial9="assets/img/swissmedical.png"
+// imgObraSocial10="assets/img/federadasalud.jpg";
+// imgObraSocial11="assets/img/sipssa.jpg";
+
+//  })
 
 
 
@@ -93,7 +93,7 @@ export class ServiciosComponent implements OnInit {
         div_titulo.style.border = '2px solid black';
         div_titulo.style.margin = '10px'; // Margen para separación entre divs
         div_contenedor.appendChild(div_titulo);
-        
+
         const div_padre = document.getElementById('div'+i); // Asegúrate de que este sea el ID correcto
         if (div_padre) {
             div_padre.appendChild(div_titulo);
@@ -146,7 +146,7 @@ export class ServiciosComponent implements OnInit {
 
         // Añadir div_contenedor a newDiv
           // newDiv.appendChild(div_contenedor);
-        
+
         const div_descripcion = document.createElement('div'); // este constante genera el div contenedor de la especialidad
         div_descripcion.id = 'div_descripcion';
         div_descripcion.innerText = data[i].descripcion;
@@ -188,7 +188,7 @@ export class ServiciosComponent implements OnInit {
         } else {
             console.error('No se encontró el elemento con id "app"');
         }
-        
+
 
 
 
@@ -213,11 +213,11 @@ export class ServiciosComponent implements OnInit {
     event.preventDefault();
     this.fetchData();
   }
->>>>>>> 3e7bbc31fd1125c360cea2fee5315883a2cc20f1
+
 }
-      
+
 //       for (const item of data) {
-        
+
 //         const newDiv = document.createElement('div');// este constante genera el div contenedor de la especialidad
 //         newDiv.innerText = item.especialidad;// este innertext carga el contenido de especialidad en el dom
 //         newDiv.style.width = '200px';
@@ -252,7 +252,7 @@ export class ServiciosComponent implements OnInit {
 //     }
 
 
-      
+
 //     } catch (error) {
 //       console.error('Error al obtener datos:', error);
 //     }
