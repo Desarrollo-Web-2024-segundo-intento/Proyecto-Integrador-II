@@ -31,21 +31,21 @@
     color: #000000c5;
     text-transform: uppercase;
     margin-top: 10px;
-  
-  } 
+
+  }
   .servicio-container-superior{
     width: 100%;
     height: auto;
     display: flex;
     justify-content: space-between;
   }
-  
+
   .container-info {
-    width: 360px; 
+    width: 360px;
     height: auto;
     box-shadow: 0 0 10px 5px #2323a738;
     padding:5px 15px;
-    box-sizing: border-box;   
+    box-sizing: border-box;
     border-radius: 20px;
     display: flex;
     flex-direction: column;
@@ -54,43 +54,43 @@
   .card-inferior{
     width: 370px;
   }
-  
+
   .container-info img {
     height: 180px;
-    border-radius: 9px; 
+    border-radius: 9px;
     margin-left: 30px;
     align-self: flex-start;
   }
-  
+
   .container-info1 img{
     border-radius:75px;
-    height: 140px; 
-    width: 140px; 
+    height: 140px;
+    width: 140px;
     margin: 0;
     margin-bottom: 30px;
-    padding-bottom: 8px;  
+    padding-bottom: 8px;
     background-color: #00B6E7;
   }
-  
+
   .container-info1 img,
-  .container-info img{ 
-    animation: aparecer 0.8s forwards; 
+  .container-info img{
+    animation: aparecer 0.8s forwards;
   }
-  
+
   @keyframes aparecer {
     from {
-        transform: translateX(100%); 
+        transform: translateX(100%);
     }
     to {
-        transform: translateX(0); 
+        transform: translateX(0);
     }
   }
-    
+
   .container-info h3 {
-    margin-top: 10px;   
+    margin-top: 10px;
     color:#0e3c86e6;
     font-size: 18px;
-    text-transform: uppercase;  
+    text-transform: uppercase;
     text-align: center;
   }
   .container-info p {
@@ -98,11 +98,11 @@
     font-weight: 600;
     color:rgb(79, 75, 75);
     width: calc(100% - 10px);
-    margin: 0 auto; 
-    padding-left: 5px; 
+    margin: 0 auto;
+    padding-left: 5px;
     padding-right: 5px;
     padding-bottom: 10px;
-  
+
   }
   .container-info p > .asterisco{
     color:#151635;
@@ -113,7 +113,7 @@
     font-size: 30px;
     font-weight: 800;
     text-align: center;
-    margin: 80px 0;  
+    margin: 80px 0;
   }
   .container-consulta a{
     text-decoration: none;
@@ -122,7 +122,7 @@
     color:#dcd5d5;
     background-color:#0E3D86 ;
     padding: 10px 10px;
-    border-radius: 5px; 
+    border-radius: 5px;
   }
   .button:hover{
     color:#0E3D86 ;
@@ -130,34 +130,34 @@
     padding: 10px 10px;
     border-radius: 5px;
   }
-  
+
   .card .btn {
     width: 100%;
   }
-  
+
   .carousel-container {
     width: 100%;
-    height: 150px; 
+    height: 150px;
     padding-top: 40px;
-  
-    overflow: hidden; 
+
+    overflow: hidden;
   }
-  
+
   .carousel {
-    display: flex; 
-    animation: scroll 15s linear infinite; 
+    display: flex;
+    animation: scroll 15s linear infinite;
   }
-  
+
   .carousel img {
-    width: 20%; 
+    width: 20%;
     height: 100%;
     border-radius: 8px;
     margin-right: 5px;
   }
-  
+
   @keyframes scroll {
     0% { transform: translateX(0); }
-    100% { transform: translateX(-1500px); } 
+    100% { transform: translateX(-1500px); }
   }
   .container-medio {
     display: flex;
@@ -171,9 +171,9 @@
     box-shadow: 0 0 10px 5px #5959ec38;
     cursor: pointer;
   }
-  
+
   .card h3 {
-    margin-bottom: 10px;  
+    margin-bottom: 10px;
   }
   .card img{
     width: 35px;
@@ -181,13 +181,13 @@
     cursor: pointer;
   }
   .card h3 .indicador{
-    margin-left: auto; 
+    margin-left: auto;
   }
-  
+
   .lista-oculta {
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.3s ease; 
+    transition: max-height 0.3s ease;
   }
   .lista-oculta li {
    color:#151635;
@@ -195,33 +195,30 @@
    margin-left: 80px;
   }
   .toggle {
-    display: none; 
+    display: none;
   }
-  
+
   .toggle:checked + ul {
-    max-height: 700px; 
+    max-height: 700px;
     transition: max-height 0.3s ease;
   }
   .obra-social img {
-    width: 60%; 
+    width: 60%;
     height: 70%;
-<<<<<<< HEAD
-  } 
+  }
 
   .defer{
     text-align:center ;
     font-size: 40px;
-    color: #808080; 
-    text-shadow: 
-      1px 1px 5px rgba(192,192,192,0.5), 
+    color: #808080;
+    text-shadow:
+      1px 1px 5px rgba(192,192,192,0.5),
       2px 2px 10px rgba(192,192,192,0.5),
       3px 3px 15px rgba(192,192,192,0.5);
       margin:40px;
   }
-=======
-  }  
+  }
   .obra-social img {
-    width: 60%; 
+    width: 60%;
     height: 70%;
   }  */
->>>>>>> 3e7bbc31fd1125c360cea2fee5315883a2cc20f1
