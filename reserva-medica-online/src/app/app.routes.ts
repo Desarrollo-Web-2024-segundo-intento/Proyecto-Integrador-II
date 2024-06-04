@@ -10,7 +10,6 @@ import { ServiciosComponent } from './pages/servicios/servicios.component';
 import { TerminosYCondicionesComponent } from './pages/terminos-y-condiciones/terminos-y-condiciones.component';
 import { IniciarSesionComponent } from './auth/iniciar-sesion/iniciar-sesion.component';
 import { RegistroComponent } from './auth/registro/registro.component';
-
 import { PagosComponent } from './pages/dashboard/pagos/pagos.component';
 import { EstadoPagosComponent } from './pages/dashboard/estado-pagos/estado-pagos.component';
 import { HistorialPagosComponent } from './pages/dashboard/historial-pagos/historial-pagos.component';
