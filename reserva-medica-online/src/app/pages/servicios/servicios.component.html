@@ -1,12 +1,12 @@
 <main>
-    <section id="servicios">
+    <div class="servicios_dinamicos" id="servicios">
 
-      <h2 class="titulo_servicios ">Estudios médicos de baja, mediana y alta complejidad.</h2>
+      <!-- <h2 class="titulo_servicios ">Estudios médicos de baja, mediana y alta complejidad.</h2>
       <div class="servicio-container">
         <div class="servicio-container-superior servicio-container-inf">
 
           <div class="container-info card-inferior">
-            <img class="image1 imgs" src="assets/img/imga.png" alt="Imagen servicio">
+            <img class="image1 imgs" [src]=imgBajaComplejidad alt="Imagen servicio">
             <h3>Baja complejidad:</h3>
             <p><span class="asterisco">*</span> Análisis de sangre para medir los niveles de glucosa en pacientes con
               diabetes.</p>
@@ -21,7 +21,7 @@
           </div>
 
           <div class="container-info card-inferior">
-            <img class="image2 imgs" src="assets/img/imgb.png" alt="imagen servicio">
+            <img class="image2 imgs" [src]=imgMedianaComplejidad alt="imagen servicio">
             <h3>Mediana complejidad:</h3>
             <p><span class="asterisco">*</span> Tomografía computarizada (TC) de abdomen para diagnosticar apendicitis
               aguda.</p>
@@ -35,7 +35,7 @@
           </div>
 
           <div class="container-info card-inferior">
-            <img class="image3 imgs" src="assets/img/imgc.png" alt="imagen servicio">
+            <img class="image3 imgs" [src]=imgAltaComplejidad alt="imagen servicio">
             <h3 class="titulo-plan">Alta complejidad:</h3>
             <p><span class="asterisco">*</span> Trasplante de médula ósea para tratar la leucemia.</p>
             <p><span class="asterisco">*</span> Cirugía de bypass coronario para restaurar el flujo sanguíneo al
@@ -47,49 +47,58 @@
           </div>
         </div>
       </div>
-
+      @defer{
       <app-especial-medicas></app-especial-medicas>
-      
+      }@placeholder {
+        <p class="defer">cargando Especialidades...</p>
+      }
     </section>
 
+    @defer{
     <section>
       <div class="container text-center">
         <h2>Convenio con Obras Sociales</h2>
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3">
           <div class="obra-social">
-            <img src="assets/img/medife.png" alt="" />
+            <img [src]=imgObraSocial1 alt="" />
           </div>
           <div class="obra-social">
-            <img src="assets/img/osde.png" alt="" />
+            <img [src]=imgObraSocial2 alt="" />
           </div>
           <div class="obra-social">
-            <img src="assets/img/sancor.png" alt="" />
+            <img [src]=imgObraSocial3 alt="" />
           </div>
           <div class="obra-social">
-            <img src="assets/img/galeno.jpg" alt="" />
+            <img [src]=imgObraSocial4 alt="" />
           </div>
           <div class="obra-social">
-            <img src="assets/img/Prevencion_Salud.png" alt="" />
+            <img [src]=imgObraSocial5 alt="" />
           </div>
           <div class="obra-social">
-            <img src="assets/img/avalian.png" alt="" />
+            <img [src]=imgObraSocial6 alt="" />
           </div>
           <div class="obra-social">
-            <img src="assets/img/pami.jpg" alt="" />
+            <img [src]=imgObraSocial7 alt="" />
           </div>
           <div class="obra-social">
-            <img src="assets/img/apross.jpg" alt="" />
+            <img [src]=imgObraSocial8 alt="" />
           </div>
           <div class="obra-social">
-            <img src="assets/img/swissmedical.png" alt="" />
+            <img [src]=imgObraSocial9 alt="" />
           </div>
           <div class="obra-social">
-            <img src="assets/img/federadasalud.jpg" alt="" />
+            <img [src]=imgObraSocial10 alt="" />
           </div>
           <div class="obra-social">
-            <img src="assets/img/sipssa.jpg" alt="" />
+            <img [src]=imgObraSocial11 alt="" />
           </div>
         </div>
+<<<<<<< HEAD
       </div>
     </section>
+  }@placeholder {<p>Cargando...</p>}
+=======
+      </div> -->
+    </div>
+>>>>>>> 3e7bbc31fd1125c360cea2fee5315883a2cc20f1
   </main>

@@ -7,4 +7,5 @@
 .index.html
 .readme.md
 /node_modules
-
+mientornovirtual
+__pycache__
