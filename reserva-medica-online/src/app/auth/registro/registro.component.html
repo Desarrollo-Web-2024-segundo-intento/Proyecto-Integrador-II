@@ -1,7 +1,12 @@
 <div class="logo_login">
   <img id="calendar" src="assets/img/time-and-calendar.png" alt="">
 </div>
-<form [formGroup]="form" (ngSubmit)="onRegistrar($event)">
+
+
+
+
+<!-- <form [formGroup]="form" (ngSubmit)="onRegistrar($event)"> -->
+  <!-- <form (ngSubmit)="onSubmit()">
   <div id="registro_pacientes" class="row align-items-center singin-container">
     <h2 class="text-center">Datos Personales</h2>
     <div class="row p-4">
@@ -14,8 +19,9 @@
         <div *ngIf="Dni?.hasError('invalidDni')" style="font-size: 12px;">
           Debe tener entre 7 a 8 caracteres numéricos.
         </div>
-      </div>
+      </div> -->
 
+      
       <!-- <input class="input_registro" type="text" id="apellido" formControlName="apellido" placeholder="Apellido">
       <div *ngIf="Apellido?.errors && Apellido?.touched" class="text-danger">
         <div *ngIf="Apellido?.hasError('required')">
@@ -26,7 +32,7 @@
         </div>
       </div> -->
 
-      <input class="input_registro" type="text" id="nombre" formControlName="nombre" placeholder="Nombre">
+      <!-- <input class="input_registro" type="text" id="nombre" formControlName="nombre" placeholder="Nombre">
       <div *ngIf="Nombre?.errors && Nombre?.touched" class="text-danger">
         <div *ngIf="Nombre?.hasError('required')" style="font-size: 12px;">
           El Nombre es requerido.
@@ -43,7 +49,7 @@
         <div *ngIf="Apellido?.hasError('invalidName')" style="font-size: 12px;">
           Debe tener al menos 3 caracteres y no debe contener números.
         </div>
-      </div>
+      </div> -->
 
       <!-- <input class="input_registro" type="tel" id="telefono" formControlName="telefono" placeholder="Telefono">
       <div *ngIf="Telefono?.errors && Telefono?.touched" class="text-danger">
@@ -76,7 +82,7 @@
 
       </div> -->
 
-      <input class="input_registro" type="text" id="email" formControlName="email" placeholder="Email">
+      <!-- <input class="input_registro" type="text" id="email" formControlName="email" placeholder="Email">
       <div *ngIf="Email?.errors && Email?.touched" class="text-danger">
         <div *ngIf="Email?.hasError('required')" style="font-size: 12px;">
           El Email es requerido.
@@ -110,4 +116,29 @@
       <button type="submit" id="datos_personales" class="posicion_boton_grabar_datospersonales btn-singin">Registrarse</button>
     </div>
   </div>
+</form> -->
+
+<form (ngSubmit)="onSubmit()"  #registerForm="ngForm">
+  <div id="registro_pacientes" class="row align-items-center singin-container">
+  <label for="username">DNI:</label>
+  <input type="text" id="username" [(ngModel)]="user.username" name="username" required>
+
+  <label for="first_name">Nombre:</label>
+  <input type="text" id="first_name" [(ngModel)]="user.first_name" name="first_name" required>
+
+  <label for="last_name">Apellido:</label>
+  <input type="text" id="last_name" [(ngModel)]="user.last_name" name="last_name" required>
+
+  <label for="email">Email:</label>
+  <input type="email" id="email" [(ngModel)]="user.email" name="email" required>
+
+  <label for="password">Password:</label>
+  <input type="password" id="password" [(ngModel)]="user.password" name="password" required>
+  <div class="mt-3">
+    
+  </div>
+
+  <button type="submit" class="posicion_boton_grabar_datospersonales btn-singin">Registrarse</button>
+  </div>
 </form>
+
