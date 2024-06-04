@@ -1,13 +1,10 @@
-<<<<<<< HEAD
 
 
-import { Component, OnInit } from '@angular/core';
+//import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
-=======
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
->>>>>>> 7862e755141a07412b1f7024e76a9a6e4bd38e6b
 import { TurnosService } from '../../services/turnos.service';
 import { PasarelaPagoService } from '../pasarela-pago/pasarela-pago.service';
 
