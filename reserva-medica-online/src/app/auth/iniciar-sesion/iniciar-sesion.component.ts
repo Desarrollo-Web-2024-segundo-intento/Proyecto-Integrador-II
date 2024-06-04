@@ -66,7 +66,7 @@ import { NavComponent } from '../../shared/nav/nav.component';
 
 @Component({
   // selector: 'app-login',
-    selector: 'app-iniciar-sesion',
+  selector: 'app-iniciar-sesion',
   standalone: true,
   // imports: [RouterLink, FormsModule],
   imports: [ReactiveFormsModule, CommonModule, RouterLink, RouterLinkActive, FormsModule],
@@ -79,18 +79,18 @@ export class IniciarSesionComponent{
   loginForm: FormGroup;
 
   constructor(
-    private fb: FormBuilder,
-    private apiService: ApiService,
-    private router: Router
-  ) {
-    this.loginForm = this.fb.group({
-      dni: ['', Validators.required],
-      password: ['', Validators.required]
+    private fb: FormBuilder, private apiService: ApiService, private router: Router) {
+      this.loginForm = this.fb.group({
+        dni: ['', Validators.required, []],
+        password: ['', Validators.required, []]
     });
   }
+
   ngOnInit(): void {}
+
   userLoginOn: boolean = false; // Iniciar sesión por defecto
-   onSubmit(): void {
+  onSubmit(event:Event): void {
+    event.preventDefault;
     if (this.loginForm.valid) {
       const { dni, password } = this.loginForm.value;
       this.apiService.login(dni, password).subscribe(
@@ -106,6 +106,9 @@ export class IniciarSesionComponent{
         }
       );
     }
+    else {
+      this.loginForm.markAllAsTouched();
+    };
   }
 
   // showLoginElements() {
@@ -117,6 +120,14 @@ export class IniciarSesionComponent{
   //   this.loginElement.nativeElement.style.display = 'none';
   //   this.logoutElement.nativeElement.style.display = 'flex';
   // }
+
+  get Dni(){
+    return this.loginForm.get("dni");
+  }
+
+  get Password(){
+    return this.loginForm.get("password");
+  }
 
   toggleLoginStatus() {
     this.userLoginOn = true; // Cambiar el estado de inicio de sesión
