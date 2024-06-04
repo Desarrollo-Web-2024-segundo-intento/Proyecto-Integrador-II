@@ -20,7 +20,7 @@ import { MisTurnosComponent } from './pages/dashboard/mis-turnos/mis-turnos.comp
 import { authGuard } from './guards/auth.guard';
 
 export const routes: Routes = [
-   {path:" ", component: InicioComponent},
+  //  {path:" ", component: InicioComponent},
    {path:"inicio", component: InicioComponent},
    {path:"acercaDe", component: AcercaDeComponent},
    {path:"servicios", component: ServiciosComponent},
