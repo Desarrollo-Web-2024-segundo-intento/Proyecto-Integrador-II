@@ -40,19 +40,19 @@
     grid-area: div_boton_1;
     display: flex;
     justify-content: center;
-    align-items: center; 
+    align-items: center;
    }
   .div_boton_2{
     grid-area: div_boton_2;
     display: flex;
-    justify-content: center; 
-    align-items: center; 
+    justify-content: center;
+    align-items: center;
   }
   .div_boton_3{
     grid-area: div_boton_3;
     display: flex;
-    justify-content: center; 
-    align-items: center; 
+    justify-content: center;
+    align-items: center;
   }
 
   .menuPrincipal{
@@ -61,7 +61,7 @@
   grid-template:
   "div_titulo   div_titulo  div_titulo" 60px
   "div_boton_1  div_boton_2 div_boton_3"50px /
-  20%           20%;
+  20%           20%         ;
 }
 
 
@@ -95,19 +95,19 @@
     grid-area: div_boton_4;
     display: flex;
     justify-content: center;
-    align-items: center; 
+    align-items: center;
   }
   .div_boton_5{
     grid-area: div_boton_5;
     display: flex;
-    justify-content: center; 
+    justify-content: center;
     align-items: center;
   }
   .div_boton_6{
     grid-area: div_boton_6;
     display: flex;
     justify-content: center;
-    align-items: center; 
+    align-items: center;
   }
 
   .menu_boton{
