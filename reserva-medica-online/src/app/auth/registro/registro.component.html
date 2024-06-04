@@ -120,22 +120,99 @@
   </div>
 </form> -->
 
-<form (ngSubmit)="onSubmit()"  #registerForm="ngForm">
+<form [formGroup]="form" (ngSubmit)="onSubmit($event)"  #registerForm="ngForm">
   <div id="registro_pacientes" class="row align-items-center singin-container">
   <label for="username">DNI:</label>
-  <input type="text" id="username" [(ngModel)]="user.username" name="username" required>
+  <input type="text" id="username" [(ngModel)]="user.username" name="username" formControlName="dni">
+  @if (Dni?.errors && Dni?.touched) {
+    @if (Dni?.hasError('required'))
+    {
+      <p class="text-danger">
+      El DNI es requerido.
+      </p>
+    }
+    @else if (Dni?.hasError('dni'))
+    {
+      <p class="text-danger">
+      El formato del DNI debe ser válido.
+      </p>
+    }
+  }
 
   <label for="first_name">Nombre:</label>
-  <input type="text" id="first_name" [(ngModel)]="user.first_name" name="first_name" required>
+  <input type="text" id="first_name" [(ngModel)]="user.first_name" name="first_name" formControlName="nombre">
+  @if (Nombre?.errors && Nombre?.touched) {
+    @if (Nombre?.hasError('required'))
+    {
+      <p class="text-danger">
+      El Nombre es requerido.
+      </p>
+    }
+    @else if (Nombre?.hasError('nombre'))
+    {
+      <p class="text-danger">
+      El formato del Nombre debe ser válido.
+      </p>
+    }
+  }
 
   <label for="last_name">Apellido:</label>
-  <input type="text" id="last_name" [(ngModel)]="user.last_name" name="last_name" required>
-
+  <input type="text" id="last_name" [(ngModel)]="user.last_name" name="last_name" formControlName="apellido">
+  <!-- <div *ngIf="Apellido?.errors && Apellido?.touched" class="text-danger">
+    <div *ngIf="Apellido?.hasError('required')">
+      El Apellido es requerido.
+    </div>
+    <div *ngIf="Apellido?.hasError('invalidName')">
+      Debe tener al menos 3 caracteres y no debe contener números.
+    </div>
+  </div> -->
+  @if (Apellido?.errors && Apellido?.touched) {
+    @if (Apellido?.hasError('required'))
+    {
+      <p class="text-danger">
+      El Apellido es requerido.
+      </p>
+    }
+    @else if (Apellido?.hasError('apellido'))
+    {
+      <p class="text-danger">
+      El formato del Apellido debe ser válido.
+      </p>
+    }
+  }
   <label for="email">Email:</label>
-  <input type="email" id="email" [(ngModel)]="user.email" name="email" required>
+  <input type="email" id="email" [(ngModel)]="user.email" name="email" formControlName="email">
+  @if (Email?.errors && Email?.touched) {
+    @if (Email?.hasError('required'))
+    {
+      <p class="text-danger">
+      El email es requerido.
+      </p>
+    }
+    @else if (Email?.hasError('email'))
+    {
+      <p class="text-danger">
+      El formato del email debe ser válido.
+      </p>
+    }
+  }
 
   <label for="password">Password:</label>
-  <input type="password" id="password" [(ngModel)]="user.password" name="password" required>
+  <input type="password" id="password" [(ngModel)]="user.password" name="password" formControlName="password">
+  @if (Password?.errors && Password?.touched) {
+    @if (Password?.hasError('required'))
+    {
+      <p class="text-danger">
+      La contraseña es requerida.
+      </p>
+    }
+    @else if (Password?.hasError('password'))
+    {
+      <p class="text-danger">
+      El formato de la contraseña debe ser válido.
+      </p>
+    }
+  }
   <div class="mt-3">
 
   </div>
