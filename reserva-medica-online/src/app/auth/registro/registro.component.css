@@ -1,42 +1,22 @@
-
-    .row{
+   .row{
         display: flex;
         justify-content: center;
     }
   .input_registro {
     border: 1px solid #ccc; 
     border-radius: 10px; 
-    padding: 10px; /* Espaciado interno */
+    padding: 10px; 
     width: 50%; 
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
   }
   .espacio_5px {
-    height: 10px; /* Espacio vertical entre elementos */
+    height: 10px; 
     width: 60%;
 }
 .mi_clase{
   display: block;
-  /* background-color: green; */
   align-items: center;
-  width: 100%;
 }
-.posicion_boton_grabar_datospersonales{
-  width: 20%;
-  height: 30px;
-  background-color: #151635;
-  color: #fff;
-  margin-left: 40%;
-  border-radius: 5px;
-}
-.posicion_boton_grabar_datospersonales:hover{
-  background-color:rgba(0, 86, 179, 0.7);
-}
-.btn {
-    background-color: #151635;
-    border: none;
-    color: #ffffff;
-}
-
 .logo_login{
   width: 100%;
   height: auto;
@@ -87,6 +67,7 @@ input {
 /*Estilo para el botÃ³n de login*/
 .btn-singin{
   background-color: #007bff;
+  width: 70%;
   color: white; /* Texto blanco */
   padding: 10px 20px; /* Espaciado interno */
   border: none; /* Sin borde adicional */
@@ -97,4 +78,3 @@ input {
 .btn-singin:hover{
   background-color: #0056b3;
 }
-

@@ -24,58 +24,62 @@
 
       <div class="equipo">
         <h2>Nuestro Equipo</h2>
-
+        @defer{
         <div class="containerCards">
           <div class="card">
-            <img src="assets/img/images.jpg" />
+            <img [src]=imgEquipo1 />
             <h4>Juan Manuel Zalazar</h4>
             <p>Especialista en Marketing Digital</p>
           </div>
 
           <div class="card">
-            <img src="assets/img/images.jpg" />
+            <img [src]=imgEquipo2 />
             <h4>Vanessa Veizaga</h4>
             <p>Especialista en Marketing Digital</p>
           </div>
 
           <div class="card">
-            <img src="assets/img/Jessi.jpeg" />
+            <img [src]=imgEquipo3 />
             <h4>Jesica Aramayo</h4>
-            <p>Desarrolladora Backtend</p>
+            <p>Desarrolladora Backend</p>
           </div>
 
           <div class="card">
-            <img src="assets/img/mony.jpg" />
+            <img [src]=imgEquipo4 />
             <h4>Monica Antich</h4>
-            <p>Desarrolladora Frontend</p>
+            <p>Desarrolladora Backend</p>
           </div>
 
           <div class="card">
-            <img src="assets/img/matias.jpeg" />
+            <img [src]=imgEquipo5 />
             <h4>Matias Sorrentino</h4>
-            <p>Desarrollador Backtend</p>
+            <p>Desarrollador Backend</p>
           </div>
 
           <div class="card">
-            <img src="assets/img/patry.jpg" />
+            <img [src]=imgEquipo6 />
             <h4>Patricia Castillo</h4>
             <p>Desarrolladora Frontend</p>
           </div>
 
           <div class="card">
-            <img src="assets/img/alejo.jpg" />
+            <img [src]=imgEquipo7 />
             <h4>Luis Alejo Lucero</h4>
             <p>Desarrollador Frontend</p>
           </div>
 
           <div class="card">
-            <img src="assets/img/images.jpg" />
+            <img [src]=imgEquipo8 />
             <h4>Brenda Storello</h4>
             <p>Desarrolladora Backtend</p>
           </div>
         </div>
+      }@placeholder {
+        <p class="d-flex justify-content-center">Cargando...</p>
+      }
+
       </div>
     </div>
   </main>
-  
+
 

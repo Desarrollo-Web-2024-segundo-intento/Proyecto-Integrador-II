@@ -9,6 +9,6 @@ import { Component } from '@angular/core';
   styleUrl: './estado-pagos.component.css'
 })
 export class EstadoPagosComponent {
-  title:string="Estado";
+  title="Estado";
 
 }

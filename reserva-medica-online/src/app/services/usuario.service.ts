@@ -1,4 +1,3 @@
-
 import { Injectable } from '@angular/core';
 import { Usuario } from '../interfaces/usuario';
 
@@ -34,7 +33,7 @@ export class UsuarioService {
 
   saveUsuarioData(data: Usuario): void {
     this.usuarioData = data;
-    // Aquí puedes agregar lógica adicional para guardar los datos en el servidor o en local storage
+   
     console.log('Datos guardados en el servicio:', this.usuarioData);
   }
 

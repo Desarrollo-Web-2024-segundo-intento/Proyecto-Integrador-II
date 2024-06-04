@@ -1,12 +1,11 @@
 .logo_login{
-    /* background-color: cyan; */
     width: 100%;
     height: auto;
     margin: auto;
     display: flex;
     justify-content: center;
     align-items: center;
-  
+
   }
 div.row {
     justify-content: space-around;
@@ -14,14 +13,11 @@ div.row {
 }
 
 #calendar {
-    /* width: 10rem;
-    margin: 2rem; */
     width: 10rem;
     margin: 2rem;
     margin: auto;
 }
 
-/* Contenedor del formulario de login */
 .login-container {
     max-width: 400px; 
     margin: 30px auto; 
@@ -34,18 +30,18 @@ div.row {
 
 /* Estilo para los encabezados */
 h2 {
-    color: #333; /* Color de texto */
-    margin-bottom: 20px; /* Espacio debajo del tÃ­tulo */
+    color: #333; 
+    margin-bottom: 20px;
 }
 
 /* Estilo para los campos de entrada */
 input {
-    border: 1px solid #ccc; /* Borde gris claro */
-    border-radius: 5px; /* Bordes redondeados */
-    padding: 10px; /* Espaciado interno */
-    width: 100%; /* Los inputs ocupan el ancho completo */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave */
-    margin-bottom: 10px; /* Espacio entre campos */
+    border: 1px solid #ccc; 
+    border-radius: 5px; 
+    padding: 10px; 
+    width: 100%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px; 
 }
 
 /*Estilo para el botÃ³n de login*/
@@ -59,14 +55,14 @@ input {
     /* transition: background-color 0.3s; TransiciÃ³n suave */
 }
 .btn_login:hover{
-    background-color: #0056b3; 
+    background-color: #0056b3;
 }
 
 
-.ng-valid:not(form).ng-touched {
+/* .ng-valid:not(form).ng-touched {
     border: 2px solid#3fd447;
 }
 
 .ng-invalid:not(form).ng-touched {
     border: 2px solid#f70905;
-}
+} */

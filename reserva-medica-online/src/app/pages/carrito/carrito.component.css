@@ -4,61 +4,47 @@ main{
 }
 h2{
     text-align: center;
-}
-.container{
-    display: flex;
-    flex-direction: row;
+    margin:40px 0;
 }
 .btn{
     margin: 50px;
   
 }
-/* Estilos para la tabla */
 table {
     width: 100%;
-    border-collapse: collapse;
+    border-collapse: collapse; 
   }
-  
   table th,
   table td {
     padding: 8px;
     text-align: left;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid #ddd; 
   }
-
   th span {
-    margin: 0 48px; 
+    margin: 0 78px;  
   }
   tr{
-    font-weight: 500;
+    font-weight: 500; 
   }
-  /* Estilo para la primera fila (encabezados) */
   table th {
     background-color: #5866d0;
     color: #333; 
     color: #e2e2e2;
     font-weight: 600;
   }
-
   input{
     border-radius: 5px;  
   }
   .input input{
-    /* width:50%; */
     margin-top: 10px;
     padding: 6px 6px;
   }
   .input{
     width:70%;
   }
-
-  
-  /* Estilo para las filas impares */
   table tbody tr:nth-child(odd) {
     background-color: #f9f9f9;
   }
-  
-  /* Estilo para las filas al pasar el cursor */
   table tbody tr:hover {
     background-color: #e2e2e2;
   }
@@ -68,4 +54,34 @@ table {
   }
   .espaciado{
     margin: 0 30px;
+  }
+  p{
+    color:#333;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 500;
+    margin:20px;
+    animation: slide-in 2s ease-out forwards;
+    transform: translatey(100%);
+    opacity: 0;
+  }
+  
+  @keyframes slide-in {
+    to {
+      transform: translatey(0);
+      opacity: 1;
+    }
+  }
+
+  .btn-iniciar_sesion{
+      background-color: #007bff;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      text-decoration: none;
+  }
+  .p-carrito{
+    padding:40px;
   }

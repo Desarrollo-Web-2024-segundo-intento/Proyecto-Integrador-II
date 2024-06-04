@@ -13,35 +13,12 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './mis-turnos.component.css'
 })
 export class MisTurnosComponent implements OnInit {
-  // turnos: any[] = [];
-  // turno:Turno | undefined;
-  turnoData: any={};
-  updated:boolean=false;
-    // id: 0,
-    // especialidad: "",
-    // profesional: "",
-    // fecha: "",
-    // hora: "",
-    // obraSocial: ""
-  // };
+
+
 
   constructor(private turnosService: TurnosService) { }
   ngOnInit(): void {
-    this.turnoData= this.turnosService.turno
+
   }
   
-
-//   agregarTurno(): void {
-//     this.turnosService.agregarTurno(this.nuevoTurno).subscribe((turno: any) => {
-//       console.log('Turno registrado:', turno);
-//       this.nuevoTurno = {
-//         id:0 ,
-//         especialidad: '',
-//         profesional: '',
-//         fecha: '',
-//         hora: '',
-//         obraSocial:'',
-//       };
-//     });
-//   }
 }
