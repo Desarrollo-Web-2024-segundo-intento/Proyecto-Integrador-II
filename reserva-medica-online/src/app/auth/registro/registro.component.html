@@ -101,7 +101,7 @@
           Debe tener al menos 6 caracteres y maximo 20, al menos una letra mayúscula, un número y un símbolo.
         </div>
       </div>
-      <input class="input_registro" type="password" id="password" formControlName="password" placeholder="Repetir Contraseña">
+      <input class="input_registro" type="text" id="password2" formControlName="password2" placeholder="Repetir Contraseña">
       <div *ngIf="Password?.errors && Password?.touched" class="text-danger">
         <div *ngIf="Password?.hasError('required')" style="font-size: 12px;">
           La constraseña es requerida.
