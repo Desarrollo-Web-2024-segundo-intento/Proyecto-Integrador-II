@@ -63,7 +63,7 @@ Recomendamos leer cada uno de los readmes en las distintas carpetas del reposito
 A continuación dejamos los links directos:  
 1. [README FrontEnd](https://github.com/Desarrollo-Web-2024-segundo-intento/Proyecto-Integrador-II/blob/main/reserva-medica-online/README.md)  
 2. [README BackEnd](https://github.com/Desarrollo-Web-2024-segundo-intento/Proyecto-Integrador-II/blob/main/BackEnd/Readme.md)  
-3. [README Pasarerla de Pago con Stripe]()
+3. [README Pasarerla de Pago con Stripe](https://github.com/Desarrollo-Web-2024-segundo-intento/Proyecto-Integrador-II/blob/main/BackEnd/stripe_server/README.md)
 
 <h2>Equipo de Desarrolladores</h2>
 
