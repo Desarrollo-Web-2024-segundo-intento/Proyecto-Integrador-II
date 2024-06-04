@@ -18,7 +18,7 @@ import { NavDashbComponent } from '../../pages/dashboard/nav-dashb/nav-dashb.com
   styleUrl: './nav.component.css'
 })
 export class NavComponent{
-  userLoginOn: boolean = false;
+ userLoginOn: boolean = false;
 }
 
   // imports: [NavComponent, RouterLink, RouterLinkActive, NavDashbComponent],
