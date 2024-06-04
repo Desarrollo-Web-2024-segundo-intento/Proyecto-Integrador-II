@@ -24,6 +24,8 @@ import { routes } from '../../app.routes';
   //  email: '',
 //
 
+
+
 export class RegistroComponent {
   user = {
     username: '',
