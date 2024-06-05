@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { EspecialMedicasComponent } from '../especial-medicas/especial-medicas.component';
 
 
+
 @Component({
   selector: 'app-servicios',
   standalone: true,
@@ -10,25 +11,6 @@ import { EspecialMedicasComponent } from '../especial-medicas/especial-medicas.c
   styleUrl: './servicios.component.css'
 
 })
-// export class ServiciosComponent {
-// imgBajaComplejidad="assets/img/imga.png";
-// imgMedianaComplejidad="assets/img/imgb.png";
-// imgAltaComplejidad="assets/img/imgc.png";
-// imgObraSocial1="assets/img/medife.png";
-// imgObraSocial2="assets/img/osde.png";
-// imgObraSocial3="assets/img/sancor.png";
-// imgObraSocial4="assets/img/galeno.jpg";
-// imgObraSocial5="assets/img/Prevencion_Salud.png";
-// imgObraSocial6="assets/img/avalian.png";
-// imgObraSocial7="assets/img/pami.jpg";
-// imgObraSocial8="assets/img/apross.jpg";
-// imgObraSocial9="assets/img/swissmedical.png"
-// imgObraSocial10="assets/img/federadasalud.jpg";
-// imgObraSocial11="assets/img/sipssa.jpg";
-
-//  })
-
-
 
 export class ServiciosComponent implements OnInit {
 
@@ -41,7 +23,8 @@ export class ServiciosComponent implements OnInit {
 
   async fetchData() {
     try {
-      const response = await fetch('http://127.0.0.1:8000/api/v1/especialidad/?format=json');
+      const response = await fetch('http://192.168.0.170:8000/api/v1/especialidad/?format=json');
+      // const response = await fetch('http://127.0.0.1:8000/api/v1/especialidad/?format=json');
       // const response = await fetch('http://casaiot.ddns.net:8000/api/v1/especialidad/?format=json');
       if (!response.ok) {
         console.error('Error en la respuesta de la solicitud.');
@@ -114,12 +97,6 @@ export class ServiciosComponent implements OnInit {
         div_carrito.style.border = '1px solid black';
         div_carrito.style.margin = '10px'; // Margen para separación entre divs
 
-        // const div_padre = document.getElementById('div'+i); // Asegúrate de que este sea el ID correcto
-        // if (div_padre) {
-        //     div_padre.appendChild(div_carrito);
-        // } else {
-        //     console.error('No se encontró el elemento con id "app"');
-        // }
             // Añadir div_titulo y div_carrito a div_contenedor
             div_contenedor.appendChild(div_titulo);
             div_contenedor.appendChild(div_carrito);
@@ -216,80 +193,5 @@ export class ServiciosComponent implements OnInit {
 
 }
 
-//       for (const item of data) {
 
-//         const newDiv = document.createElement('div');// este constante genera el div contenedor de la especialidad
-//         newDiv.innerText = item.especialidad;// este innertext carga el contenido de especialidad en el dom
-//         newDiv.style.width = '200px';
-//         newDiv.style.height = '300px';
-//         newDiv.style.backgroundColor = 'white';
-//         newDiv.style.display = 'flex';
-//         newDiv.style.justifyContent = 'center';
-//         newDiv.style.alignItems = 'center';
-//         newDiv.style.border = '2px solid black';
-//         newDiv.style.float = 'left';
-//         const appDiv = document.getElementById('servicios'); //adentro de la caja servicios incrustar lo q voy a crear
-//         if (appDiv) {
-//             appDiv.appendChild(newDiv);
-//         } else {
-//             console.error('No se encontró el elemento con id "app"');
-//         }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//          //createDiv();
-//     }
-
-
-
-//     } catch (error) {
-//       console.error('Error al obtener datos:', error);
-//     }
-//   }
-
-//   onServiciosClick(event: Event) {
-//     event.preventDefault();
-//     this.fetchData();
-//   }
-
-// }
-
-// // src/app.ts
-
-// // Función para crear un div y añadirlo al DOM
-// function createDiv(): void {
-//   // Crear un nuevo elemento div
-//   const newDiv = document.createElement('div');
-
-//   // Asignar contenido y estilo al div
-//   newDiv.innerText = 'Este es un nuevo div creado con TypeScript';
-//   newDiv.style.width = '200px';
-//   newDiv.style.height = '200px';
-//   newDiv.style.backgroundColor = 'blue';
-//   newDiv.style.display = 'flex';
-//   newDiv.style.justifyContent = 'center';
-//   newDiv.style.alignItems = 'center';
-//   newDiv.style.border = '2px solid black';
-//   newDiv.style.float = 'left';
-
-//   // Obtener el elemento del DOM donde se añadirá el nuevo div
-//   const appDiv = document.getElementById('servicios'); //adentro de la caja servicios incrustar lo q voy a crear
-//   // Asegurarse de que el elemento existe
-//   if (appDiv) {
-//       appDiv.appendChild(newDiv);
-//   } else {
-//       console.error('No se encontró el elemento con id "app"');
-//   }
-// }
 
