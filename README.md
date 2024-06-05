@@ -56,6 +56,9 @@ El objetivo principal de este proyecto es permitir a los usuarios realizar las s
 2. Ejecuta el frontend: ng server (Angular)
 3. Instala las dependencias del backend: entra en la carpeta BackEnd y ejecuta pip install -r requirements.txt
 4. Ejecuta el backend: python manage.py runserver
+5. Instala las dependencias de Stripe: entrar en la carpeta stripe_server (en BackEnd) y ejecutar npm install
+6. Ejecuta Stripe: dentro de la carpeta stripe_server ir al archivo package.json, posicionar el cursor del mouse sobre "start" y hacer clic en "Run Script" (se puede ver información más detallada en el readme de stripe_server)
+
 
 <h2>READMEs</h2>
 
