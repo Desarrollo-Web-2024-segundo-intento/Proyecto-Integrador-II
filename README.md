@@ -56,6 +56,9 @@ El objetivo principal de este proyecto es permitir a los usuarios realizar las s
 2. Ejecuta el frontend: ng server (Angular)
 3. Instala las dependencias del backend: entra en la carpeta BackEnd y ejecuta pip install -r requirements.txt
 4. Ejecuta el backend: python manage.py runserver
+5. Instala las dependencias de Stripe: entrar en la carpeta stripe_server (en BackEnd) y ejecutar npm install
+6. Ejecuta Stripe: dentro de la carpeta stripe_server ir al archivo package.json, posicionar el cursor del mouse sobre "start" y hacer clic en "Run Script" (se puede ver información más detallada en el readme de stripe_server)
+
 
 <h2>READMEs</h2>
 
@@ -63,7 +66,7 @@ Recomendamos leer cada uno de los readmes en las distintas carpetas del reposito
 A continuación dejamos los links directos:  
 1. [README FrontEnd](https://github.com/Desarrollo-Web-2024-segundo-intento/Proyecto-Integrador-II/blob/main/reserva-medica-online/README.md)  
 2. [README BackEnd](https://github.com/Desarrollo-Web-2024-segundo-intento/Proyecto-Integrador-II/blob/main/BackEnd/Readme.md)  
-3. [README Pasarerla de Pago con Stripe]()
+3. [README Pasarerla de Pago con Stripe](https://github.com/Desarrollo-Web-2024-segundo-intento/Proyecto-Integrador-II/blob/main/BackEnd/stripe_server/README.md)
 
 <h2>Equipo de Desarrolladores</h2>
 

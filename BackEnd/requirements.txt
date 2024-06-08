@@ -7,3 +7,5 @@ python-dotenv==1.0.1
 sqlparse==0.5.0
 tzdata==2024.1
 pip==24.0
+pip install djangorestframework-simplejwt
+npm install --save @stripe/stripe-js
