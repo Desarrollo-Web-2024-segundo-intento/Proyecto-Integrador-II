@@ -131,10 +131,10 @@
       El DNI es requerido.
       </p>
     }
-    @else if (Dni?.hasError('dni'))
+    @else if (Dni?.hasError('pattern'))
     {
       <p class="text-danger">
-      El formato del DNI debe ser válido.
+        Debe tener entre 7 a 8 caracteres numéricos.
       </p>
     }
   }
@@ -148,10 +148,10 @@
       El Nombre es requerido.
       </p>
     }
-    @else if (Nombre?.hasError('nombre'))
+    @else if (Nombre?.hasError('pattern'))
     {
       <p class="text-danger">
-      El formato del Nombre debe ser válido.
+        Debe tener al menos 3 caracteres y no debe contener números.
       </p>
     }
   }
@@ -173,10 +173,10 @@
       El Apellido es requerido.
       </p>
     }
-    @else if (Apellido?.hasError('apellido'))
+    @else if (Apellido?.hasError('pattern'))
     {
       <p class="text-danger">
-      El formato del Apellido debe ser válido.
+        Debe tener al menos 3 caracteres y no debe contener números.
       </p>
     }
   }
@@ -189,7 +189,7 @@
       El email es requerido.
       </p>
     }
-    @else if (Email?.hasError('email'))
+    @else if (Email?.hasError('pattern'))
     {
       <p class="text-danger">
       El formato del email debe ser válido.
@@ -206,10 +206,10 @@
       La contraseña es requerida.
       </p>
     }
-    @else if (Password?.hasError('password'))
+    @else if (Password?.hasError('pattern'))
     {
       <p class="text-danger">
-      El formato de la contraseña debe ser válido.
+        Debe tener entre 6 a 20 caracteres, al menos una letra mayúscula, un número y un símbolo.
       </p>
     }
   }

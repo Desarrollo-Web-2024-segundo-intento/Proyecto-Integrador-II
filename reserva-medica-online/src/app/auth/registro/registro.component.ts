@@ -53,13 +53,13 @@ export class RegistroComponent {
   constructor(private apiService: ApiService, private router: Router, private formBuilder:FormBuilder) {
     this.form=this.formBuilder.group(
       {
-        apellido:['',[Validators.required], []],
-        nombre:['',[Validators.required], []],
+        apellido:['',[Validators.required, Validators.pattern(/^([a-zA-ZáéíóúüÁÉÍÓÚÜñÑ]{2,60}[\,\-\.]{0,1}[\s]{0,1}){1,3}$/)], []],
+        nombre:['',[Validators.required, Validators.pattern(/^([a-zA-ZáéíóúüÁÉÍÓÚÜñÑ]{2,60}[\,\-\.]{0,1}[\s]{0,1}){1,3}$/)], []],
         //telefono:['',[Validators.required, this.telefonoValidator()], []],
-        dni:['',[Validators.required], []],
+        dni:['',[Validators.required, Validators.pattern(/^[\d]{1,3}\.?[0-9]{3,3}\.?[\d]{3,3}$/)], []],
         //mutual:['',[Validators.required, this.mutualValidator()], []],
-        email:['',[Validators.required, Validators.email], []],
-        password:['',[Validators.required], []]
+        email:['',[Validators.required, Validators.pattern(/^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/)], []],
+        password:['',[Validators.required, Validators.pattern(/^(?=(?:.*\d))(?=.*[A-Z])(?=.*[a-z])(?=.*[.,*!?¿¡/#$%&])\S{8,20}$/)], []]
       }
     )
   }
