@@ -54,9 +54,9 @@ export class ServiciosComponent implements OnInit {
 
   async fetchData() {
     try {
-      const response = await fetch('http://192.168.0.170:8000/api/v1/especialidad/?format=json');
+      //const response = await fetch('http://192.168.0.170:8000/api/v1/especialidad/?format=json');
       // const response = await fetch('http://127.0.0.1:8000/api/v1/especialidad/?format=json');
-      // const response = await fetch('http://casaiot.ddns.net:8000/api/v1/especialidad/?format=json');
+       const response = await fetch('http://casaiot.ddns.net:8000/api/v1/especialidad/?format=json');
       // const response = await fetch('http://mgalarmasserver1.ddns.net:8000/api/v1/especialidad/?format=json');
       if (!response.ok) {
         console.error('Error en la respuesta de la solicitud.');
@@ -69,7 +69,7 @@ export class ServiciosComponent implements OnInit {
 
 
 
-      
+
       const data = await response.json();
       console.log('Datos recibidos:', data);
 
@@ -104,9 +104,9 @@ export class ServiciosComponent implements OnInit {
 
 
 
-        const div_padre = document.getElementById('div'+i);  
+        const div_padre = document.getElementById('div'+i);
 
-        const div_contenedor = document.createElement('div'); 
+        const div_contenedor = document.createElement('div');
         div_contenedor.style.width = '100%';
         // div_contenedor.style.backgroundColor = 'yellow';
         div_contenedor.style.display = 'flex';

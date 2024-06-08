@@ -34,13 +34,21 @@ import { Usuario } from '../../interfaces/usuario';
 
 export class RegistroComponent {
   form:FormGroup;
-  user = {
-    username: '',
-    first_name: '',
-    last_name: '',
-    email: '',
-    password: ''
-  };
+  // user = {
+  //   username: '',
+  //   first_name: '',
+  //   last_name: '',
+  //   email: '',
+  //   password: ''
+  // };
+
+  // newUser = {
+  //   username: this.form.value.dni,
+  //   first_name: this.form.value.nombre,
+  //   last_name: this.form.value.apellido,
+  //   email: this.form.value.email,
+  //   password: this.form.value.password,
+  // };
 
   constructor(private apiService: ApiService, private router: Router, private formBuilder:FormBuilder) {
     this.form=this.formBuilder.group(
@@ -50,7 +58,7 @@ export class RegistroComponent {
         //telefono:['',[Validators.required, this.telefonoValidator()], []],
         dni:['',[Validators.required], []],
         //mutual:['',[Validators.required, this.mutualValidator()], []],
-        email:['',[Validators.required], [Validators.email]],
+        email:['',[Validators.required, Validators.email], []],
         password:['',[Validators.required], []]
       }
     )
@@ -58,18 +66,29 @@ export class RegistroComponent {
 
   onSubmit(event:Event): void {
     event.preventDefault;
-    console.log('entre a la rutina onsubmit');
-    this.apiService.register(this.user).subscribe(
-      response => {
-        console.log('Registro exitoso:', response);
-        alert('registro exitoso');
-        this.router.navigate(['/iniciarSesion']);
-      },
-      error => {
-        this.form.markAllAsTouched();
-        console.error('Error en el registro:', error);
-      }
-    );
+
+    if (this.form.valid) {
+      console.log('entre a la rutina onsubmit');
+      const newUser = {
+        username: this.form.value.dni,
+        first_name: this.form.value.nombre,
+        last_name: this.form.value.apellido,
+        email: this.form.value.email,
+        password: this.form.value.password,
+      };
+      this.apiService.register(newUser).subscribe(
+        response => {
+          console.log('Registro exitoso:', response);
+          alert('registro exitoso');
+          this.router.navigate(['/iniciarSesion']);
+        },
+        error => {
+          console.error('Error en el registro:', error);
+        }
+      );
+    } else {
+      this.form.markAllAsTouched();
+    }
   }
 
   get Nombre(){
