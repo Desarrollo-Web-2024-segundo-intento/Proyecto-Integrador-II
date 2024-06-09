@@ -146,25 +146,25 @@ export class ServiciosComponent implements OnInit {
 
 
 
-      const div_carrito = document.createElement('div'); // este constante genera el div contenedor de la especialidad
-      div_carrito.id = 'div_carrito';
-      // div_carrito.innerText = 'Carrito';
-      div_carrito.style.width = '25%';
-      div_carrito.style.height = '50px';
-      // div_carrito.style.backgroundColor = 'transparent';
-      div_carrito.style.display = 'flex';
-      div_carrito.style.flexDirection = 'column';
-      div_carrito.style.justifyContent = 'center';
-      div_carrito.style.alignItems = 'center';
-      // div_carrito.style.border = '1px solid black';
-      div_carrito.style.margin = '10px'; // Margen para separación entre divs
+      // const div_carrito = document.createElement('div'); // este constante genera el div contenedor de la especialidad
+      // div_carrito.id = 'div_carrito';
+      // // div_carrito.innerText = 'Carrito';
+      // div_carrito.style.width = '25%';
+      // div_carrito.style.height = '50px';
+      // // div_carrito.style.backgroundColor = 'transparent';
+      // div_carrito.style.display = 'flex';
+      // div_carrito.style.flexDirection = 'column';
+      // div_carrito.style.justifyContent = 'center';
+      // div_carrito.style.alignItems = 'center';
+      // // div_carrito.style.border = '1px solid black';
+      // div_carrito.style.margin = '10px'; // Margen para separación entre divs
 
 
-      if (div_contenedor) {
-          div_contenedor.appendChild(div_carrito);
-      } else {
-          console.error('No se encontró el elemento con id "app"');
-      }
+      // if (div_contenedor) {
+      //     div_contenedor.appendChild(div_carrito);
+      // } else {
+      //     console.error('No se encontró el elemento con id "app"');
+      // }
 
       const div_valor = document.createElement('div'); // este constante genera el div contenedor de la especialidad
       div_valor.id = 'div_valor';
@@ -187,16 +187,16 @@ export class ServiciosComponent implements OnInit {
       }
 
 
-            // Crear y configurar la imagen
-            const img = document.createElement('img');
-            img.src = 'assets/img/carrito.png'; // Cambia esta ruta a la de tu imagen
-            img.alt = 'Carrito';
-            img.style.width = '50px'; // Ajusta el tamaño según sea necesario
-            img.style.height = '50px'; // Ajusta el tamaño según sea necesario
+            // // Crear y configurar la imagen
+            // const img = document.createElement('img');
+            // img.src = 'assets/img/carrito.png'; // Cambia esta ruta a la de tu imagen
+            // img.alt = 'Carrito';
+            // img.style.width = '50px'; // Ajusta el tamaño según sea necesario
+            // img.style.height = '50px'; // Ajusta el tamaño según sea necesario
 
 
-            // Añadir la imagen al div_carrito
-            div_carrito.appendChild(img);
+            // // Añadir la imagen al div_carrito
+            // div_carrito.appendChild(img);
 
 
 
@@ -225,7 +225,7 @@ export class ServiciosComponent implements OnInit {
 
 
         const div_boton_turno = document.createElement('div'); // este constante genera el div contenedor de la especialidad
-        div_boton_turno.id = 'div_descripcion';
+        div_boton_turno.id = 'div_boton_turno';
         div_boton_turno.innerText = 'Agendar Turno';
         div_boton_turno.style.width = '90%';
         div_boton_turno.style.height = '50px';
@@ -241,11 +241,13 @@ export class ServiciosComponent implements OnInit {
         div_boton_turno.style.margin = '10px'; // Margen para separación entre divs
 
 
+        
+
         if (div_padre) {
             div_padre.appendChild(div_boton_turno);
         } else {
             console.error('No se encontró el elemento con id "app"');
-        }
+      }
 
 
       }
