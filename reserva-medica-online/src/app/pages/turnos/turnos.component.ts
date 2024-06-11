@@ -11,7 +11,7 @@ import { Especialidad } from '../../interfaces/especialidad';
 import { TurnosService } from '../../services/turnos.service';
 import { PasarelaPagoService } from '../pasarela-pago/pasarela-pago.service';
 import { Profesional } from '../../interfaces/profesional';
-
+import { ApiService } from '../../services/api.service';
 
 @Component({
   selector: 'app-turnos',
@@ -24,9 +24,17 @@ export class TurnosComponent implements OnInit {
   especialidadesList: Especialidad[] = [];
   profesionalesList: Profesional[] = [];
   // selected = "---";
-  constructor(private router: Router, private turnosService: TurnosService, private pasarelaDePago: PasarelaPagoService) {}
+  constructor(private router: Router, private turnosService: TurnosService, private pasarelaDePago: PasarelaPagoService, private apiService:ApiService) {}
+
+
 
   ngOnInit() {
+    if (this.apiService.isLoggedIn()){
+      this.router.navigate(['/turnos']);
+    } else {
+      alert('Por favor, Inicia sesión para agendar un turno');
+      this.router.navigate(['/iniciarSesion']);
+    }
     this.setupButtonEventListeners();
     this.getEspecialidades();
     this.getProfesionales();

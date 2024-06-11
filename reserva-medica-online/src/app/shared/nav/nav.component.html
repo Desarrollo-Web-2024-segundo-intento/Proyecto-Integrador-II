@@ -112,18 +112,25 @@
           <a class="nav-link" routerLink="/contacto" routerLinkActive="active">Contacto</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" routerLink="/turnos" routerLinkActive="active">Turnos</a>
+          <a *ngIf="apiService.isLoggedIn()" class="nav-link" routerLink="/turnos" routerLinkActive="active">Turnos</a>
         </li>
+        <li class="nav-item">
+          <a *ngIf="apiService.isLoggedIn()" class="nav-link" routerLink="/dashboard" routerLinkActive="active">Dashboard</a>
+        </li>
+        <li class="nav-item">
+          <a *ngIf="apiService.isLoggedIn()" class="nav-link" routerLink="/carrito" routerLinkActive="active">Pago de turnos</a>
+        </li>
+
 
         <!-- <li class="nav-item">
           <a class="nav-link" routerLink="/iniciarSesion" routerLinkActive="active">Iniciar Sesion</a>
         </li> -->
 
-        <li *ngIf="!userLoginOn" class="nav-item" id="logout">
-          <a class="nav-link" routerLink="/iniciarSesion" routerLinkActive="active">Iniciar Sesion</a>
+        <li  class="nav-item" id="logout">
+          <a *ngIf="!apiService.isLoggedIn()" class="nav-link" routerLink="/iniciarSesion" routerLinkActive="active">Iniciar Sesion</a>
         </li>
-        <li  *ngIf="userLoginOn" class="nav-item" id="login">
-          <a class="nav-link" routerLink="/contacto" routerLinkActive="active">Cerrar Sesion</a>
+        <li class="nav-item" id="login">
+          <a *ngIf="apiService.isLoggedIn()" (click)="onLogout()" class="nav-link" routerLink="/contacto" routerLinkActive="active">Cerrar Sesion</a>
         </li>
 
         <!-- <div class="auth">
@@ -149,7 +156,7 @@
           <a class="nav-link" routerLink="/iniciarSesion" routerLinkActive="active">Iniciar Sesion</a>
         </li> -->
         <li class="nav-item">
-          <a class="nav-link" routerLink="/registro" routerLinkActive="active">Registro</a>
+          <a *ngIf="!apiService.isLoggedIn()" class="nav-link" routerLink="/registro" routerLinkActive="active">Registro</a>
         </li>
 
       </ul>

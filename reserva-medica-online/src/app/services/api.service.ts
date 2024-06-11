@@ -1,6 +1,7 @@
 import { Injectable } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
-import { Observable } from "rxjs";
+import { Observable, throwError } from "rxjs";
+import { catchError, map } from 'rxjs/operators';
 @Injectable({
     providedIn: 'root'
 })
@@ -18,7 +19,27 @@ export class ApiService {
     }
     login(dni: string, password: string): Observable<any> {
         const body = { username: dni, password: password };
-        return this.http.post<any>(this.apiUrl + '/login/', body);
+        return this.http.post<any>(this.apiUrl + '/login/', body).pipe(
+          //console.log();
+          map((response: any) => {
+            //console.log('ACA ESTA EL NOMBRE DE USUARIO');
+            //console.log(access_token);
+            localStorage.setItem('access_token', response.access);
+            localStorage.setItem('refresh_token', response.refresh);
+            localStorage.setItem('username', response.refresh);
+            console.log('ACA ESTA EL NOMBRE DE USUARIO');
+            let cliente = localStorage.getItem(response.access);
+            console.log(cliente);
+            return response;
+          }),
+        );
+    }
+    logout(): void {
+      localStorage.removeItem('access_token');
+      localStorage.removeItem('refresh_token');
+    }
+    isLoggedIn(): boolean {
+      return !!localStorage.getItem('access_token'); // Devuelve true si el token existe
     }
     // especialidades(dni: string, password: string): Observable<any> {
     //     const body = { username: dni, password: password };

@@ -17,7 +17,7 @@ import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { CarritoComponent } from './pages/carrito/carrito.component';
 import { PerfilComponent } from './pages/dashboard/usuario/perfil/perfil.component';
 import { MisTurnosComponent } from './pages/dashboard/mis-turnos/mis-turnos.component';
-import { authGuard } from './guards/auth.guard';
+import { AuthGuard } from './guards/auth.guard';
 
 export const routes: Routes = [
   //  {path:" ", component: InicioComponent},
@@ -27,11 +27,11 @@ export const routes: Routes = [
    {path:"contacto", component: ContactoComponent},
    {path:"servicios", component: ServiciosComponent},
    {path:"iniciarSesion", component: IniciarSesionComponent},
-   {path:"turnos", component: TurnosComponent},
+   {path:"turnos", component: TurnosComponent, canActivate: [AuthGuard]},
    {path:"preguntas", component: PreguntasComponent},
    {path:"terminos-y-condiciones", component: TerminosYCondicionesComponent},
    {path:"politicas", component: PoliticasComponent},
-   {path:"dashboard", component: DashboardComponent, canActivate: [authGuard],
+   {path:"dashboard", component: DashboardComponent, canActivate: [AuthGuard],
       children:[
         {path:'usuario/perfil', component: PerfilComponent},
         {path:'mis-turnos', component: MisTurnosComponent},
@@ -39,7 +39,7 @@ export const routes: Routes = [
         {path:'estado', component:EstadoPagosComponent },
         {path:'historial', component: HistorialPagosComponent},
       ]},
-   {path:"carrito", component: CarritoComponent},
+   {path:"carrito", component: CarritoComponent, canActivate: [AuthGuard]},
    {path: "registro", component: RegistroComponent},
    {path:"", redirectTo:"/inicio", pathMatch:"full"},
    {path: "**", component:  NotFoundComponent}

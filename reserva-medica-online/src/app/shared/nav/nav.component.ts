@@ -1,13 +1,14 @@
 
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
-import { RouterLink, RouterLinkActive } from '@angular/router';
+import { Router, RouterLink, RouterLinkActive } from '@angular/router';
 import { NgModule } from '@angular/core';
 
 import { NgIf } from '@angular/common'; //PATRI
 //import { Component } from '@angular/core';
 //import { RouterLink, RouterLinkActive } from '@angular/router';
 import { NavDashbComponent } from '../../pages/dashboard/nav-dashb/nav-dashb.component'; //PATRI
+import { ApiService } from '../../services/api.service';
 
 
 @Component({
@@ -19,6 +20,12 @@ import { NavDashbComponent } from '../../pages/dashboard/nav-dashb/nav-dashb.com
 })
 export class NavComponent{
  userLoginOn: boolean = false;
+ constructor(public apiService: ApiService, private router: Router) {}
+
+ onLogout(): void {
+  this.apiService.logout();
+  this.router.navigate(['/iniciarSesion']);
+}
 }
 
   // imports: [NavComponent, RouterLink, RouterLinkActive, NavDashbComponent],

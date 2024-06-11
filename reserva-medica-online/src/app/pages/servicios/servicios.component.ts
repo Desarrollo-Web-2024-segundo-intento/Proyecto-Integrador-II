@@ -7,7 +7,7 @@ import { createUrlTreeFromSnapshot } from '@angular/router';
 import { Especialidad } from '../../interfaces/especialidad';
 import { EspecialidadesService } from '../../services/especialidades.service';
 import { ServiciosService } from '../../services/servicios.service';
-
+import { ApiService } from '../../services/api.service';
 
 
 
@@ -49,7 +49,7 @@ export class ServiciosComponent implements OnInit {
   especialidadesList: Especialidad[] = [];
 
 
-  constructor(private serviciosService: ServiciosService, private router: Router) { }
+  constructor(private serviciosService: ServiciosService, private router: Router, private apiService: ApiService,) { }
 
 
   ngOnInit():void {
@@ -73,12 +73,12 @@ export class ServiciosComponent implements OnInit {
     event.preventDefault;
     this.router.navigate(['/turnos']); //por ahora lo dejamos asi ...
     //aca no se cual authService es o si es ApiService... MODIFICAR
-    // if (this.authService.isLogged()){
-    //   this.router.navigate(['/turnos']);
-    // } else {
-    //   alert('Por favor, Inicia sesión para agendar un turno');
-    //   this.router.navigate(['/iniciarSesion']);
-    // }
+     if (this.apiService.isLoggedIn()){
+       this.router.navigate(['/turnos']);
+     } else {
+       alert('Por favor, Inicia sesión para agendar un turno');
+       this.router.navigate(['/iniciarSesion']);
+     }
   }
 }
   // async fetchData() {

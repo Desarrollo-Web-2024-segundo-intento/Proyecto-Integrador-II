@@ -83,7 +83,7 @@ export class IniciarSesionComponent{
       this.loginForm = this.fb.group({
         // dni: ['', Validators.required, []],
         // password: ['', Validators.required, []]
-        
+
         dni:['',[Validators.required, Validators.pattern(/^[\d]{1,3}\.?[0-9]{3,3}\.?[\d]{3,3}$/)], []],
         password:['',[Validators.required, Validators.pattern(/^(?=(?:.*\d))(?=.*[A-Z])(?=.*[a-z])(?=.*[.,*!?¿¡/#$%&])\S{8,20}$/)], []]
     });
@@ -99,8 +99,8 @@ export class IniciarSesionComponent{
       this.apiService.login(dni, password).subscribe(
         response => {
           console.log('Login exitoso', response);
-          this.toggleLoginStatus();
-          console.log(this.userLoginOn);
+          //this.toggleLoginStatus();
+          //console.log(this.userLoginOn);
           this.loginForm.reset()
           this.router.navigate(['/servicios']);
         },
