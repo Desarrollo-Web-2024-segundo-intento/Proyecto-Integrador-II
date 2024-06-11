@@ -4,23 +4,55 @@
 import { FormsModule } from '@angular/forms';
 
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { CommonModule } from '@angular/common';
+import { Router, RouterLink } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
+import { Especialidad } from '../../interfaces/especialidad';
 import { TurnosService } from '../../services/turnos.service';
 import { PasarelaPagoService } from '../pasarela-pago/pasarela-pago.service';
+import { Profesional } from '../../interfaces/profesional';
 
 
 @Component({
   selector: 'app-turnos',
+  standalone: true,
+  imports: [CommonModule, HttpClientModule, RouterLink, TurnosComponent],
   templateUrl: './turnos.component.html',
   styleUrls: ['./turnos.component.css']
 })
 export class TurnosComponent implements OnInit {
+  especialidadesList: Especialidad[] = [];
+  profesionalesList: Profesional[] = [];
+  // selected = "---";
   constructor(private router: Router, private turnosService: TurnosService, private pasarelaDePago: PasarelaPagoService) {}
 
   ngOnInit() {
     this.setupButtonEventListeners();
+    this.getEspecialidades();
+    this.getProfesionales();
   }
 
+  getEspecialidades(): void {
+    this.turnosService.obtenerEspecialidades().subscribe(data => {
+      this.especialidadesList = data;
+      console.log('Datos recibidos:', data);
+    });
+  }
+
+  getProfesionales(): void {
+    this.turnosService.obtenerProfesionales().subscribe(data => {
+      this.profesionalesList = data;
+      console.log('Datos recibidos:', data);
+    });
+  }
+
+  // update(e){
+  //   this.selected = e.target.value
+  // }
+
+  // trackById(index: number, especialidad: Especialidad): number {
+  //   return especialidad.id;
+  // }
   setupButtonEventListeners() {
     this.setupButtonEventListener('nuevoTurno', () => {
       this.ocultarSecciones();

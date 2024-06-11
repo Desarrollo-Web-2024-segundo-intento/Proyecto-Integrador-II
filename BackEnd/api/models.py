@@ -1,6 +1,7 @@
 
 from django.db import models
 from django.utils import timezone
+#from django.core.validators import MinLengthValidator, MaxLengthValidator
 # import datetime
 # from django.contrib.auth.validators import *
 # from django.contrib.auth.models import AbstractUser
@@ -10,8 +11,9 @@ from django.utils import timezone
 # #1
 class Especialidad(models.Model):
     especialidad = models.CharField(max_length=100)
-    descripcion = models.CharField(max_length=500)
-    # imagen = models.ImageField(null=False, blank=True)
+    descripcion = models.CharField(max_length=500) #default='descripcion'
+    #imagen = models.ImageField(null=False, blank=True)
+    #precio = models.IntegerField(default=7000)
     class Meta:
         verbose_name = "Especialidad"
         verbose_name_plural = "Especialidades"
