@@ -44,15 +44,15 @@ input {
     margin-bottom: 10px; 
 }
 
-/*Estilo para el botÃ³n de login*/
+
 .btn-login{
     background-color: #007bff;
-    color: white; /* Texto blanco */
-    padding: 10px 20px; /* Espaciado interno */
-    border: none; /* Sin borde adicional */
-    border-radius: 5px; /* Bordes redondeados */
-    cursor: pointer; /* Cursor cambia a mano */
-    /* transition: background-color 0.3s; TransiciÃ³n suave */
+    color: white; 
+    padding: 10px 20px; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    
 }
 .btn_login:hover{
     background-color: #0056b3;

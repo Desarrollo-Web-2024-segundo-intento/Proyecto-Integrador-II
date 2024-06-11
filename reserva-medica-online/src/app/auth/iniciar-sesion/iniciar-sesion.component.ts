@@ -81,8 +81,11 @@ export class IniciarSesionComponent{
   constructor(
     private fb: FormBuilder, private apiService: ApiService, private router: Router) {
       this.loginForm = this.fb.group({
-        dni: ['', Validators.required, []],
-        password: ['', Validators.required, []]
+        // dni: ['', Validators.required, []],
+        // password: ['', Validators.required, []]
+        
+        dni:['',[Validators.required, Validators.pattern(/^[\d]{1,3}\.?[0-9]{3,3}\.?[\d]{3,3}$/)], []],
+        password:['',[Validators.required, Validators.pattern(/^(?=(?:.*\d))(?=.*[A-Z])(?=.*[a-z])(?=.*[.,*!?¿¡/#$%&])\S{8,20}$/)], []]
     });
   }
 

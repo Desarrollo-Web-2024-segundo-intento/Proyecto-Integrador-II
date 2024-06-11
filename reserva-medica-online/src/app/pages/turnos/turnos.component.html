@@ -25,12 +25,14 @@
     <div class="row m-4">
       <div class="col-6">
         <select id="especialidad" class="form-select" aria-label="Default select example">
-          <option value="1" selected>Médico Clínico</option>
+          <option value="">Selecciona un especialidad</option>
+          <option [value]="especialidad" *ngFor="let especialidad of especialidadesList">{{especialidad.especialidad}}</option>
         </select>
       </div>
       <div class="col-6">
         <select id="profesional" class="form-select" aria-label="Default select example">
-          <option value="1" selected>Dr. Giménez Matías</option>
+          <option value="">Selecciona un profesional</option>
+          <option [value]="profesional" *ngFor="let profesional of profesionalesList">{{profesional.nombre +" "+ profesional.apellido}}</option>
         </select>
       </div>
     </div>

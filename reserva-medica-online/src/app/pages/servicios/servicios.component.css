@@ -1,3 +1,24 @@
+* {
+  padding: 0px 0px 0px 0px;
+  margin: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Fira Sans", sans-serif !important;
+  margin: 0;
+  padding: 0;
+  height: 100px;
+} 
+
+/* .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+} */
+
+
 /* #servicios{
     width: 90%;
     height: 100%;
@@ -15,17 +36,36 @@
 } */
 
 .servicios_dinamicos {
-  width: 95%; /* Ajusta el ancho según sea necesario */
-  height: auto; /* O ajusta la altura según sea necesario */
-  background-color: aqua;
-  margin-left: 50px;
-  overflow: auto; /* Puedes usar 'auto', 'hidden' u otras opciones según tus necesidades */
-  /* border: 1px solid black; /* Agrega un borde para visualizar el contenedor */
-  padding: 10px; /* Ajusta el relleno según sea necesario */
-  /* Otros estilos según tus preferencias */
-}
+  /* width: 90%; 
+  height: auto; 
+  background-color: aqua; */
+  /* margin-left: 50px; */
+  /* align-items: center;
+  justify-content:space-around;
+  overflow: auto; 
+  padding: 10px; */
 
-  /* .titulo_servicios{
+
+  /* background-color: blueviolet; */
+  width: 100%;
+  height: auto;
+  min-height: 500px;
+  display: flex;
+  flex-wrap: wrap;          
+  justify-content: space-evenly;
+  align-items: center;      
+
+/* 
+
+  display: flexbox;
+  margin-left: 30%;
+  overflow: hidden;
+  align-items: center;
+  justify-content:space-around;
+  margin: auto; */
+  
+} 
+/* .titulo_servicios{
     text-align: center;
     padding-bottom: 40px;
     color: #000000c5;
