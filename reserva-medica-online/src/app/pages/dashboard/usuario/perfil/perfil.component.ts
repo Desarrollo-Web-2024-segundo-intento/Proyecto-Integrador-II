@@ -20,19 +20,19 @@ export class PerfilComponent implements OnInit {
   constructor(private usuarioService: UsuarioService) { }
 
   ngOnInit(): void {
-    this.usuarioData = this.usuarioService.getUsuarioData();
+    //this.usuarioData = this.usuarioService.getUsuarioData();
   }
 
-  actualizarDatos(): void {
-    this.usuarioService.updateUsuarioData(this.usuarioData);
-    console.log('Datos personales actualizados:', this.usuarioData);
-    this.updated = true;
-  }
-  guardarDatos(): void {
-    this.usuarioService.saveUsuarioData(this.usuarioData);
-    console.log('Datos personales guardados:', this.usuarioData);
-    alert('Datos guardados exitosamente');
-    this.updated = false;
-  }
-  
+  // actualizarDatos(): void {
+  //   this.usuarioService.updateUsuarioData(this.usuarioData);
+  //   console.log('Datos personales actualizados:', this.usuarioData);
+  //   this.updated = true;
+  // }
+  // guardarDatos(): void {
+  //   this.usuarioService.saveUsuarioData(this.usuarioData);
+  //   console.log('Datos personales guardados:', this.usuarioData);
+  //   alert('Datos guardados exitosamente');
+  //   this.updated = false;
+  // }
+
 }

@@ -25,7 +25,7 @@ export class CarritoComponent implements OnInit {
 
   ngOnInit() {
     if (this.apiService.isLoggedIn()){
-      this.router.navigate(['/dashboard']);
+      this.router.navigate(['/carrito']);
     } else {
       alert('Por favor, Inicia sesión para agendar un turno');
       this.router.navigate(['/iniciarSesion']);
