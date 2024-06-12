@@ -12,6 +12,7 @@ export interface Especialidad {
   id: number;
   especialidad: string;
   descripcion: string;
-  imagen: string;
+  // img: string;
   precio: number;
+  cantidad: number;
 }
