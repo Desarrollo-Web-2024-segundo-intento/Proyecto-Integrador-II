@@ -146,6 +146,19 @@ def eliminar_usuario(request):
     user.delete()
     return Response({"message": "Usuario eliminado exitosamente."}, status=status.HTTP_204_NO_CONTENT)
 
+# traer profesionales segun especialidad seleccionada
+@api_view(['GET'])
+def get_profesionales_por_especialidad(request, especialidad_id):
+    try:
+        # Filtra los profesionales por el ID de la especialidad
+        profesionales = Profesional.objects.filter(especialidad_id=especialidad_id)
+        serializer = ProfesionalSerializer(profesionales, many=True)
+        return Response(serializer.data, status=status.HTTP_200_OK)
+    except Profesional.DoesNotExist:
+        return Response({"error": "No se encontraron profesionales para la especialidad especificada."}, status=status.HTTP_404_NOT_FOUND)
+    except Exception as e:
+        return Response({"error": str(e)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+
 class EspecialidadViewSet(viewsets.ModelViewSet):
     queryset = Especialidad.objects.all()
     serializer_class = EspecialidadSerializer

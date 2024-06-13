@@ -3,6 +3,7 @@ import { RouterLink } from '@angular/router';
 import { NgIf } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 //import { UsuarioService } from '../../../../services/usuario.service';
+import { ApiService } from '../../../../services/api.service';
 
 @Component({
   selector: 'app-perfil',
@@ -14,15 +15,19 @@ import { FormsModule } from '@angular/forms';
 })
 export class PerfilComponent implements OnInit {
   title: string="Perfil";
-  usuarioData: any = {};
+  // traer profesionales segun especialidad seleccionada
+  userData: any = {};
   updated: boolean = false;
 
   //constructor(private usuarioService: UsuarioService) { }
-  constructor(){}
+  constructor(private apiService: ApiService){}
 
   ngOnInit(): void {
     //this.usuarioData = this.usuarioService.getUsuarioData();
-  }
+    // traer profesionales segun especialidad seleccionada
+    this.apiService.getUserData().subscribe(data => {
+      this.userData = data;
+  });
 
   // actualizarDatos(): void {
   //   this.usuarioService.updateUsuarioData(this.usuarioData);
@@ -35,5 +40,5 @@ export class PerfilComponent implements OnInit {
   //   alert('Datos guardados exitosamente');
   //   this.updated = false;
   // }
-
+  }
 }

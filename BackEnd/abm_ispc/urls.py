@@ -16,6 +16,9 @@ urlpatterns = [
     re_path('login/', views.login),
     re_path('register/', views.register),
     re_path('profile/', views.profile),
+    #traer profesionales segun especialidad seleccionada
+    path('profesionales/especialidad/<int:especialidad_id>/', views.get_profesionales_por_especialidad, name='profesionales-por-especialidad'),
+
     # re_path('actualizar_usuario/', views.actualizar_usuario),
     # re_path('actualizar_nombre/', views.actualizar_nombre),
     # re_path('actualizar_apellido/', views.actualizar_apellido),

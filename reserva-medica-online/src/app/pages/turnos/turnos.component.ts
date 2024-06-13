@@ -32,10 +32,34 @@ export class TurnosComponent implements OnInit {
   }
 
   getEspecialidades(): void {
-    this.turnosService.obtenerEspecialidades().subscribe(data => {
+    this.turnosService.obtenerEspecialidades().subscribe((data: Especialidad[]) => {
       this.especialidadesList = data;
       console.log('Datos recibidos:', data);
     });
+  }
+
+  // onChangeEspecialidad(event: any) {
+  //   const especialidadId = event.target.value;
+  //   // this.turnosService.getProfesionalesPorEspecialidad(especialidadId).subscribe((data: any) => {
+  //   //   this.profesionalesList = data;
+  //   // });
+  //   if (especialidadId) {
+  //     this.turnosService.getProfesionalesPorEspecialidad(especialidadId).subscribe((data: any) => {
+  //       this.profesionalesList = data;
+  //     });
+  //   } else {
+  //     this.profesionalesList = []; // Limpiar la lista de profesionales si no se selecciona ninguna especialidad
+  //   }
+  // }
+  onChangeEspecialidad(event: any) {
+    const especialidadId = event.target.value;
+    if (especialidadId) {
+      this.turnosService.getProfesionalesPorEspecialidad(especialidadId).subscribe((data: any) => {
+        this.profesionalesList = data;
+      });
+    } else {
+      this.profesionalesList = []; // Limpiar la lista de profesionales si no se selecciona ninguna especialidad
+    }
   }
 
   getProfesionales(): void {

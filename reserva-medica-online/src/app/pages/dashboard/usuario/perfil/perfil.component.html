@@ -39,12 +39,12 @@
         <p class="card-text"><strong>Mutual:</strong> {{ usuarioData.obraSocial }}</p>
         <p class="card-text"><strong>Email:</strong> {{ usuarioData.email }}</p>-->
   <div class="container">
-    <div class="cliente-form-container">
+    <div *ngIf="userData" class="cliente-form-container">
 
-        <p>Nombre: </p>
-        <p>Apellido:</p>
-        <p>DNI/username:</p>
-        <p>Email:</p>
+        <p>Nombre: {{ userData.nombre }}</p>
+        <p>Apellido: {{ userData.apellido }}</p>
+        <p>DNI/username: {{ userData.dni }}</p>
+        <p>Email: {{ userData.email }}</p>
 
         <!--<form>
         <label for="apellido">Apellido:</label>

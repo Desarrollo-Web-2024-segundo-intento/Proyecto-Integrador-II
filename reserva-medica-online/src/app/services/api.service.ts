@@ -1,7 +1,7 @@
 import { Injectable } from "@angular/core";
 import { HttpClient, HttpHeaders } from "@angular/common/http";
 import { Observable, throwError } from "rxjs";
-import { catchError, map } from 'rxjs/operators';
+//import { catchError, map } from 'rxjs/operators';
 @Injectable({
     providedIn: 'root'
 })
@@ -24,7 +24,6 @@ export class ApiService {
         return this.http.post<any>(this.apiUrl + '/login/', body).pipe(
         );
     }
-
 
 
 
@@ -57,6 +56,15 @@ export class ApiService {
       return !!localStorage.getItem('token'); // Devuelve true si el token existe
     }
 
+    //traer profesionales segun especialidad seleccionada
+    getUserData(): Observable<any> {
+      const token = localStorage.getItem('token');
+      const headers = new HttpHeaders({
+        'Content-Type': 'application/json',
+        'Authorization': `Token ${token}`
+      });
+      return this.http.get<any>(`${this.apiUrl}/user/`, { headers });
+    }
 
 
     profile(): void {
