@@ -288,12 +288,16 @@ body {
   
   .card {
     height: 100%;
+    padding: 10px;
   }
   
   .card-body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    border-radius: 5px;
+    border: 1px solid #000;
+    padding: 30px;
   }
   
   .card img {
@@ -302,8 +306,11 @@ body {
   }
   
   .card .card-title {
+    font-family:cursive;
     font-size: 1.25rem;
     font-weight: bold;
+    color:  #0f69c9;
+
   }
   
   .card .card-text {
@@ -313,7 +320,7 @@ body {
   
   .card .precio {
     font-size: 1.2rem;
-    color: #007bff;
+    color:#007bff;
     font-weight: bold;
   }
   
