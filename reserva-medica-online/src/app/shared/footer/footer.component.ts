@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
-import { PoliticasComponent } from '../../pages/politicas/politicas.component';
-import { TerminosYCondicionesComponent } from '../../pages//terminos-y-condiciones/terminos-y-condiciones.component';
+import { PoliticasComponent } from './politicas/politicas.component';
+import { TerminosYCondicionesComponent } from './terminos-y-condiciones/terminos-y-condiciones.component';
 
 
 @Component({
