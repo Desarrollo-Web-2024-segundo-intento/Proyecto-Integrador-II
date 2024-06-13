@@ -10,6 +10,7 @@ import { ApiService } from '../../services/api.service';
 
 
 
+
 @Component({
   selector: 'app-turnos',
   standalone: true,
@@ -25,12 +26,6 @@ export class TurnosComponent implements OnInit {
 
 
   ngOnInit() {
-    if (this.apiService.isLoggedIn()){
-      this.router.navigate(['/turnos']);
-    } else {
-      alert('Por favor, Inicia sesión para agendar un turno');
-      this.router.navigate(['/iniciarSesion']);
-    }
     this.setupButtonEventListeners();
     this.getEspecialidades();
     this.getProfesionales();

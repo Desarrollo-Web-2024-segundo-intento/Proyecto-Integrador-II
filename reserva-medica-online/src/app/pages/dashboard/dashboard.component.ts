@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { Router, RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
-import { NavDashbComponent } from './nav-dashb/nav-dashb.component';
 import { NgIf } from '@angular/common';
 import { ApiService } from '../../services/api.service';
 
@@ -10,20 +9,19 @@ import { ApiService } from '../../services/api.service';
     standalone: true,
     templateUrl: './dashboard.component.html',
     styleUrl: './dashboard.component.css',
-    imports: [RouterOutlet, RouterLink, RouterLinkActive, NavDashbComponent, NgIf]
+    imports: [RouterOutlet, RouterLink, RouterLinkActive, NgIf]
 })
 export class DashboardComponent {
-estaAutenticado=true;
+  estaAutenticado=true;
 
-constructor(private router: Router, private apiService:ApiService) {}
+  constructor(private router: Router, private apiService:ApiService) {}
 
-ngOnInit() {
-  if (this.apiService.isLoggedIn()){
-    this.router.navigate(['/dashboard']);
-  } else {
-    alert('Por favor, Inicia sesión para agendar un turno');
-    this.router.navigate(['/iniciarSesion']);
+  ngOnInit() {
+    if (this.apiService.isLoggedIn()){
+      this.router.navigate(['/dashboard']);
+    } else {
+      alert('Por favor, Inicia sesión para agendar un turno');
+      this.router.navigate(['/iniciarSesion']);
+    }
   }
-}
-
 }

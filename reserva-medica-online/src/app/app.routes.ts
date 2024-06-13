@@ -11,8 +11,6 @@ import { TerminosYCondicionesComponent } from './pages/terminos-y-condiciones/te
 import { IniciarSesionComponent } from './auth/iniciar-sesion/iniciar-sesion.component';
 import { RegistroComponent } from './auth/registro/registro.component';
 import { PagosComponent } from './pages/dashboard/pagos/pagos.component';
-import { EstadoPagosComponent } from './pages/dashboard/estado-pagos/estado-pagos.component';
-import { HistorialPagosComponent } from './pages/dashboard/historial-pagos/historial-pagos.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { CarritoComponent } from './pages/carrito/carrito.component';
 import { PerfilComponent } from './pages/dashboard/usuario/perfil/perfil.component';
@@ -20,7 +18,6 @@ import { MisTurnosComponent } from './pages/dashboard/mis-turnos/mis-turnos.comp
 import { AuthGuard } from './guards/auth.guard';
 
 export const routes: Routes = [
-  //  {path:" ", component: InicioComponent},
    {path:"inicio", component: InicioComponent},
    {path:"acercaDe", component: AcercaDeComponent},
    {path:"servicios", component: ServiciosComponent},
@@ -36,8 +33,6 @@ export const routes: Routes = [
         {path:'usuario/perfil', component: PerfilComponent},
         {path:'mis-turnos', component: MisTurnosComponent},
         {path:'pagos', component: PagosComponent},
-        {path:'estado', component:EstadoPagosComponent },
-        {path:'historial', component: HistorialPagosComponent},
       ]},
    {path:"carrito", component: CarritoComponent, canActivate: [AuthGuard]},
    {path: "registro", component: RegistroComponent},
