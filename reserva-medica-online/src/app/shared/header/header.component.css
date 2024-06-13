@@ -29,7 +29,56 @@ body {
     margin-bottom: 8px; 
   }
   
+  .div_header {
+    height: 70px;
+    width: 95%;
+    /* border: 1px solid yellow;  */
+    display: flex; /* Utilizar flexbox */
+    justify-content: space-between; /* Espacio entre elementos */
+    align-items: center; /* Centrar verticalmente */
+    margin: 0 auto; /* Centrar horizontalmente */
+  }
+  
+  .div_titulo {
+    height: 55px;
+    width: 70%;
+    border-radius: 10px;
+    /* border: 1px solid #ccc; */
+  }
   header h1 {
     margin: 0;
     font-size: 36px; 
+    margin-left: 35%;
   }
+
+
+
+  
+  /* .div_usuario {
+    height: 55px;
+    width: 30%;
+    border: 1px solid red;
+    border-radius: 10px;
+  }
+.input_usuario{
+  height: 35px;
+  width: 100%;
+  margin: auto;
+} */
+.div_usuario {
+  height: 55px;
+  width: 30%;
+  /* border: 1px solid #ccc; */
+  border-radius: 10px;
+  display: flex; /* Convertir a flexbox */
+  justify-content: center; /* Centrar horizontalmente */
+  align-items: center; /* Centrar verticalmente */
+}
+
+.input_usuario {
+  padding: 8px;
+  width: 80%; /* Ajustar el ancho del input */
+  border: none; /* Eliminar el borde del input */
+  outline: none; /* Eliminar el contorno al enfocar */
+  border-radius: 4px;
+}
