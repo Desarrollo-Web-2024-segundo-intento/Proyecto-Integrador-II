@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { NgIf } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { UsuarioService } from '../../../../services/usuario.service';
+//import { UsuarioService } from '../../../../services/usuario.service';
 
 @Component({
   selector: 'app-perfil',
@@ -17,7 +17,8 @@ export class PerfilComponent implements OnInit {
   usuarioData: any = {};
   updated: boolean = false;
 
-  constructor(private usuarioService: UsuarioService) { }
+  //constructor(private usuarioService: UsuarioService) { }
+  constructor(){}
 
   ngOnInit(): void {
     //this.usuarioData = this.usuarioService.getUsuarioData();
