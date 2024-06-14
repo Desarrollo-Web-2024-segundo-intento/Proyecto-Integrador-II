@@ -26,63 +26,11 @@ from .models import Paciente
 from .models import Turnos
 
 
-
 # username: (String) Campo que almacena el nombre de usuario. Debe ser único.
 # first_name: (String) Campo opcional que almacena el primer nombre del usuario.
 # last_name: (String) Campo opcional que almacena el apellido del usuario.
 # email: (String) Campo opcional que almacena la dirección de correo electrónico del usuario.
 # password: (String) Campo que almacena la contraseña del usuario en formato cifrado.
-
-
-
-
-@api_view(['POST'])
-@authentication_classes([JWTAuthentication, TokenAuthentication])
-@permission_classes([IsAuthenticated])
-def nuevo_turno(request):
-    try:
-        data = request.data
-        fecha_turno = data.get('fecha_turno')
-        hora_turno = data.get('hora_turno')
-        estado_turno_id = data.get('estado_turno_id')
-        username = data.get('username')
-        profesional_id = data.get('profesional_id')
-        especialidad = data.get('especialidad')
-
-        if not username:
-            return Response({"error": "Username is required."}, status=status.HTTP_400_BAD_REQUEST)
-
-        try:
-            paciente = User.objects.get(username=username)
-        except User.DoesNotExist:
-            return Response({"error": "User not found."}, status=status.HTTP_404_NOT_FOUND)
-
-        turno = Turnos(
-            fecha_turno=fecha_turno,
-            hora_turno=hora_turno,
-            estado_turno_id=estado_turno_id,
-            username=username,
-            profesional_id=profesional_id,
-            especialidad=especialidad
-        )
-        turno.save()
-
-        return Response({"message": "Turno guardado."}, status=status.HTTP_200_OK)
-    except Exception as e:
-        return Response({"error": str(e)}, status=status.HTTP_400_BAD_REQUEST)
- 
-
-@api_view(['GET'])
-@authentication_classes([TokenAuthentication])
-@permission_classes([IsAuthenticated])
-def lista_turnos_usuario(request):
-    username = request.user.username
-    turnos = Turnos.objects.filter(username=username)
-    serializer = TurnosSerializer(turnos, many=True)
-    return Response(serializer.data)
-
-
-
 
 @api_view(['POST'])
 def login(request):
@@ -134,7 +82,9 @@ def logout(request):
 @permission_classes([IsAuthenticated])
 def profile(request):
     print(request.user)
-     
+    
+    
+    
     return Response({})
 
 @api_view(['PUT'])
@@ -152,6 +102,8 @@ def actualizar_usuario(request):
     
     serializer = UserSerializer(user)
     return Response(serializer.data, status=status.HTTP_200_OK)
+
+
 
 @api_view(['PUT'])
 @authentication_classes([TokenAuthentication])
