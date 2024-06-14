@@ -40,6 +40,16 @@ export class ApiService {
             console.log(response);
           localStorage.removeItem('token');
           localStorage.removeItem('dni');
+          localStorage.removeItem('nombre');
+          localStorage.removeItem('apellido');
+
+
+          const inputUsuario = document.getElementById('input_usuario') as HTMLInputElement;
+          if (inputUsuario) {
+            inputUsuario.value = "";
+            inputUsuario.style.display = 'none';
+          }
+
           },
           error => {
             console.error('Error en el logout', error);
