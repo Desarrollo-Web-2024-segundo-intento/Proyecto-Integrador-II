@@ -103,69 +103,7 @@ def actualizar_usuario(request):
     serializer = UserSerializer(user)
     return Response(serializer.data, status=status.HTTP_200_OK)
 
-@api_view(['PUT'])
-@authentication_classes([TokenAuthentication])
-@permission_classes([IsAuthenticated])
-def actualizar_nombre(request):
-    user = request.user  # Obtener el usuario autenticado
-    data = request.data
-    
-    if 'first_name' not in data:
-        return Response({"error": "El campo 'first_name' es requerido."}, status=status.HTTP_400_BAD_REQUEST)
-    
-    user.first_name = data['first_name']
-    user.save()
-    
-    serializer = UserSerializer(user)
-    return Response(serializer.data, status=status.HTTP_200_OK)
 
-@api_view(['PUT'])
-@authentication_classes([TokenAuthentication])
-@permission_classes([IsAuthenticated])
-def actualizar_apellido(request):
-    user = request.user  # Obtener el usuario autenticado
-    data = request.data
-    
-    if 'last_name' not in data:
-        return Response({"error": "El campo 'last_name' es requerido."}, status=status.HTTP_400_BAD_REQUEST)
-    
-    user.last_name = data['last_name']
-    user.save()
-    
-    serializer = UserSerializer(user)
-    return Response(serializer.data, status=status.HTTP_200_OK)
-
-@api_view(['PUT'])
-@authentication_classes([TokenAuthentication])
-@permission_classes([IsAuthenticated])
-def actualizar_email(request):
-    user = request.user  # Obtener el usuario autenticado
-    data = request.data
-    
-    if 'email' not in data:
-        return Response({"error": "El campo 'email' es requerido."}, status=status.HTTP_400_BAD_REQUEST)
-    
-    user.email = data['email']
-    user.save()
-    
-    serializer = UserSerializer(user)
-    return Response(serializer.data, status=status.HTTP_200_OK)
-
-@api_view(['PUT'])
-@authentication_classes([TokenAuthentication])
-@permission_classes([IsAuthenticated])
-def actualizar_password(request):
-    user = request.user  # Obtener el usuario autenticado
-    data = request.data
-    
-    if 'password' not in data:
-        return Response({"error": "El campo 'password' es requerido."}, status=status.HTTP_400_BAD_REQUEST)
-    
-    user.password = data['password']
-    user.save()
-    
-    serializer = UserSerializer(user)
-    return Response(serializer.data, status=status.HTTP_200_OK)
 
 @api_view(['PUT'])
 @authentication_classes([TokenAuthentication])
@@ -207,6 +145,19 @@ def eliminar_usuario(request):
     user = request.user  # Obtener el usuario autenticado
     user.delete()
     return Response({"message": "Usuario eliminado exitosamente."}, status=status.HTTP_204_NO_CONTENT)
+
+# traer profesionales segun especialidad seleccionada
+@api_view(['GET'])
+def get_profesionales_por_especialidad(request, especialidad_id):
+    try:
+        # Filtra los profesionales por el ID de la especialidad
+        profesionales = Profesional.objects.filter(especialidad_id=especialidad_id)
+        serializer = ProfesionalSerializer(profesionales, many=True)
+        return Response(serializer.data, status=status.HTTP_200_OK)
+    except Profesional.DoesNotExist:
+        return Response({"error": "No se encontraron profesionales para la especialidad especificada."}, status=status.HTTP_404_NOT_FOUND)
+    except Exception as e:
+        return Response({"error": str(e)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
 class EspecialidadViewSet(viewsets.ModelViewSet):
     queryset = Especialidad.objects.all()

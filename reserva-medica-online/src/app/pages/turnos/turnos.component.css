@@ -61,7 +61,7 @@
   grid-template:
   "div_titulo   div_titulo  div_titulo" 60px
   "div_boton_1  div_boton_2 div_boton_3"50px /
-  20%           20%         ;
+  20%                  ;
 }
 
 

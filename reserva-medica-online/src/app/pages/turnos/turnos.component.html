@@ -9,12 +9,6 @@
   <div class="div_boton_1">
     <button type="button" id="nuevoTurno" class="botones_turnos">Nuevo turno</button>
   </div>
-  <div class="div_boton_2">
-    <button type="button" id="misTurnos" class="botones_turnos">Mis turnos</button>
-  </div>
-  <!-- <div class="div_boton_3">
-    <button type="button" id="datos_personales_boton" class="botones_turnos">Registrarme</button>
-  </div> -->
 </div>
 
 
@@ -24,129 +18,33 @@
   <form class="container" id="formTurnos">
     <div class="row m-4">
       <div class="col-6">
-        <select id="especialidad" class="form-select" aria-label="Default select example">
-          <option value="1" selected>Médico Clínico</option>
+        <select id="especialidad" class="form-select" aria-label="Default select example" (change)="onChangeEspecialidad($event)">
+          <option value="">Selecciona un especialidad</option>
+          <option [value]="especialidad.id" *ngFor="let especialidad of especialidadesList">{{especialidad.especialidad}}</option>
         </select>
       </div>
       <div class="col-6">
         <select id="profesional" class="form-select" aria-label="Default select example">
-          <option value="1" selected>Dr. Giménez Matías</option>
+          <option value="">Selecciona un profesional</option>
+          <option [value]="profesional.id" *ngFor="let profesional of profesionalesList">{{profesional.nombre +" "+ profesional.apellido}}</option>
         </select>
       </div>
     </div>
     <div class="row m-4">
-      <div class="col-6">
-        <select id="fecha" class="form-select" aria-label="Default select example">
-          <option value="1" selected>05/06/2024</option>
-        </select>
+      <div class="col-6">Seleccione fecha:
+        <input type="date" placeholder="Fecha">
       </div>
-      <div class="col-6">
-        <select id="hora" class="form-select" aria-label="Default select example">
-          <option value="1" selected>10:30</option>
-        </select>
+      <div class="col-6">Seleccione horario:
+        <input type="time" placeholder="Horario">
       </div>
     </div>
-    <div class="row m-4">
-      <div class="col-6">
-        <select id="obraSocial" class="form-select" aria-label="Default select example">
-          <option value="1" selected>IOMA</option>
-        </select>
-      </div>
-    </div>
-    <!-- <div class="row">
-        <button type="submit" id="registrarNuevo" class="btn col-3 m-2">Registrar</button>
-    </div> -->
   </form>
 </div>
-
-<div id="vistaMisTurnos" class="contenedor_turnos" style="display: none;">
-  <h2 class="text-center">Mis turnos</h2>
-  <table class="table">
-    <thead>
-      <tr>
-        <th>Especialidad</th>
-        <th>Profesional</th>
-        <th>Fecha</th>
-        <th>Hora</th>
-        <th>Obra Social</th>
-        <th>Precio</th>
-        <th>Acción</th>
-      </tr>
-    </thead>
-    <tbody id="turnosBody">
-      <tr>
-        <td>Médico Clínico</td>
-        <td>Dr. Giménez Matías</td>
-        <td>05/06/2024</td>
-        <td>10:30</td>
-        <td>IOMA</td>
-        <td>$7600</td>
-        <td><button class="btn btn-primary" id="confirmarCompra">Confirmar</button></td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-<!--
-<div id="registro_pacientes" class="contenedor_turnos" style="display: none;">
-  <h2 class="text-center">Datos Personales</h2>
-  <div class="row m-4">
-    <input class="input_registro" type="text" id="apellido" name="apellido" placeholder="Apellido">
-    <div class="espacio_5px"></div>
-    <input class="input_registro" type="text" id="nombre" name="nombre" placeholder="Nombre">
-    <div class="espacio_5px"></div>
-    <input class="input_registro" type="tel" id="telefono" name="telefono" placeholder="Telefono" required>
-    <div class="espacio_5px"></div>
-    <input class="input_registro" type="text" id="dni" name="dni" placeholder="DNI" required>
-    <div class="espacio_5px"></div>
-    <input class="input_registro" type="text" id="mutual" name="mutual" placeholder="Mutual" required>
-    <div class="espacio_5px"></div>
-    <input class="input_registro" type="text" id="email" name="email" placeholder="Email" required>
-  </div>
-</div> -->
-
-
-
-<!--
-
-
-
-
-
-<div id="registro_pacientes" class="contenedor_turnos" style="display: none;">
-  <h2 class="text-center">Datos Personales</h2>
-
-  <div class="row m-4">
-
-    <label for="apellido">Apellido:</label>
-    <input class="input_registro" type="text" id="apellido" name="apellido" placeholder="Apellido">
-    <div class="espacio_5px"></div>
-    <label for="nombre">Nombre:</label>
-    <input class="input_registro" type="text" id="nombre" name="nombre" placeholder="Nombre">
-    <div class="espacio_5px"></div>
-    <label for="telefono">Teléfono:</label>
-    <input class="input_registro" type="tel" id="telefono" name="telefono" placeholder="Telefono" required>
-    <div class="espacio_5px"></div>
-    <label for="dni">DNI:</label>
-    <input class="input_registro" type="text" id="dni" name="dni" placeholder="DNI" required>
-    <div class="espacio_5px"></div>
-    <label for="mutual">Mutual:</label>
-    <input class="input_registro" type="text" id="mutual" name="mutual" placeholder="Mutual" required>
-    <div class="espacio_5px"></div>
-    <label for="email">E-Mail:</label>
-    <input class="input_registro" type="text" id="email" name="email" placeholder="Email" required>
-  </div>
-</div>
-
- -->
-
-
 
 <div class="menu_boton" id="menu_boton" style="display:none;">
   <div class="div_boton_4" id="boton_grabar_turno" style="display: none;">
     <button type="submit" id="registrarNuevo" class="botones_turnos" (click)="onProceedToPay()">Grabar Turno</button>
-    <button type="submit" id="datos_personales" class="botones_turnos" style="display: none;">Grabar Registro</button>
   </div>
-  <div class="div_boton_5" id="boton_Grabar_registro" style="display: none;"></div>
   <div class="div_boton_6" id="botonVolver" style="display: none;">
     <button class="botones_turnos" id="volver">Volver</button>
   </div>

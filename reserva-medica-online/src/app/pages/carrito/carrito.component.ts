@@ -4,6 +4,7 @@ import { Router, RouterLink } from '@angular/router';
 import { Especialidad } from '../../interfaces/especialidad';
 import { CarritoService } from '../../services/carrito.service';
 import { CommonModule } from '@angular/common';
+import { ApiService } from '../../services/api.service';
 
 @Component({
   selector: 'app-carrito',
@@ -20,9 +21,15 @@ export class CarritoComponent implements OnInit {
   carritoItems: any[] = [];
   total: number = 0;
 
-  constructor(private router: Router, private carritoService: CarritoService) {}
+  constructor(private router: Router, private carritoService: CarritoService, private apiService: ApiService) {}
 
   ngOnInit() {
+    if (this.apiService.isLoggedIn()){
+      this.router.navigate(['/carrito']);
+    } else {
+      alert('Por favor, Inicia sesión para agendar un turno');
+      this.router.navigate(['/iniciarSesion']);
+    }
     this.carritoItems = this.carritoService.obtenerCarritoItems();
     this.actualizarTotal();
   }

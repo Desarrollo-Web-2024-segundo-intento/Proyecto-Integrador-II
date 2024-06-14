@@ -1,5 +1,5 @@
 main{
-  padding:0;   
+  padding:0;
 }
 
 h2{
@@ -7,9 +7,9 @@ h2{
   margin: 20px 0;
   color: #000000c5;
   text-transform: uppercase;
-} 
+}
 .container{
-display: flex; 
+display: flex;
 flex-direction: row;
 /* background-color: rgb(0, 255, 51); */
 gap:70px;
@@ -19,7 +19,7 @@ gap:70px;
   width: 600px;
   margin: 0 auto;
   padding: 20px;
-  background: #f9f9f9; background: #6d6fa8;
+  background: #f9f9f9; background: #d0d1f5;
   border-radius: 5px;
 
 }
@@ -42,7 +42,7 @@ input {
 input[type="date" i] ,
 input[type="time" i]{
   margin-bottom: 10px;
-} 
+}
 
 small {
   color: red;
@@ -73,13 +73,13 @@ padding: 16px;
 margin-top: 16px;
 background-color: #f9f9f9;
 border-radius: 8px;
-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 
 .card-body {
 padding: 16px;
-border-radius: 5px; 
+border-radius: 5px;
 background: #0057b356;
 color:rgb(58, 57, 57);
 font-weight: 500;

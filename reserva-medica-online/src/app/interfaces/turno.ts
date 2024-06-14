@@ -4,5 +4,5 @@ export interface Turno {
     profesional: string;
     fecha: string;
     hora: string;
-    obraSocial: string;
+    // obraSocial: string;
 }
