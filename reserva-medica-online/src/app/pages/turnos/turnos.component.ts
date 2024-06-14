@@ -10,9 +10,6 @@ import { ApiService } from '../../services/api.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 
-
-
-
 @Component({
   selector: 'app-turnos',
   standalone: true,
@@ -24,10 +21,9 @@ export class TurnosComponent implements OnInit {
   especialidadesList: Especialidad[] = [];
   profesionalesList: Profesional[] = [];
   turnoForm: FormGroup;
-
-  // constructor(private router: Router, private turnosService: TurnosService, private pasarelaDePago: PasarelaPagoService, private apiService:ApiService) {}
   constructor(private router: Router, 
               private turnosService: TurnosService, 
+              private pasarelaDePago: PasarelaPagoService,
               private apiService:ApiService,
               private fb: FormBuilder) {
                 this.turnoForm = this.fb.group({
@@ -42,20 +38,18 @@ export class TurnosComponent implements OnInit {
     this.setupButtonEventListeners();
     this.getEspecialidades();
     this.getProfesionales();
-
   }
 
   onSubmit(): void {
     if (this.turnoForm.valid) {
-      let dni_cliente = localStorage.getItem('dni'); 
+      let dni_cliente = localStorage.getItem('dni');
       const fecha_turno = this.turnoForm.get('fecha_turno')?.value;
       const hora_turno = this.turnoForm.get('hora_turno')?.value;
       const profesional_id = this.turnoForm.get('profesional')?.value;
       const especialidad_turno = this.turnoForm.get('especialidad')?.value;
-  
       if (fecha_turno && hora_turno && profesional_id !== null) {
         const turnoData = {
-          username: dni_cliente,     
+          username: dni_cliente,
           fecha_turno: fecha_turno,
           hora_turno: hora_turno,
           estado_turno_id: '1',
@@ -66,24 +60,16 @@ export class TurnosComponent implements OnInit {
         localStorage.setItem('datos_turno', JSON.stringify(turnoData));
         // let datos = localStorage.getItem('datos_turno');
         // console.log('los datos: ' + datos);
-
-
-
         this.apiService.nuevo_turno();
-        
-        this.router.navigate(['/dashboard/mis-turnos']);
-   
+        this.onProceedToPay();
+        // this.router.navigate(['/dashboard/mis-turnos']);
       } else {
         console.error('Error: Uno de los campos del formulario es null o undefined.');
       }
-  
     } else {
       this.turnoForm.markAllAsTouched();
     }
   }
-
-
-
 
   getEspecialidades(): void {
     this.turnosService.obtenerEspecialidades().subscribe((data: Especialidad[]) => {
@@ -101,7 +87,6 @@ export class TurnosComponent implements OnInit {
       this.profesionalesList = []; 
     }
   }
-
   getProfesionales(): void {
     this.turnosService.obtenerProfesionales().subscribe(data => {
       this.profesionalesList = data;
@@ -225,8 +210,8 @@ export class TurnosComponent implements OnInit {
     { id: 1, title:"medico Clinico",profesional:"",obra_social:"",  fecha: '15-05-2024', price: 7600 },
     { id: 2, title:"Dermatologo",profesional:"Sebastian verne" ,obra_social:"Saraza",fecha: '16-05-2023', price: 7600,  },
   ]
-  //ESTO DEBERIA ESTAR COMO UN BOTON "PAGAR" EN EL CARRITO LLEVANDO OBVIAMENTE LOS DATOS DEL CARRITO
-  // onProceedToPay(){
-  //   this.pasarelaDePago.onProceedToPay(this.pagos)
-  //}
+  // ESTO DEBERIA ESTAR COMO UN BOTON "PAGAR" EN EL CARRITO LLEVANDO OBVIAMENTE LOS DATOS DEL CARRITO
+  onProceedToPay(){
+    this.pasarelaDePago.onProceedToPay(this.pagos);
+  }
 }
