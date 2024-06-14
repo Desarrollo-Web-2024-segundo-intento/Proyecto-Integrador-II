@@ -57,23 +57,12 @@ class Paciente(models.Model):
         verbose_name_plural = "Pacientes"
         
 # #6    
-# class Turnos(models.Model):
-#     fecha_turno = models.DateField(null=True)
-#     hora_turno = models.TimeField(null=True)
-#     estado_turno = models.ForeignKey(Estadoturno, on_delete=models.CASCADE, related_name='turnos',null=True)  # Clave foránea a Estadoturno
-#     paciente = models.ForeignKey(Paciente, on_delete=models.CASCADE, related_name='turnos',null=True)  # Clave foránea a Paciente
-#     profesional = models.ForeignKey(Profesional, on_delete=models.CASCADE, related_name='turnos',null=True)  # Clave foránea a Profesional
-
 class Turnos(models.Model):
-    fecha_turno = models.DateField(null=True, blank=True)
-    hora_turno = models.TimeField(null=True, blank=True)
-    estado_turno_id = models.CharField(max_length=150, null=True, blank=True)
-    username = models.CharField(max_length=150, null=True, blank=True)
-    profesional_id = models.CharField(max_length=150, null=True, blank=True)
-    especialidad = models.CharField(max_length=150, null=True, blank=True)
-    
-    def __str__(self):
-        return f"Turno {self.id} - {self.fecha_turno} {self.hora_turno}"
+    fecha_turno = models.DateField(null=True)
+    hora_turno = models.TimeField(null=True)
+    paciente = models.ForeignKey(Paciente, on_delete=models.CASCADE, related_name='turnos',null=True)  # Clave foránea a Paciente
+    profesional = models.ForeignKey(Profesional, on_delete=models.CASCADE, related_name='turnos',null=True)  # Clave foránea a Profesional
+    estado_turno = models.ForeignKey(Estadoturno, on_delete=models.CASCADE, related_name='turnos',null=True)  # Clave foránea a Estadoturno
     class Meta:
         verbose_name = "Turno"
         verbose_name_plural = "Turnos"

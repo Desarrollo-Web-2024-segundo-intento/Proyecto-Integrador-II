@@ -1,35 +1,4 @@
  
-<!-- <main>
-  <h2 class="text-center pt-3 pb-2">Mis turnos</h2>
-  <div id="vistaMisTurnos" class="contenedor_turnos">
-    <table class="table">
-      <thead>
-        <tr>
-          <th>Especialidad</th>
-          <th>Profesional</th>
-          <th>Fecha</th>
-          <th>Hora</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Clinico</td>
-          <td>Montoto Erica</td>
-          <td>24/06/24</td>
-          <td>16:30</td>
-        </tr>
-        <tr>
-          <td>Clinico</td>
-          <td>Montoto Erica</td>
-          <td>24/06/24</td>
-          <td>16:30</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-</main> -->
-
-
 <main>
   <h2 class="text-center pt-3 pb-2">Mis turnos</h2>
   <div id="vistaMisTurnos" class="contenedor_turnos">
@@ -43,11 +12,17 @@
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let turno of turnos">
-          <td>{{ turno.especialidad }}</td>
-          <td>{{ turno.profesional_id }}</td>
-          <td>{{ turno.fecha_turno }}</td>
-          <td>{{ turno.hora_turno }}</td>
+        <tr>
+          <td>Clinico</td>
+          <td>Montoto Erica</td>
+          <td>24/06/24</td>
+          <td>16:30</td>
+        </tr>
+        <tr>
+          <td>Clinico</td>
+          <td>Montoto Erica</td>
+          <td>24/06/24</td>
+          <td>16:30</td>
         </tr>
       </tbody>
     </table>

@@ -13,7 +13,7 @@
 
 
 
-<div id="vistaNuevoTurno" class="contenedor_turnos" style="display: none;">
+<!-- <div id="vistaNuevoTurno" class="contenedor_turnos" style="display: none;">
   <h2 class="text-center">Registrar un nuevo turno</h2>
   <form class="container" id="formTurnos">
     <div class="row m-4">
@@ -48,4 +48,44 @@
   <div class="div_boton_6" id="botonVolver" style="display: none;">
     <button class="botones_turnos" id="volver">Volver</button>
   </div>
+</div> -->
+
+
+
+<div id="vistaNuevoTurno" class="contenedor_turnos" style="display: none;">
+  <h2 class="text-center">Registrar un nuevo turno</h2>
+  <form class="container" [formGroup]="turnoForm" (ngSubmit)="onSubmit()">
+    <div class="row m-4">
+      <div class="col-6">
+        <select formControlName="especialidad" id="especialidad" class="form-select" aria-label="Default select example" (change)="onChangeEspecialidad($event)">
+          <option value="">Selecciona una especialidad</option>
+          <option [value]="especialidad.especialidad" *ngFor="let especialidad of especialidadesList">{{especialidad.especialidad}}</option>
+        </select>
+      </div>
+      <div class="col-6">
+        <select formControlName="profesional" id="profesional" class="form-select" aria-label="Default select example">
+          <option value="">Selecciona un profesional</option>
+          <option [value]="profesional.apellido + ' ' + profesional.nombre" *ngFor="let profesional of profesionalesList">{{profesional.nombre + ' ' + profesional.apellido}}</option>
+        </select>
+      </div>
+    </div>
+    <div class="row m-4">
+      <div class="col-6">
+        <label for="fecha_turno">Seleccione fecha:</label>
+        <input type="date" id="fecha_turno" formControlName="fecha_turno" class="form-control">
+      </div>
+      <div class="col-6">
+        <label for="hora_turno">Seleccione horario:</label>
+        <input type="time" id="hora_turno" formControlName="hora_turno" class="form-control">
+      </div>
+    </div>
+    <div class="menu_boton">
+      <div class="div_boton_4">
+        <button type="submit" id="registrarNuevo" class="botones_turnos">Grabar Turno</button>
+      </div>
+      <div class="div_boton_6">
+        <button type="button" class="botones_turnos" id="volver">Volver</button>
+      </div>
+    </div>
+  </form>
 </div>
