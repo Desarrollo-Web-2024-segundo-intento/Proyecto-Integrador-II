@@ -9,6 +9,7 @@ import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { NavComponent } from '../../shared/nav/nav.component';
+import { HeaderComponent } from '../../shared/header/header.component';  
 
 
 @Component({
@@ -46,6 +47,8 @@ export class IniciarSesionComponent{
           //-------------------------------------------------------------------
           localStorage.setItem('token', response.token);
           localStorage.setItem('dni', response.user.username);
+          localStorage.setItem('nombre', response.user.first_name);
+          localStorage.setItem('apellido', response.user.last_name);
           //-------------------------------------------------------------------
           //a modo de verificacion en las 4 lineas siguientes leemos lo que esta
           //grabado en el cache del navegador y lo publicamos por consola
@@ -54,6 +57,18 @@ export class IniciarSesionComponent{
           console.log('El dni del paciente es : ' + dni_cliente);
           let token_cliente = localStorage.getItem('token');
           console.log('El token del paciente es : ' +token_cliente);
+          let nombre_cliente = localStorage.getItem('nombre');
+          console.log('El nombre del paciente es : ' +nombre_cliente);
+          //-------------------------------------------------------------------
+          //aca cargamos el Nombre y el apellido del usuario con mensaje bienvenido
+          //-------------------------------------------------------------------
+
+          const inputUsuario = document.getElementById('input_usuario') as HTMLInputElement;
+          if (inputUsuario) {
+            inputUsuario.value = `Bienvenido : ${response.user.first_name} ${response.user.last_name}`;
+              inputUsuario.style.display = 'flex';
+            }
+          
           //-------------------------------------------------------------------
           //luego reseteamos el formulario y vaos a la page servicios
           //-------------------------------------------------------------------
