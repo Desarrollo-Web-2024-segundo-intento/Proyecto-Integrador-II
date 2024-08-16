@@ -49,8 +49,6 @@ export class IniciarSesionComponent{
           localStorage.setItem('dni', response.user.username);
           localStorage.setItem('nombre', response.user.first_name);
           localStorage.setItem('apellido', response.user.last_name);
-          localStorage.setItem('email', response.user.email);
-          
           //-------------------------------------------------------------------
           //a modo de verificacion en las 4 lineas siguientes leemos lo que esta
           //grabado en el cache del navegador y lo publicamos por consola
@@ -61,10 +59,6 @@ export class IniciarSesionComponent{
           console.log('El token del paciente es : ' +token_cliente);
           let nombre_cliente = localStorage.getItem('nombre');
           console.log('El nombre del paciente es : ' +nombre_cliente);
-          let apellido_cliente = localStorage.getItem('apellido');
-          console.log('El nombre del paciente es : ' +apellido_cliente);          
-          let email_cliente = localStorage.getItem('email');
-          console.log('El nombre del paciente es : ' +email_cliente);
           //-------------------------------------------------------------------
           //aca cargamos el Nombre y el apellido del usuario con mensaje bienvenido
           //-------------------------------------------------------------------
@@ -91,9 +85,6 @@ export class IniciarSesionComponent{
       this.loginForm.markAllAsTouched();
     };
   }
-
-
-  
   get Dni(){
     return this.loginForm.get("dni");
   }

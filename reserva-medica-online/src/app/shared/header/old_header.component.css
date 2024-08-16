@@ -1,0 +1,63 @@
+
+* {
+  padding: 0px 0px 0px 0px;
+  margin: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Fira Sans", sans-serif !important;
+  margin: 0;
+  padding: 0;
+  height: 100px;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+header {
+  background-color: #151635;
+  color: #fff;
+  padding: 8px; 
+  text-align: center;
+  margin-bottom: 8px; 
+}
+.div_header {
+  height: 70px;
+  width: 95%;
+  /* border: 1px solid yellow;  */
+  display: flex; /* Utilizar flexbox */
+  justify-content: space-between; /* Espacio entre elementos */
+  align-items: center; /* Centrar verticalmente */
+  margin: 0 auto; /* Centrar horizontalmente */
+}
+.div_titulo {
+  height: 55px;
+  width: 70%;
+  border-radius: 10px;
+  /* border: 1px solid #ccc; */
+}
+header h1 {
+  margin: 0;
+  font-size: 36px; 
+  margin-left: 35%;
+}
+.div_usuario {
+height: 55px;
+width: 30%;
+border-radius: 10px;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.input_usuario {
+background-color: transparent;
+display: flex;
+color: white;
+padding: 8px;
+width: 80%;
+border: none; 
+outline: none;
+border-radius: 4px;
+}

@@ -1,74 +1,34 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Router, RouterLink } from '@angular/router';
-import { HttpClientModule, HttpHeaders } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 import { Especialidad } from '../../interfaces/especialidad';
 import { TurnosService } from '../../services/turnos.service';
 import { PasarelaPagoService } from '../pasarela-pago/pasarela-pago.service';
 import { Profesional } from '../../interfaces/profesional';
 import { ApiService } from '../../services/api.service';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { ReactiveFormsModule } from '@angular/forms';
+
+
+
 
 @Component({
   selector: 'app-turnos',
   standalone: true,
-  imports: [CommonModule, HttpClientModule, RouterLink, TurnosComponent,  ReactiveFormsModule ],
+  imports: [CommonModule, HttpClientModule, RouterLink, TurnosComponent],
   templateUrl: './turnos.component.html',
   styleUrls: ['./turnos.component.css']
 })
 export class TurnosComponent implements OnInit {
   especialidadesList: Especialidad[] = [];
   profesionalesList: Profesional[] = [];
-  turnoForm: FormGroup;
-  constructor(private router: Router, 
-              private turnosService: TurnosService, 
-              private pasarelaDePago: PasarelaPagoService,
-              private apiService:ApiService,
-              private fb: FormBuilder) {
-                this.turnoForm = this.fb.group({
-                  especialidad: ['', Validators.required],
-                  profesional: ['', Validators.required],
-                  fecha_turno: ['', Validators.required],
-                  hora_turno: ['', Validators.required]
-                });
-              }
+  constructor(private router: Router, private turnosService: TurnosService, private pasarelaDePago: PasarelaPagoService, private apiService:ApiService) {}
+
+
 
   ngOnInit() {
     this.setupButtonEventListeners();
     this.getEspecialidades();
     this.getProfesionales();
-  }
-
-  onSubmit(): void {
-    if (this.turnoForm.valid) {
-      let dni_cliente = localStorage.getItem('dni');
-      const fecha_turno = this.turnoForm.get('fecha_turno')?.value;
-      const hora_turno = this.turnoForm.get('hora_turno')?.value;
-      const profesional_id = this.turnoForm.get('profesional')?.value;
-      const especialidad_turno = this.turnoForm.get('especialidad')?.value;
-      if (fecha_turno && hora_turno && profesional_id !== null) {
-        const turnoData = {
-          username: dni_cliente,
-          fecha_turno: fecha_turno,
-          hora_turno: hora_turno,
-          estado_turno_id: '1',
-          profesional_id: profesional_id,
-          especialidad: especialidad_turno
-        };
-        // console.log('Datos del turno:', turnoData);
-        localStorage.setItem('datos_turno', JSON.stringify(turnoData));
-        // let datos = localStorage.getItem('datos_turno');
-        // console.log('los datos: ' + datos);
-        this.apiService.nuevo_turno();
-        this.onProceedToPay();
-        // this.router.navigate(['/dashboard/mis-turnos']);
-      } else {
-        console.error('Error: Uno de los campos del formulario es null o undefined.');
-      }
-    } else {
-      this.turnoForm.markAllAsTouched();
-    }
   }
 
   getEspecialidades(): void {
@@ -77,6 +37,20 @@ export class TurnosComponent implements OnInit {
       console.log('Datos recibidos:', data);
     });
   }
+
+  // onChangeEspecialidad(event: any) {
+  //   const especialidadId = event.target.value;
+  //   // this.turnosService.getProfesionalesPorEspecialidad(especialidadId).subscribe((data: any) => {
+  //   //   this.profesionalesList = data;
+  //   // });
+  //   if (especialidadId) {
+  //     this.turnosService.getProfesionalesPorEspecialidad(especialidadId).subscribe((data: any) => {
+  //       this.profesionalesList = data;
+  //     });
+  //   } else {
+  //     this.profesionalesList = []; // Limpiar la lista de profesionales si no se selecciona ninguna especialidad
+  //   }
+  // }
   onChangeEspecialidad(event: any) {
     const especialidadId = event.target.value;
     if (especialidadId) {
@@ -84,9 +58,10 @@ export class TurnosComponent implements OnInit {
         this.profesionalesList = data;
       });
     } else {
-      this.profesionalesList = []; 
+      this.profesionalesList = []; // Limpiar la lista de profesionales si no se selecciona ninguna especialidad
     }
   }
+
   getProfesionales(): void {
     this.turnosService.obtenerProfesionales().subscribe(data => {
       this.profesionalesList = data;
@@ -210,8 +185,8 @@ export class TurnosComponent implements OnInit {
     { id: 1, title:"medico Clinico",profesional:"",obra_social:"",  fecha: '15-05-2024', price: 7600 },
     { id: 2, title:"Dermatologo",profesional:"Sebastian verne" ,obra_social:"Saraza",fecha: '16-05-2023', price: 7600,  },
   ]
-  // ESTO DEBERIA ESTAR COMO UN BOTON "PAGAR" EN EL CARRITO LLEVANDO OBVIAMENTE LOS DATOS DEL CARRITO
+  //ESTO DEBERIA ESTAR COMO UN BOTON "PAGAR" EN EL CARRITO LLEVANDO OBVIAMENTE LOS DATOS DEL CARRITO
   onProceedToPay(){
-    this.pasarelaDePago.onProceedToPay(this.pagos);
+    this.pasarelaDePago.onProceedToPay(this.pagos)
   }
 }
