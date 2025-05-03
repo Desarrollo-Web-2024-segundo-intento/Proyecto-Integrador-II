@@ -10,9 +10,9 @@ import { Profesional } from '../interfaces/profesional';
   providedIn: 'root'
 })
 export class TurnosService {
-  private apiUrl = 'http://127.0.0.1:8000/api/v1'; // URL base de la API
-  private apiUrl1 = 'http://127.0.0.1:8000/api/v1/especialidad/';
-  private apiUrl2 = 'http://127.0.0.1:8000/api/v1/profesionales/';
+  private apiUrl = 'http://192.168.0.28:8000/api/v1'; // URL base de la API
+  private apiUrl1 = 'http://192.168.0.28:8000/api/v1/especialidad/';
+  private apiUrl2 = 'http://192.168.0.28:8000/api/v1/profesionales/';
   // turno={
   //   id:0,
   //   especialidad:"",

@@ -26,8 +26,8 @@ SECRET_KEY = 'django-insecure-oo0idm%r))&%51rf_fj%yo6fa28=p%(su4#@%j6k5_l&c#vc5u
 DEBUG = True
 
 # ALLOWED_HOSTS = ['192.168.0.170']
-ALLOWED_HOSTS = ['localhost', '127.0.0.1','192.168.0.170', 'casaiot.ddns.net', '192.168.0.20']
-
+#ALLOWED_HOSTS = ['localhost', '127.0.0.1','192.168.0.170', 'casaiot.ddns.net', '192.168.0.20']
+ALLOWED_HOSTS = ['*']
 
 # Application definition
 
@@ -82,11 +82,11 @@ WSGI_APPLICATION = 'abm_ispc.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'reservasmedicasdb',
+        'NAME': 'reservasmedicas_db',
         'USER': 'desarrollo_web_2024',
         'PASSWORD': 'web_2024',
-        'HOST': 'ispcserver1.ddns.net',
-        'PORT': '3306',
+        'HOST': '192.168.0.30',
+        'PORT': '6033',
         'OPTIONS': {
             'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
             'sql_mode': 'traditional',
