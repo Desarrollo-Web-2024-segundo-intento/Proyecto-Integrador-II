@@ -13,7 +13,8 @@ export class AcercaDeComponent {
   imgEquipo3="assets/img/Jessi.png" ;
   imgEquipo4="assets/img/mony.jpg";
   imgEquipo5="assets/img/matias.jpeg";
-  imgEquipo6="assets/img/patry.jpg";
+  imgEquipo6="assets/img/jon.png";
   imgEquipo7="assets/img/alejo.jpg";
   imgEquipo8="assets/img/images.png";
+  imgEquipo9="assets/img/daniel.png";
 }

@@ -44,7 +44,7 @@ def nuevo_turno(request):
         data = request.data
         fecha_turno = data.get('fecha_turno')
         hora_turno = data.get('hora_turno')
-        estado_turno_id = data.get('estado_turno_id')
+        estado_turno_id = data.get('estado|_turno_id')
         username = data.get('username')
         profesional_id = data.get('profesional_id')
         especialidad = data.get('especialidad')
